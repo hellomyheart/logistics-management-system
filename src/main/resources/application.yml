@@ -6,3 +6,14 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     #使用阿里巴巴druid数据源，默认使用自带的
     type: com.alibaba.druid.pool.DruidDataSource
+
+
+# mybatis配置
+mybatis:
+  # 配置别名需要扫描的包
+  type-aliases-package: cn.hellomyheart.logistics.management.system.entity
+  # 引入映射文件
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 配置日志在控制台显示sql语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
