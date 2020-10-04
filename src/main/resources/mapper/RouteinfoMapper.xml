@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.RouteinfoMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Routeinfo">
+    <!--@mbg.generated-->
+    <!--@Table routeinfo-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="distance" jdbcType="DOUBLE" property="distance" />
+    <result column="end_station" jdbcType="INTEGER" property="endStation" />
+    <result column="fetch_time" jdbcType="DOUBLE" property="fetchTime" />
+    <result column="pass_station" jdbcType="VARCHAR" property="passStation" />
+    <result column="start_station" jdbcType="INTEGER" property="startStation" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, distance, end_station, fetch_time, pass_station, start_station
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from routeinfo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from routeinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Routeinfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into routeinfo (distance, end_station, fetch_time, 
+      pass_station, start_station)
+    values (#{distance,jdbcType=DOUBLE}, #{endStation,jdbcType=INTEGER}, #{fetchTime,jdbcType=DOUBLE}, 
+      #{passStation,jdbcType=VARCHAR}, #{startStation,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Routeinfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into routeinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="distance != null">
+        distance,
+      </if>
+      <if test="endStation != null">
+        end_station,
+      </if>
+      <if test="fetchTime != null">
+        fetch_time,
+      </if>
+      <if test="passStation != null">
+        pass_station,
+      </if>
+      <if test="startStation != null">
+        start_station,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="distance != null">
+        #{distance,jdbcType=DOUBLE},
+      </if>
+      <if test="endStation != null">
+        #{endStation,jdbcType=INTEGER},
+      </if>
+      <if test="fetchTime != null">
+        #{fetchTime,jdbcType=DOUBLE},
+      </if>
+      <if test="passStation != null">
+        #{passStation,jdbcType=VARCHAR},
+      </if>
+      <if test="startStation != null">
+        #{startStation,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Routeinfo">
+    <!--@mbg.generated-->
+    update routeinfo
+    <set>
+      <if test="distance != null">
+        distance = #{distance,jdbcType=DOUBLE},
+      </if>
+      <if test="endStation != null">
+        end_station = #{endStation,jdbcType=INTEGER},
+      </if>
+      <if test="fetchTime != null">
+        fetch_time = #{fetchTime,jdbcType=DOUBLE},
+      </if>
+      <if test="passStation != null">
+        pass_station = #{passStation,jdbcType=VARCHAR},
+      </if>
+      <if test="startStation != null">
+        start_station = #{startStation,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Routeinfo">
+    <!--@mbg.generated-->
+    update routeinfo
+    set distance = #{distance,jdbcType=DOUBLE},
+      end_station = #{endStation,jdbcType=INTEGER},
+      fetch_time = #{fetchTime,jdbcType=DOUBLE},
+      pass_station = #{passStation,jdbcType=VARCHAR},
+      start_station = #{startStation,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

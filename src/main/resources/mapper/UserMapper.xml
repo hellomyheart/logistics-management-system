@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.User">
+    <!--@mbg.generated-->
+    <!--@Table `user`-->
+    <id column="login_id" jdbcType="VARCHAR" property="loginId" />
+    <result column="if_online" jdbcType="BIT" property="ifOnline" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    login_id, if_online, `password`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from `user`
+    where login_id = #{loginId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from `user`
+    where login_id = #{loginId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.User">
+    <!--@mbg.generated-->
+    insert into `user` (login_id, if_online, `password`
+      )
+    values (#{loginId,jdbcType=VARCHAR}, #{ifOnline,jdbcType=BIT}, #{password,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.User">
+    <!--@mbg.generated-->
+    insert into `user`
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="loginId != null">
+        login_id,
+      </if>
+      <if test="ifOnline != null">
+        if_online,
+      </if>
+      <if test="password != null">
+        `password`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="loginId != null">
+        #{loginId,jdbcType=VARCHAR},
+      </if>
+      <if test="ifOnline != null">
+        #{ifOnline,jdbcType=BIT},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.User">
+    <!--@mbg.generated-->
+    update `user`
+    <set>
+      <if test="ifOnline != null">
+        if_online = #{ifOnline,jdbcType=BIT},
+      </if>
+      <if test="password != null">
+        `password` = #{password,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where login_id = #{loginId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.User">
+    <!--@mbg.generated-->
+    update `user`
+    set if_online = #{ifOnline,jdbcType=BIT},
+      `password` = #{password,jdbcType=VARCHAR}
+    where login_id = #{loginId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.DriverclearMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+    <!--@mbg.generated-->
+    <!--@Table driverclear-->
+    <id column="back_bill_code" jdbcType="VARCHAR" property="backBillCode" />
+    <result column="add_carriage" jdbcType="DOUBLE" property="addCarriage" />
+    <result column="balance" jdbcType="DOUBLE" property="balance" />
+    <result column="balance_time" jdbcType="DATE" property="balanceTime" />
+    <result column="balance_type" jdbcType="VARCHAR" property="balanceType" />
+    <result column="bind_insurance" jdbcType="DOUBLE" property="bindInsurance" />
+    <result column="carry_fee" jdbcType="DOUBLE" property="carryFee" />
+    <result column="dispatch_service_fee" jdbcType="DOUBLE" property="dispatchServiceFee" />
+    <result column="driver_code" jdbcType="VARCHAR" property="driverCode" />
+    <result column="insurance" jdbcType="DOUBLE" property="insurance" />
+    <result column="need_payment" jdbcType="DOUBLE" property="needPayment" />
+    <result column="payed_money" jdbcType="DOUBLE" property="payedMoney" />
+    <result column="prepay_money" jdbcType="DOUBLE" property="prepayMoney" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    back_bill_code, add_carriage, balance, balance_time, balance_type, bind_insurance, 
+    carry_fee, dispatch_service_fee, driver_code, insurance, need_payment, payed_money, 
+    prepay_money
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from driverclear
+    where back_bill_code = #{backBillCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from driverclear
+    where back_bill_code = #{backBillCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+    <!--@mbg.generated-->
+    insert into driverclear (back_bill_code, add_carriage, balance, 
+      balance_time, balance_type, bind_insurance, 
+      carry_fee, dispatch_service_fee, driver_code, 
+      insurance, need_payment, payed_money, 
+      prepay_money)
+    values (#{backBillCode,jdbcType=VARCHAR}, #{addCarriage,jdbcType=DOUBLE}, #{balance,jdbcType=DOUBLE}, 
+      #{balanceTime,jdbcType=DATE}, #{balanceType,jdbcType=VARCHAR}, #{bindInsurance,jdbcType=DOUBLE}, 
+      #{carryFee,jdbcType=DOUBLE}, #{dispatchServiceFee,jdbcType=DOUBLE}, #{driverCode,jdbcType=VARCHAR}, 
+      #{insurance,jdbcType=DOUBLE}, #{needPayment,jdbcType=DOUBLE}, #{payedMoney,jdbcType=DOUBLE}, 
+      #{prepayMoney,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+    <!--@mbg.generated-->
+    insert into driverclear
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="backBillCode != null">
+        back_bill_code,
+      </if>
+      <if test="addCarriage != null">
+        add_carriage,
+      </if>
+      <if test="balance != null">
+        balance,
+      </if>
+      <if test="balanceTime != null">
+        balance_time,
+      </if>
+      <if test="balanceType != null">
+        balance_type,
+      </if>
+      <if test="bindInsurance != null">
+        bind_insurance,
+      </if>
+      <if test="carryFee != null">
+        carry_fee,
+      </if>
+      <if test="dispatchServiceFee != null">
+        dispatch_service_fee,
+      </if>
+      <if test="driverCode != null">
+        driver_code,
+      </if>
+      <if test="insurance != null">
+        insurance,
+      </if>
+      <if test="needPayment != null">
+        need_payment,
+      </if>
+      <if test="payedMoney != null">
+        payed_money,
+      </if>
+      <if test="prepayMoney != null">
+        prepay_money,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="backBillCode != null">
+        #{backBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="addCarriage != null">
+        #{addCarriage,jdbcType=DOUBLE},
+      </if>
+      <if test="balance != null">
+        #{balance,jdbcType=DOUBLE},
+      </if>
+      <if test="balanceTime != null">
+        #{balanceTime,jdbcType=DATE},
+      </if>
+      <if test="balanceType != null">
+        #{balanceType,jdbcType=VARCHAR},
+      </if>
+      <if test="bindInsurance != null">
+        #{bindInsurance,jdbcType=DOUBLE},
+      </if>
+      <if test="carryFee != null">
+        #{carryFee,jdbcType=DOUBLE},
+      </if>
+      <if test="dispatchServiceFee != null">
+        #{dispatchServiceFee,jdbcType=DOUBLE},
+      </if>
+      <if test="driverCode != null">
+        #{driverCode,jdbcType=VARCHAR},
+      </if>
+      <if test="insurance != null">
+        #{insurance,jdbcType=DOUBLE},
+      </if>
+      <if test="needPayment != null">
+        #{needPayment,jdbcType=DOUBLE},
+      </if>
+      <if test="payedMoney != null">
+        #{payedMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="prepayMoney != null">
+        #{prepayMoney,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+    <!--@mbg.generated-->
+    update driverclear
+    <set>
+      <if test="addCarriage != null">
+        add_carriage = #{addCarriage,jdbcType=DOUBLE},
+      </if>
+      <if test="balance != null">
+        balance = #{balance,jdbcType=DOUBLE},
+      </if>
+      <if test="balanceTime != null">
+        balance_time = #{balanceTime,jdbcType=DATE},
+      </if>
+      <if test="balanceType != null">
+        balance_type = #{balanceType,jdbcType=VARCHAR},
+      </if>
+      <if test="bindInsurance != null">
+        bind_insurance = #{bindInsurance,jdbcType=DOUBLE},
+      </if>
+      <if test="carryFee != null">
+        carry_fee = #{carryFee,jdbcType=DOUBLE},
+      </if>
+      <if test="dispatchServiceFee != null">
+        dispatch_service_fee = #{dispatchServiceFee,jdbcType=DOUBLE},
+      </if>
+      <if test="driverCode != null">
+        driver_code = #{driverCode,jdbcType=VARCHAR},
+      </if>
+      <if test="insurance != null">
+        insurance = #{insurance,jdbcType=DOUBLE},
+      </if>
+      <if test="needPayment != null">
+        need_payment = #{needPayment,jdbcType=DOUBLE},
+      </if>
+      <if test="payedMoney != null">
+        payed_money = #{payedMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="prepayMoney != null">
+        prepay_money = #{prepayMoney,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where back_bill_code = #{backBillCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+    <!--@mbg.generated-->
+    update driverclear
+    set add_carriage = #{addCarriage,jdbcType=DOUBLE},
+      balance = #{balance,jdbcType=DOUBLE},
+      balance_time = #{balanceTime,jdbcType=DATE},
+      balance_type = #{balanceType,jdbcType=VARCHAR},
+      bind_insurance = #{bindInsurance,jdbcType=DOUBLE},
+      carry_fee = #{carryFee,jdbcType=DOUBLE},
+      dispatch_service_fee = #{dispatchServiceFee,jdbcType=DOUBLE},
+      driver_code = #{driverCode,jdbcType=VARCHAR},
+      insurance = #{insurance,jdbcType=DOUBLE},
+      need_payment = #{needPayment,jdbcType=DOUBLE},
+      payed_money = #{payedMoney,jdbcType=DOUBLE},
+      prepay_money = #{prepayMoney,jdbcType=DOUBLE}
+    where back_bill_code = #{backBillCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

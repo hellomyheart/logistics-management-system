@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.CompensationinfoMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Compensationinfo">
+    <!--@mbg.generated-->
+    <!--@Table compensationinfo-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="amends" jdbcType="DOUBLE" property="amends" />
+    <result column="amends_time" jdbcType="DATE" property="amendsTime" />
+    <result column="bad_destroy_goods" jdbcType="DOUBLE" property="badDestroyGoods" />
+    <result column="customer" jdbcType="VARCHAR" property="customer" />
+    <result column="receive_station_id" jdbcType="INTEGER" property="receiveStationId" />
+    <result column="receive_station_name" jdbcType="VARCHAR" property="receiveStationName" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="write_date" jdbcType="DATE" property="writeDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, amends, amends_time, bad_destroy_goods, customer, receive_station_id, receive_station_name, 
+    remark, write_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from compensationinfo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from compensationinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Compensationinfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into compensationinfo (amends, amends_time, bad_destroy_goods, 
+      customer, receive_station_id, receive_station_name, 
+      remark, write_date)
+    values (#{amends,jdbcType=DOUBLE}, #{amendsTime,jdbcType=DATE}, #{badDestroyGoods,jdbcType=DOUBLE}, 
+      #{customer,jdbcType=VARCHAR}, #{receiveStationId,jdbcType=INTEGER}, #{receiveStationName,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{writeDate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Compensationinfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into compensationinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="amends != null">
+        amends,
+      </if>
+      <if test="amendsTime != null">
+        amends_time,
+      </if>
+      <if test="badDestroyGoods != null">
+        bad_destroy_goods,
+      </if>
+      <if test="customer != null">
+        customer,
+      </if>
+      <if test="receiveStationId != null">
+        receive_station_id,
+      </if>
+      <if test="receiveStationName != null">
+        receive_station_name,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="writeDate != null">
+        write_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="amends != null">
+        #{amends,jdbcType=DOUBLE},
+      </if>
+      <if test="amendsTime != null">
+        #{amendsTime,jdbcType=DATE},
+      </if>
+      <if test="badDestroyGoods != null">
+        #{badDestroyGoods,jdbcType=DOUBLE},
+      </if>
+      <if test="customer != null">
+        #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveStationId != null">
+        #{receiveStationId,jdbcType=INTEGER},
+      </if>
+      <if test="receiveStationName != null">
+        #{receiveStationName,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="writeDate != null">
+        #{writeDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Compensationinfo">
+    <!--@mbg.generated-->
+    update compensationinfo
+    <set>
+      <if test="amends != null">
+        amends = #{amends,jdbcType=DOUBLE},
+      </if>
+      <if test="amendsTime != null">
+        amends_time = #{amendsTime,jdbcType=DATE},
+      </if>
+      <if test="badDestroyGoods != null">
+        bad_destroy_goods = #{badDestroyGoods,jdbcType=DOUBLE},
+      </if>
+      <if test="customer != null">
+        customer = #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveStationId != null">
+        receive_station_id = #{receiveStationId,jdbcType=INTEGER},
+      </if>
+      <if test="receiveStationName != null">
+        receive_station_name = #{receiveStationName,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="writeDate != null">
+        write_date = #{writeDate,jdbcType=DATE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Compensationinfo">
+    <!--@mbg.generated-->
+    update compensationinfo
+    set amends = #{amends,jdbcType=DOUBLE},
+      amends_time = #{amendsTime,jdbcType=DATE},
+      bad_destroy_goods = #{badDestroyGoods,jdbcType=DOUBLE},
+      customer = #{customer,jdbcType=VARCHAR},
+      receive_station_id = #{receiveStationId,jdbcType=INTEGER},
+      receive_station_name = #{receiveStationName,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      write_date = #{writeDate,jdbcType=DATE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

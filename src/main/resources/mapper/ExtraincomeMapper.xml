@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.ExtraincomeMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Extraincome">
+    <!--@mbg.generated-->
+    <!--@Table extraincome-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="income_month" jdbcType="VARCHAR" property="incomeMonth" />
+    <result column="money" jdbcType="DOUBLE" property="money" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="write_date" jdbcType="DATE" property="writeDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, income_month, money, `name`, write_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from extraincome
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from extraincome
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraincome" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into extraincome (income_month, money, `name`, 
+      write_date)
+    values (#{incomeMonth,jdbcType=VARCHAR}, #{money,jdbcType=DOUBLE}, #{name,jdbcType=VARCHAR}, 
+      #{writeDate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraincome" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into extraincome
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="incomeMonth != null">
+        income_month,
+      </if>
+      <if test="money != null">
+        money,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="writeDate != null">
+        write_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="incomeMonth != null">
+        #{incomeMonth,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null">
+        #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="writeDate != null">
+        #{writeDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraincome">
+    <!--@mbg.generated-->
+    update extraincome
+    <set>
+      <if test="incomeMonth != null">
+        income_month = #{incomeMonth,jdbcType=VARCHAR},
+      </if>
+      <if test="money != null">
+        money = #{money,jdbcType=DOUBLE},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="writeDate != null">
+        write_date = #{writeDate,jdbcType=DATE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraincome">
+    <!--@mbg.generated-->
+    update extraincome
+    set income_month = #{incomeMonth,jdbcType=VARCHAR},
+      money = #{money,jdbcType=DOUBLE},
+      `name` = #{name,jdbcType=VARCHAR},
+      write_date = #{writeDate,jdbcType=DATE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

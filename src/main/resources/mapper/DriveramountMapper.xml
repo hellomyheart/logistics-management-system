@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.DriveramountMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Driveramount">
+    <!--@mbg.generated-->
+    <!--@Table driveramount-->
+    <id column="driver_code" jdbcType="VARCHAR" property="driverCode" />
+    <result column="add_carriage_total" jdbcType="DOUBLE" property="addCarriageTotal" />
+    <result column="carry_fee_total" jdbcType="DOUBLE" property="carryFeeTotal" />
+    <result column="total" jdbcType="DOUBLE" property="total" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    driver_code, add_carriage_total, carry_fee_total, total
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from driveramount
+    where driver_code = #{driverCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from driveramount
+    where driver_code = #{driverCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Driveramount">
+    <!--@mbg.generated-->
+    insert into driveramount (driver_code, add_carriage_total, carry_fee_total, 
+      total)
+    values (#{driverCode,jdbcType=VARCHAR}, #{addCarriageTotal,jdbcType=DOUBLE}, #{carryFeeTotal,jdbcType=DOUBLE}, 
+      #{total,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driveramount">
+    <!--@mbg.generated-->
+    insert into driveramount
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="driverCode != null">
+        driver_code,
+      </if>
+      <if test="addCarriageTotal != null">
+        add_carriage_total,
+      </if>
+      <if test="carryFeeTotal != null">
+        carry_fee_total,
+      </if>
+      <if test="total != null">
+        total,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="driverCode != null">
+        #{driverCode,jdbcType=VARCHAR},
+      </if>
+      <if test="addCarriageTotal != null">
+        #{addCarriageTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="carryFeeTotal != null">
+        #{carryFeeTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="total != null">
+        #{total,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driveramount">
+    <!--@mbg.generated-->
+    update driveramount
+    <set>
+      <if test="addCarriageTotal != null">
+        add_carriage_total = #{addCarriageTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="carryFeeTotal != null">
+        carry_fee_total = #{carryFeeTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="total != null">
+        total = #{total,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where driver_code = #{driverCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Driveramount">
+    <!--@mbg.generated-->
+    update driveramount
+    set add_carriage_total = #{addCarriageTotal,jdbcType=DOUBLE},
+      carry_fee_total = #{carryFeeTotal,jdbcType=DOUBLE},
+      total = #{total,jdbcType=DOUBLE}
+    where driver_code = #{driverCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

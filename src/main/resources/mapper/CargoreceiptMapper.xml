@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.CargoreceiptMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+    <!--@mbg.generated-->
+    <!--@Table cargoreceipt-->
+    <id column="goods_revert_bill_code" jdbcType="VARCHAR" property="goodsRevertBillCode" />
+    <result column="accept_station" jdbcType="VARCHAR" property="acceptStation" />
+    <result column="all_carriage" jdbcType="DOUBLE" property="allCarriage" />
+    <result column="arrive_time" jdbcType="DATE" property="arriveTime" />
+    <result column="back_bill_state" jdbcType="VARCHAR" property="backBillState" />
+    <result column="carriage_banlance_mode" jdbcType="VARCHAR" property="carriageBanlanceMode" />
+    <result column="carriage_mode" jdbcType="VARCHAR" property="carriageMode" />
+    <result column="carry_goods_bill_deposit" jdbcType="DOUBLE" property="carryGoodsBillDeposit" />
+    <result column="carry_goods_insurance" jdbcType="DOUBLE" property="carryGoodsInsurance" />
+    <result column="deal_goods_station" jdbcType="VARCHAR" property="dealGoodsStation" />
+    <result column="dispatch_service_fee" jdbcType="DOUBLE" property="dispatchServiceFee" />
+    <result column="driver_id" jdbcType="VARCHAR" property="driverId" />
+    <result column="if_balance" jdbcType="VARCHAR" property="ifBalance" />
+    <result column="insurance" jdbcType="DOUBLE" property="insurance" />
+    <result column="linkman_phone" jdbcType="VARCHAR" property="linkmanPhone" />
+    <result column="load_station" jdbcType="VARCHAR" property="loadStation" />
+    <result column="receive_goods_detail_addr" jdbcType="VARCHAR" property="receiveGoodsDetailAddr" />
+    <result column="receive_goods_linkman" jdbcType="VARCHAR" property="receiveGoodsLinkman" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="sign_time" jdbcType="DATE" property="signTime" />
+    <result column="start_advance" jdbcType="DOUBLE" property="startAdvance" />
+    <result column="start_carry_time" jdbcType="DATE" property="startCarryTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    goods_revert_bill_code, accept_station, all_carriage, arrive_time, back_bill_state, 
+    carriage_banlance_mode, carriage_mode, carry_goods_bill_deposit, carry_goods_insurance, 
+    deal_goods_station, dispatch_service_fee, driver_id, if_balance, insurance, linkman_phone, 
+    load_station, receive_goods_detail_addr, receive_goods_linkman, remark, sign_time, 
+    start_advance, start_carry_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from cargoreceipt
+    where goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from cargoreceipt
+    where goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+    <!--@mbg.generated-->
+    insert into cargoreceipt (goods_revert_bill_code, accept_station, 
+      all_carriage, arrive_time, back_bill_state, 
+      carriage_banlance_mode, carriage_mode, carry_goods_bill_deposit, 
+      carry_goods_insurance, deal_goods_station, dispatch_service_fee, 
+      driver_id, if_balance, insurance, 
+      linkman_phone, load_station, receive_goods_detail_addr, 
+      receive_goods_linkman, remark, sign_time, 
+      start_advance, start_carry_time)
+    values (#{goodsRevertBillCode,jdbcType=VARCHAR}, #{acceptStation,jdbcType=VARCHAR}, 
+      #{allCarriage,jdbcType=DOUBLE}, #{arriveTime,jdbcType=DATE}, #{backBillState,jdbcType=VARCHAR}, 
+      #{carriageBanlanceMode,jdbcType=VARCHAR}, #{carriageMode,jdbcType=VARCHAR}, #{carryGoodsBillDeposit,jdbcType=DOUBLE}, 
+      #{carryGoodsInsurance,jdbcType=DOUBLE}, #{dealGoodsStation,jdbcType=VARCHAR}, #{dispatchServiceFee,jdbcType=DOUBLE}, 
+      #{driverId,jdbcType=VARCHAR}, #{ifBalance,jdbcType=VARCHAR}, #{insurance,jdbcType=DOUBLE}, 
+      #{linkmanPhone,jdbcType=VARCHAR}, #{loadStation,jdbcType=VARCHAR}, #{receiveGoodsDetailAddr,jdbcType=VARCHAR}, 
+      #{receiveGoodsLinkman,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{signTime,jdbcType=DATE}, 
+      #{startAdvance,jdbcType=DOUBLE}, #{startCarryTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+    <!--@mbg.generated-->
+    insert into cargoreceipt
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="goodsRevertBillCode != null">
+        goods_revert_bill_code,
+      </if>
+      <if test="acceptStation != null">
+        accept_station,
+      </if>
+      <if test="allCarriage != null">
+        all_carriage,
+      </if>
+      <if test="arriveTime != null">
+        arrive_time,
+      </if>
+      <if test="backBillState != null">
+        back_bill_state,
+      </if>
+      <if test="carriageBanlanceMode != null">
+        carriage_banlance_mode,
+      </if>
+      <if test="carriageMode != null">
+        carriage_mode,
+      </if>
+      <if test="carryGoodsBillDeposit != null">
+        carry_goods_bill_deposit,
+      </if>
+      <if test="carryGoodsInsurance != null">
+        carry_goods_insurance,
+      </if>
+      <if test="dealGoodsStation != null">
+        deal_goods_station,
+      </if>
+      <if test="dispatchServiceFee != null">
+        dispatch_service_fee,
+      </if>
+      <if test="driverId != null">
+        driver_id,
+      </if>
+      <if test="ifBalance != null">
+        if_balance,
+      </if>
+      <if test="insurance != null">
+        insurance,
+      </if>
+      <if test="linkmanPhone != null">
+        linkman_phone,
+      </if>
+      <if test="loadStation != null">
+        load_station,
+      </if>
+      <if test="receiveGoodsDetailAddr != null">
+        receive_goods_detail_addr,
+      </if>
+      <if test="receiveGoodsLinkman != null">
+        receive_goods_linkman,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="signTime != null">
+        sign_time,
+      </if>
+      <if test="startAdvance != null">
+        start_advance,
+      </if>
+      <if test="startCarryTime != null">
+        start_carry_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="goodsRevertBillCode != null">
+        #{goodsRevertBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="acceptStation != null">
+        #{acceptStation,jdbcType=VARCHAR},
+      </if>
+      <if test="allCarriage != null">
+        #{allCarriage,jdbcType=DOUBLE},
+      </if>
+      <if test="arriveTime != null">
+        #{arriveTime,jdbcType=DATE},
+      </if>
+      <if test="backBillState != null">
+        #{backBillState,jdbcType=VARCHAR},
+      </if>
+      <if test="carriageBanlanceMode != null">
+        #{carriageBanlanceMode,jdbcType=VARCHAR},
+      </if>
+      <if test="carriageMode != null">
+        #{carriageMode,jdbcType=VARCHAR},
+      </if>
+      <if test="carryGoodsBillDeposit != null">
+        #{carryGoodsBillDeposit,jdbcType=DOUBLE},
+      </if>
+      <if test="carryGoodsInsurance != null">
+        #{carryGoodsInsurance,jdbcType=DOUBLE},
+      </if>
+      <if test="dealGoodsStation != null">
+        #{dealGoodsStation,jdbcType=VARCHAR},
+      </if>
+      <if test="dispatchServiceFee != null">
+        #{dispatchServiceFee,jdbcType=DOUBLE},
+      </if>
+      <if test="driverId != null">
+        #{driverId,jdbcType=VARCHAR},
+      </if>
+      <if test="ifBalance != null">
+        #{ifBalance,jdbcType=VARCHAR},
+      </if>
+      <if test="insurance != null">
+        #{insurance,jdbcType=DOUBLE},
+      </if>
+      <if test="linkmanPhone != null">
+        #{linkmanPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="loadStation != null">
+        #{loadStation,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveGoodsDetailAddr != null">
+        #{receiveGoodsDetailAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveGoodsLinkman != null">
+        #{receiveGoodsLinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="signTime != null">
+        #{signTime,jdbcType=DATE},
+      </if>
+      <if test="startAdvance != null">
+        #{startAdvance,jdbcType=DOUBLE},
+      </if>
+      <if test="startCarryTime != null">
+        #{startCarryTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+    <!--@mbg.generated-->
+    update cargoreceipt
+    <set>
+      <if test="acceptStation != null">
+        accept_station = #{acceptStation,jdbcType=VARCHAR},
+      </if>
+      <if test="allCarriage != null">
+        all_carriage = #{allCarriage,jdbcType=DOUBLE},
+      </if>
+      <if test="arriveTime != null">
+        arrive_time = #{arriveTime,jdbcType=DATE},
+      </if>
+      <if test="backBillState != null">
+        back_bill_state = #{backBillState,jdbcType=VARCHAR},
+      </if>
+      <if test="carriageBanlanceMode != null">
+        carriage_banlance_mode = #{carriageBanlanceMode,jdbcType=VARCHAR},
+      </if>
+      <if test="carriageMode != null">
+        carriage_mode = #{carriageMode,jdbcType=VARCHAR},
+      </if>
+      <if test="carryGoodsBillDeposit != null">
+        carry_goods_bill_deposit = #{carryGoodsBillDeposit,jdbcType=DOUBLE},
+      </if>
+      <if test="carryGoodsInsurance != null">
+        carry_goods_insurance = #{carryGoodsInsurance,jdbcType=DOUBLE},
+      </if>
+      <if test="dealGoodsStation != null">
+        deal_goods_station = #{dealGoodsStation,jdbcType=VARCHAR},
+      </if>
+      <if test="dispatchServiceFee != null">
+        dispatch_service_fee = #{dispatchServiceFee,jdbcType=DOUBLE},
+      </if>
+      <if test="driverId != null">
+        driver_id = #{driverId,jdbcType=VARCHAR},
+      </if>
+      <if test="ifBalance != null">
+        if_balance = #{ifBalance,jdbcType=VARCHAR},
+      </if>
+      <if test="insurance != null">
+        insurance = #{insurance,jdbcType=DOUBLE},
+      </if>
+      <if test="linkmanPhone != null">
+        linkman_phone = #{linkmanPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="loadStation != null">
+        load_station = #{loadStation,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveGoodsDetailAddr != null">
+        receive_goods_detail_addr = #{receiveGoodsDetailAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveGoodsLinkman != null">
+        receive_goods_linkman = #{receiveGoodsLinkman,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="signTime != null">
+        sign_time = #{signTime,jdbcType=DATE},
+      </if>
+      <if test="startAdvance != null">
+        start_advance = #{startAdvance,jdbcType=DOUBLE},
+      </if>
+      <if test="startCarryTime != null">
+        start_carry_time = #{startCarryTime,jdbcType=DATE},
+      </if>
+    </set>
+    where goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+    <!--@mbg.generated-->
+    update cargoreceipt
+    set accept_station = #{acceptStation,jdbcType=VARCHAR},
+      all_carriage = #{allCarriage,jdbcType=DOUBLE},
+      arrive_time = #{arriveTime,jdbcType=DATE},
+      back_bill_state = #{backBillState,jdbcType=VARCHAR},
+      carriage_banlance_mode = #{carriageBanlanceMode,jdbcType=VARCHAR},
+      carriage_mode = #{carriageMode,jdbcType=VARCHAR},
+      carry_goods_bill_deposit = #{carryGoodsBillDeposit,jdbcType=DOUBLE},
+      carry_goods_insurance = #{carryGoodsInsurance,jdbcType=DOUBLE},
+      deal_goods_station = #{dealGoodsStation,jdbcType=VARCHAR},
+      dispatch_service_fee = #{dispatchServiceFee,jdbcType=DOUBLE},
+      driver_id = #{driverId,jdbcType=VARCHAR},
+      if_balance = #{ifBalance,jdbcType=VARCHAR},
+      insurance = #{insurance,jdbcType=DOUBLE},
+      linkman_phone = #{linkmanPhone,jdbcType=VARCHAR},
+      load_station = #{loadStation,jdbcType=VARCHAR},
+      receive_goods_detail_addr = #{receiveGoodsDetailAddr,jdbcType=VARCHAR},
+      receive_goods_linkman = #{receiveGoodsLinkman,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      sign_time = #{signTime,jdbcType=DATE},
+      start_advance = #{startAdvance,jdbcType=DOUBLE},
+      start_carry_time = #{startCarryTime,jdbcType=DATE}
+    where goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

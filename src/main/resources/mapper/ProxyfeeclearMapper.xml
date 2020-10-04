@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.ProxyfeeclearMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear">
+    <!--@mbg.generated-->
+    <!--@Table proxyfeeclear-->
+    <id column="goods_bill_code" jdbcType="VARCHAR" property="goodsBillCode" />
+    <result column="account_receivable" jdbcType="DOUBLE" property="accountReceivable" />
+    <result column="balance_date" jdbcType="DATE" property="balanceDate" />
+    <result column="commision_rate" jdbcType="FLOAT" property="commisionRate" />
+    <result column="commision_receivable" jdbcType="DOUBLE" property="commisionReceivable" />
+    <result column="customer_code" jdbcType="VARCHAR" property="customerCode" />
+    <result column="fact_receive_fund" jdbcType="DOUBLE" property="factReceiveFund" />
+    <result column="goods_pay_change" jdbcType="DOUBLE" property="goodsPayChange" />
+    <result column="received_commision" jdbcType="DOUBLE" property="receivedCommision" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    goods_bill_code, account_receivable, balance_date, commision_rate, commision_receivable, 
+    customer_code, fact_receive_fund, goods_pay_change, received_commision
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from proxyfeeclear
+    where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from proxyfeeclear
+    where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear">
+    <!--@mbg.generated-->
+    insert into proxyfeeclear (goods_bill_code, account_receivable, 
+      balance_date, commision_rate, commision_receivable, 
+      customer_code, fact_receive_fund, goods_pay_change, 
+      received_commision)
+    values (#{goodsBillCode,jdbcType=VARCHAR}, #{accountReceivable,jdbcType=DOUBLE}, 
+      #{balanceDate,jdbcType=DATE}, #{commisionRate,jdbcType=FLOAT}, #{commisionReceivable,jdbcType=DOUBLE}, 
+      #{customerCode,jdbcType=VARCHAR}, #{factReceiveFund,jdbcType=DOUBLE}, #{goodsPayChange,jdbcType=DOUBLE}, 
+      #{receivedCommision,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear">
+    <!--@mbg.generated-->
+    insert into proxyfeeclear
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="goodsBillCode != null">
+        goods_bill_code,
+      </if>
+      <if test="accountReceivable != null">
+        account_receivable,
+      </if>
+      <if test="balanceDate != null">
+        balance_date,
+      </if>
+      <if test="commisionRate != null">
+        commision_rate,
+      </if>
+      <if test="commisionReceivable != null">
+        commision_receivable,
+      </if>
+      <if test="customerCode != null">
+        customer_code,
+      </if>
+      <if test="factReceiveFund != null">
+        fact_receive_fund,
+      </if>
+      <if test="goodsPayChange != null">
+        goods_pay_change,
+      </if>
+      <if test="receivedCommision != null">
+        received_commision,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="goodsBillCode != null">
+        #{goodsBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="accountReceivable != null">
+        #{accountReceivable,jdbcType=DOUBLE},
+      </if>
+      <if test="balanceDate != null">
+        #{balanceDate,jdbcType=DATE},
+      </if>
+      <if test="commisionRate != null">
+        #{commisionRate,jdbcType=FLOAT},
+      </if>
+      <if test="commisionReceivable != null">
+        #{commisionReceivable,jdbcType=DOUBLE},
+      </if>
+      <if test="customerCode != null">
+        #{customerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="factReceiveFund != null">
+        #{factReceiveFund,jdbcType=DOUBLE},
+      </if>
+      <if test="goodsPayChange != null">
+        #{goodsPayChange,jdbcType=DOUBLE},
+      </if>
+      <if test="receivedCommision != null">
+        #{receivedCommision,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear">
+    <!--@mbg.generated-->
+    update proxyfeeclear
+    <set>
+      <if test="accountReceivable != null">
+        account_receivable = #{accountReceivable,jdbcType=DOUBLE},
+      </if>
+      <if test="balanceDate != null">
+        balance_date = #{balanceDate,jdbcType=DATE},
+      </if>
+      <if test="commisionRate != null">
+        commision_rate = #{commisionRate,jdbcType=FLOAT},
+      </if>
+      <if test="commisionReceivable != null">
+        commision_receivable = #{commisionReceivable,jdbcType=DOUBLE},
+      </if>
+      <if test="customerCode != null">
+        customer_code = #{customerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="factReceiveFund != null">
+        fact_receive_fund = #{factReceiveFund,jdbcType=DOUBLE},
+      </if>
+      <if test="goodsPayChange != null">
+        goods_pay_change = #{goodsPayChange,jdbcType=DOUBLE},
+      </if>
+      <if test="receivedCommision != null">
+        received_commision = #{receivedCommision,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear">
+    <!--@mbg.generated-->
+    update proxyfeeclear
+    set account_receivable = #{accountReceivable,jdbcType=DOUBLE},
+      balance_date = #{balanceDate,jdbcType=DATE},
+      commision_rate = #{commisionRate,jdbcType=FLOAT},
+      commision_receivable = #{commisionReceivable,jdbcType=DOUBLE},
+      customer_code = #{customerCode,jdbcType=VARCHAR},
+      fact_receive_fund = #{factReceiveFund,jdbcType=DOUBLE},
+      goods_pay_change = #{goodsPayChange,jdbcType=DOUBLE},
+      received_commision = #{receivedCommision,jdbcType=DOUBLE}
+    where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

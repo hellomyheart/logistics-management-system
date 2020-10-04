@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.LineoverallMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Lineoverall">
+    <!--@mbg.generated-->
+    <!--@Table lineoverall-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="all_carriage_total" jdbcType="DOUBLE" property="allCarriageTotal" />
+    <result column="deal_goods_station" jdbcType="VARCHAR" property="dealGoodsStation" />
+    <result column="insurance_total" jdbcType="DOUBLE" property="insuranceTotal" />
+    <result column="load_station" jdbcType="VARCHAR" property="loadStation" />
+    <result column="times" jdbcType="INTEGER" property="times" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, all_carriage_total, deal_goods_station, insurance_total, load_station, times
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from lineoverall
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from lineoverall
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Lineoverall" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into lineoverall (all_carriage_total, deal_goods_station, 
+      insurance_total, load_station, times
+      )
+    values (#{allCarriageTotal,jdbcType=DOUBLE}, #{dealGoodsStation,jdbcType=VARCHAR}, 
+      #{insuranceTotal,jdbcType=DOUBLE}, #{loadStation,jdbcType=VARCHAR}, #{times,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Lineoverall" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into lineoverall
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="allCarriageTotal != null">
+        all_carriage_total,
+      </if>
+      <if test="dealGoodsStation != null">
+        deal_goods_station,
+      </if>
+      <if test="insuranceTotal != null">
+        insurance_total,
+      </if>
+      <if test="loadStation != null">
+        load_station,
+      </if>
+      <if test="times != null">
+        times,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="allCarriageTotal != null">
+        #{allCarriageTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="dealGoodsStation != null">
+        #{dealGoodsStation,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceTotal != null">
+        #{insuranceTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="loadStation != null">
+        #{loadStation,jdbcType=VARCHAR},
+      </if>
+      <if test="times != null">
+        #{times,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Lineoverall">
+    <!--@mbg.generated-->
+    update lineoverall
+    <set>
+      <if test="allCarriageTotal != null">
+        all_carriage_total = #{allCarriageTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="dealGoodsStation != null">
+        deal_goods_station = #{dealGoodsStation,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceTotal != null">
+        insurance_total = #{insuranceTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="loadStation != null">
+        load_station = #{loadStation,jdbcType=VARCHAR},
+      </if>
+      <if test="times != null">
+        times = #{times,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Lineoverall">
+    <!--@mbg.generated-->
+    update lineoverall
+    set all_carriage_total = #{allCarriageTotal,jdbcType=DOUBLE},
+      deal_goods_station = #{dealGoodsStation,jdbcType=VARCHAR},
+      insurance_total = #{insuranceTotal,jdbcType=DOUBLE},
+      load_station = #{loadStation,jdbcType=VARCHAR},
+      times = #{times,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

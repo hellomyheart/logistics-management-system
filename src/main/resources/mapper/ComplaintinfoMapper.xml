@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.ComplaintinfoMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Complaintinfo">
+    <!--@mbg.generated-->
+    <!--@Table complaintinfo-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="appeal_content" jdbcType="VARCHAR" property="appealContent" />
+    <result column="appeal_date" jdbcType="VARCHAR" property="appealDate" />
+    <result column="call_back_date" jdbcType="VARCHAR" property="callBackDate" />
+    <result column="customer" jdbcType="VARCHAR" property="customer" />
+    <result column="deal_date" jdbcType="VARCHAR" property="dealDate" />
+    <result column="deal_person" jdbcType="VARCHAR" property="dealPerson" />
+    <result column="deal_result" jdbcType="VARCHAR" property="dealResult" />
+    <result column="goods_bill_code" jdbcType="VARCHAR" property="goodsBillCode" />
+    <result column="if_callback" jdbcType="BIT" property="ifCallback" />
+    <result column="if_handle" jdbcType="BIT" property="ifHandle" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, appeal_content, appeal_date, call_back_date, customer, deal_date, deal_person, 
+    deal_result, goods_bill_code, if_callback, if_handle
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from complaintinfo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from complaintinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Complaintinfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into complaintinfo (appeal_content, appeal_date, call_back_date, 
+      customer, deal_date, deal_person, 
+      deal_result, goods_bill_code, if_callback, 
+      if_handle)
+    values (#{appealContent,jdbcType=VARCHAR}, #{appealDate,jdbcType=VARCHAR}, #{callBackDate,jdbcType=VARCHAR}, 
+      #{customer,jdbcType=VARCHAR}, #{dealDate,jdbcType=VARCHAR}, #{dealPerson,jdbcType=VARCHAR}, 
+      #{dealResult,jdbcType=VARCHAR}, #{goodsBillCode,jdbcType=VARCHAR}, #{ifCallback,jdbcType=BIT}, 
+      #{ifHandle,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Complaintinfo" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into complaintinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="appealContent != null">
+        appeal_content,
+      </if>
+      <if test="appealDate != null">
+        appeal_date,
+      </if>
+      <if test="callBackDate != null">
+        call_back_date,
+      </if>
+      <if test="customer != null">
+        customer,
+      </if>
+      <if test="dealDate != null">
+        deal_date,
+      </if>
+      <if test="dealPerson != null">
+        deal_person,
+      </if>
+      <if test="dealResult != null">
+        deal_result,
+      </if>
+      <if test="goodsBillCode != null">
+        goods_bill_code,
+      </if>
+      <if test="ifCallback != null">
+        if_callback,
+      </if>
+      <if test="ifHandle != null">
+        if_handle,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="appealContent != null">
+        #{appealContent,jdbcType=VARCHAR},
+      </if>
+      <if test="appealDate != null">
+        #{appealDate,jdbcType=VARCHAR},
+      </if>
+      <if test="callBackDate != null">
+        #{callBackDate,jdbcType=VARCHAR},
+      </if>
+      <if test="customer != null">
+        #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="dealDate != null">
+        #{dealDate,jdbcType=VARCHAR},
+      </if>
+      <if test="dealPerson != null">
+        #{dealPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="dealResult != null">
+        #{dealResult,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsBillCode != null">
+        #{goodsBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ifCallback != null">
+        #{ifCallback,jdbcType=BIT},
+      </if>
+      <if test="ifHandle != null">
+        #{ifHandle,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Complaintinfo">
+    <!--@mbg.generated-->
+    update complaintinfo
+    <set>
+      <if test="appealContent != null">
+        appeal_content = #{appealContent,jdbcType=VARCHAR},
+      </if>
+      <if test="appealDate != null">
+        appeal_date = #{appealDate,jdbcType=VARCHAR},
+      </if>
+      <if test="callBackDate != null">
+        call_back_date = #{callBackDate,jdbcType=VARCHAR},
+      </if>
+      <if test="customer != null">
+        customer = #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="dealDate != null">
+        deal_date = #{dealDate,jdbcType=VARCHAR},
+      </if>
+      <if test="dealPerson != null">
+        deal_person = #{dealPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="dealResult != null">
+        deal_result = #{dealResult,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsBillCode != null">
+        goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="ifCallback != null">
+        if_callback = #{ifCallback,jdbcType=BIT},
+      </if>
+      <if test="ifHandle != null">
+        if_handle = #{ifHandle,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Complaintinfo">
+    <!--@mbg.generated-->
+    update complaintinfo
+    set appeal_content = #{appealContent,jdbcType=VARCHAR},
+      appeal_date = #{appealDate,jdbcType=VARCHAR},
+      call_back_date = #{callBackDate,jdbcType=VARCHAR},
+      customer = #{customer,jdbcType=VARCHAR},
+      deal_date = #{dealDate,jdbcType=VARCHAR},
+      deal_person = #{dealPerson,jdbcType=VARCHAR},
+      deal_result = #{dealResult,jdbcType=VARCHAR},
+      goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR},
+      if_callback = #{ifCallback,jdbcType=BIT},
+      if_handle = #{ifHandle,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

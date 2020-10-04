@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapper.CustomerinfoMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+    <!--@mbg.generated-->
+    <!--@Table customerinfo-->
+    <id column="customer_code" jdbcType="VARCHAR" property="customerCode" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="customer" jdbcType="VARCHAR" property="customer" />
+    <result column="customer_type" jdbcType="VARCHAR" property="customerType" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="enterprise_property" jdbcType="VARCHAR" property="enterpriseProperty" />
+    <result column="enterprise_size" jdbcType="VARCHAR" property="enterpriseSize" />
+    <result column="fax" jdbcType="VARCHAR" property="fax" />
+    <result column="linkman" jdbcType="VARCHAR" property="linkman" />
+    <result column="linkman_mobile" jdbcType="VARCHAR" property="linkmanMobile" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="post_code" jdbcType="VARCHAR" property="postCode" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    customer_code, address, customer, customer_type, email, enterprise_property, enterprise_size, 
+    fax, linkman, linkman_mobile, phone, post_code
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from customerinfo
+    where customer_code = #{customerCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from customerinfo
+    where customer_code = #{customerCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+    <!--@mbg.generated-->
+    insert into customerinfo (customer_code, address, customer, 
+      customer_type, email, enterprise_property, 
+      enterprise_size, fax, linkman, 
+      linkman_mobile, phone, post_code
+      )
+    values (#{customerCode,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{customer,jdbcType=VARCHAR}, 
+      #{customerType,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{enterpriseProperty,jdbcType=VARCHAR}, 
+      #{enterpriseSize,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, 
+      #{linkmanMobile,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{postCode,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+    <!--@mbg.generated-->
+    insert into customerinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customerCode != null">
+        customer_code,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="customer != null">
+        customer,
+      </if>
+      <if test="customerType != null">
+        customer_type,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="enterpriseProperty != null">
+        enterprise_property,
+      </if>
+      <if test="enterpriseSize != null">
+        enterprise_size,
+      </if>
+      <if test="fax != null">
+        fax,
+      </if>
+      <if test="linkman != null">
+        linkman,
+      </if>
+      <if test="linkmanMobile != null">
+        linkman_mobile,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="postCode != null">
+        post_code,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customerCode != null">
+        #{customerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="customer != null">
+        #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="customerType != null">
+        #{customerType,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseProperty != null">
+        #{enterpriseProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseSize != null">
+        #{enterpriseSize,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null">
+        #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null">
+        #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="linkmanMobile != null">
+        #{linkmanMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="postCode != null">
+        #{postCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+    <!--@mbg.generated-->
+    update customerinfo
+    <set>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="customer != null">
+        customer = #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="customerType != null">
+        customer_type = #{customerType,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseProperty != null">
+        enterprise_property = #{enterpriseProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="enterpriseSize != null">
+        enterprise_size = #{enterpriseSize,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null">
+        fax = #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="linkman != null">
+        linkman = #{linkman,jdbcType=VARCHAR},
+      </if>
+      <if test="linkmanMobile != null">
+        linkman_mobile = #{linkmanMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="postCode != null">
+        post_code = #{postCode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where customer_code = #{customerCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+    <!--@mbg.generated-->
+    update customerinfo
+    set address = #{address,jdbcType=VARCHAR},
+      customer = #{customer,jdbcType=VARCHAR},
+      customer_type = #{customerType,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      enterprise_property = #{enterpriseProperty,jdbcType=VARCHAR},
+      enterprise_size = #{enterpriseSize,jdbcType=VARCHAR},
+      fax = #{fax,jdbcType=VARCHAR},
+      linkman = #{linkman,jdbcType=VARCHAR},
+      linkman_mobile = #{linkmanMobile,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      post_code = #{postCode,jdbcType=VARCHAR}
+    where customer_code = #{customerCode,jdbcType=VARCHAR}
+  </update>
+</mapper>
