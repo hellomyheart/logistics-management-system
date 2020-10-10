@@ -5,6 +5,7 @@ import cn.hellomyheart.logistics.management.system.commons.result.CodeStatus;
 import cn.hellomyheart.logistics.management.system.commons.result.ResponseResult;
 import cn.hellomyheart.logistics.management.system.entity.Billinfo;
 import cn.hellomyheart.logistics.management.system.entity.Billrelease;
+import cn.hellomyheart.logistics.management.system.entity.Goodsreceiptinfo;
 import cn.hellomyheart.logistics.management.system.service.*;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
@@ -52,10 +53,23 @@ public class BillController {
     public ResponseResult findNotRelease(@RequestParam("pageNum") int pageNum, @RequestParam("limit") int limit) {
         PageInfo<Billinfo> notRelease = billinfoService.findNotRelease(pageNum, limit);
         return new ResponseResult<PageInfo<Billinfo>>(CodeStatus.OK, CodeMessage.SUCCESS, notRelease);
+    }
+
+    @ApiOperation(value = "到货", notes = "到货 - 添加一条货物到货回执信息")
+    @RequestMapping(value = "/addArrived", method = RequestMethod.POST)
+    public ResponseResult addArrived(@RequestBody Goodsreceiptinfo goodsreceiptinfo) {
+
+        int insert = goodsreceiptinfoService.insert(goodsreceiptinfo);
+        if (insert > 0) {
+            return new ResponseResult(CodeStatus.OK, CodeMessage.SUCCESS);
+        }
+        return new ResponseResult(CodeStatus.FAIL, CodeMessage.FAIL);
 
     }
 
-    @ApiOperation(value = "分页查询单据信息", notes = "分页查询单据信息")
+
+
+        @ApiOperation(value = "分页查询单据信息", notes = "分页查询单据信息")
     @RequestMapping(value = "/findByPage", method = RequestMethod.GET)
     public ResponseResult findAllByPage(@RequestParam("pageNum") int pageNum, @RequestParam("limit") int limit) {
         PageInfo<Billinfo> all = billinfoService.findAll(pageNum, limit);
@@ -63,8 +77,7 @@ public class BillController {
     }
 
 
-
-        @ApiOperation(value = "分发", notes = "分发 - 添加一条单据分发信息")
+    @ApiOperation(value = "分发", notes = "分发 - 添加一条单据分发信息")
     @RequestMapping(value = "/addRelease", method = RequestMethod.POST)
     public ResponseResult addRelease(@RequestBody Billrelease billrelease) {
 
