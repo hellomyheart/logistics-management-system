@@ -9,7 +9,11 @@ import cn.hellomyheart.logistics.management.system.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,7 +41,33 @@ public class UserController {
     @ApiOperation(value = "登录", notes = "登录，使用Spring-security进行授权验证")
     @PostMapping("/login-success")
     public ResponseResult login(LoginParam loginParam) {
-        return new ResponseResult(CodeStatus.OK, CodeMessage.LOGIN_SUCCESS, 1);
+        return new ResponseResult(CodeStatus.OK, CodeMessage.LOGIN_SUCCESS, loginParam);
+    }
+
+
+    @ApiOperation(value = "获取登录信息", notes = "获取Spring-security的")
+    @GetMapping("/info")
+    public ResponseResult info() {
+        return new ResponseResult(CodeStatus.OK, CodeMessage.LOGIN_SUCCESS, getUsername());
+    }
+
+
+    //获取当前用户的信息
+    private String getUsername() {
+        String username = null;
+        //当前认证通过的用户身份
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Object principal = authentication.getPrincipal();
+        if (principal == null) {
+            username = "匿名";
+        }
+        if (principal instanceof UserDetails) {
+            UserDetails userDetails = (UserDetails) principal;
+            username = userDetails.getUsername();
+        } else {
+            username = principal.toString();
+        }
+        return username;
     }
 
 }

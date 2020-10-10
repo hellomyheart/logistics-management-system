@@ -20,7 +20,7 @@ public class LoginParam implements Serializable {
     /**
      * 用户ID
      */
-    private String loginId;
+    private String username;
 
     /**
      * 用户密码
