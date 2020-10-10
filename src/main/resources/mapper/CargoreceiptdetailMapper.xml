@@ -1,146 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapper.CargoreceiptdetailMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
-    <!--@mbg.generated-->
-    <!--@Table cargoreceiptdetail-->
-    <id column="goods_revert_bill_id" jdbcType="VARCHAR" property="goodsRevertBillId" />
-    <result column="goods_bill_detail_id" jdbcType="VARCHAR" property="goodsBillDetailId" />
-    <result column="goods_value" jdbcType="DOUBLE" property="goodsValue" />
-    <result column="piece_amount" jdbcType="INTEGER" property="pieceAmount" />
-    <result column="price_mode" jdbcType="VARCHAR" property="priceMode" />
-    <result column="price_standard" jdbcType="VARCHAR" property="priceStandard" />
-    <result column="volume" jdbcType="DOUBLE" property="volume" />
-    <result column="weight" jdbcType="DOUBLE" property="weight" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    goods_revert_bill_id, goods_bill_detail_id, goods_value, piece_amount, price_mode,
-    price_standard, volume, weight
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select
-    <include refid="Base_Column_List" />
-    from cargoreceiptdetail
-    where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    <!--@mbg.generated-->
-    delete from cargoreceiptdetail
-    where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
-  </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
-    <!--@mbg.generated-->
-    insert into cargoreceiptdetail (goods_revert_bill_id, goods_bill_detail_id,
-      goods_value, piece_amount, price_mode,
-      price_standard, volume, weight
-      )
-    values (#{goodsRevertBillId,jdbcType=VARCHAR}, #{goodsBillDetailId,jdbcType=VARCHAR},
-      #{goodsValue,jdbcType=DOUBLE}, #{pieceAmount,jdbcType=INTEGER}, #{priceMode,jdbcType=VARCHAR},
-      #{priceStandard,jdbcType=VARCHAR}, #{volume,jdbcType=DOUBLE}, #{weight,jdbcType=DOUBLE}
-      )
-  </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
-    <!--@mbg.generated-->
-    insert into cargoreceiptdetail
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="goodsRevertBillId != null">
-        goods_revert_bill_id,
-      </if>
-      <if test="goodsBillDetailId != null">
-        goods_bill_detail_id,
-      </if>
-      <if test="goodsValue != null">
-        goods_value,
-      </if>
-      <if test="pieceAmount != null">
-        piece_amount,
-      </if>
-      <if test="priceMode != null">
-        price_mode,
-      </if>
-      <if test="priceStandard != null">
-        price_standard,
-      </if>
-      <if test="volume != null">
-        volume,
-      </if>
-      <if test="weight != null">
-        weight,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="goodsRevertBillId != null">
-        #{goodsRevertBillId,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsBillDetailId != null">
-        #{goodsBillDetailId,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsValue != null">
-        #{goodsValue,jdbcType=DOUBLE},
-      </if>
-      <if test="pieceAmount != null">
-        #{pieceAmount,jdbcType=INTEGER},
-      </if>
-      <if test="priceMode != null">
-        #{priceMode,jdbcType=VARCHAR},
-      </if>
-      <if test="priceStandard != null">
-        #{priceStandard,jdbcType=VARCHAR},
-      </if>
-      <if test="volume != null">
-        #{volume,jdbcType=DOUBLE},
-      </if>
-      <if test="weight != null">
-        #{weight,jdbcType=DOUBLE},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
-    <!--@mbg.generated-->
-    update cargoreceiptdetail
-    <set>
-      <if test="goodsBillDetailId != null">
-        goods_bill_detail_id = #{goodsBillDetailId,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsValue != null">
+    <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
+        <!--@mbg.generated-->
+        <!--@Table cargoreceiptdetail-->
+        <id column="goods_revert_bill_id" jdbcType="VARCHAR" property="goodsRevertBillId"/>
+        <result column="goods_bill_detail_id" jdbcType="VARCHAR" property="goodsBillDetailId"/>
+        <result column="goods_value" jdbcType="DOUBLE" property="goodsValue"/>
+        <result column="piece_amount" jdbcType="INTEGER" property="pieceAmount"/>
+        <result column="price_mode" jdbcType="VARCHAR" property="priceMode"/>
+        <result column="price_standard" jdbcType="VARCHAR" property="priceStandard"/>
+        <result column="volume" jdbcType="DOUBLE" property="volume"/>
+        <result column="weight" jdbcType="DOUBLE" property="weight"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        goods_revert_bill_id, goods_bill_detail_id, goods_value, piece_amount, price_mode,
+        price_standard, volume, weight
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from cargoreceiptdetail
+        where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        <!--@mbg.generated-->
+        delete from cargoreceiptdetail
+        where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
+    </delete>
+    <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
+        <!--@mbg.generated-->
+        insert into cargoreceiptdetail (goods_revert_bill_id, goods_bill_detail_id,
+        goods_value, piece_amount, price_mode,
+        price_standard, volume, weight
+        )
+        values (#{goodsRevertBillId,jdbcType=VARCHAR}, #{goodsBillDetailId,jdbcType=VARCHAR},
+        #{goodsValue,jdbcType=DOUBLE}, #{pieceAmount,jdbcType=INTEGER}, #{priceMode,jdbcType=VARCHAR},
+        #{priceStandard,jdbcType=VARCHAR}, #{volume,jdbcType=DOUBLE}, #{weight,jdbcType=DOUBLE}
+        )
+    </insert>
+    <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
+        <!--@mbg.generated-->
+        insert into cargoreceiptdetail
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="goodsRevertBillId != null">
+                goods_revert_bill_id,
+            </if>
+            <if test="goodsBillDetailId != null">
+                goods_bill_detail_id,
+            </if>
+            <if test="goodsValue != null">
+                goods_value,
+            </if>
+            <if test="pieceAmount != null">
+                piece_amount,
+            </if>
+            <if test="priceMode != null">
+                price_mode,
+            </if>
+            <if test="priceStandard != null">
+                price_standard,
+            </if>
+            <if test="volume != null">
+                volume,
+            </if>
+            <if test="weight != null">
+                weight,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="goodsRevertBillId != null">
+                #{goodsRevertBillId,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsBillDetailId != null">
+                #{goodsBillDetailId,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsValue != null">
+                #{goodsValue,jdbcType=DOUBLE},
+            </if>
+            <if test="pieceAmount != null">
+                #{pieceAmount,jdbcType=INTEGER},
+            </if>
+            <if test="priceMode != null">
+                #{priceMode,jdbcType=VARCHAR},
+            </if>
+            <if test="priceStandard != null">
+                #{priceStandard,jdbcType=VARCHAR},
+            </if>
+            <if test="volume != null">
+                #{volume,jdbcType=DOUBLE},
+            </if>
+            <if test="weight != null">
+                #{weight,jdbcType=DOUBLE},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective"
+            parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
+        <!--@mbg.generated-->
+        update cargoreceiptdetail
+        <set>
+            <if test="goodsBillDetailId != null">
+                goods_bill_detail_id = #{goodsBillDetailId,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsValue != null">
+                goods_value = #{goodsValue,jdbcType=DOUBLE},
+            </if>
+            <if test="pieceAmount != null">
+                piece_amount = #{pieceAmount,jdbcType=INTEGER},
+            </if>
+            <if test="priceMode != null">
+                price_mode = #{priceMode,jdbcType=VARCHAR},
+            </if>
+            <if test="priceStandard != null">
+                price_standard = #{priceStandard,jdbcType=VARCHAR},
+            </if>
+            <if test="volume != null">
+                volume = #{volume,jdbcType=DOUBLE},
+            </if>
+            <if test="weight != null">
+                weight = #{weight,jdbcType=DOUBLE},
+            </if>
+        </set>
+        where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey"
+            parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
+        <!--@mbg.generated-->
+        update cargoreceiptdetail
+        set goods_bill_detail_id = #{goodsBillDetailId,jdbcType=VARCHAR},
         goods_value = #{goodsValue,jdbcType=DOUBLE},
-      </if>
-      <if test="pieceAmount != null">
         piece_amount = #{pieceAmount,jdbcType=INTEGER},
-      </if>
-      <if test="priceMode != null">
         price_mode = #{priceMode,jdbcType=VARCHAR},
-      </if>
-      <if test="priceStandard != null">
         price_standard = #{priceStandard,jdbcType=VARCHAR},
-      </if>
-      <if test="volume != null">
         volume = #{volume,jdbcType=DOUBLE},
-      </if>
-      <if test="weight != null">
-        weight = #{weight,jdbcType=DOUBLE},
-      </if>
-    </set>
-    where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
-    <!--@mbg.generated-->
-    update cargoreceiptdetail
-    set goods_bill_detail_id = #{goodsBillDetailId,jdbcType=VARCHAR},
-      goods_value = #{goodsValue,jdbcType=DOUBLE},
-      piece_amount = #{pieceAmount,jdbcType=INTEGER},
-      price_mode = #{priceMode,jdbcType=VARCHAR},
-      price_standard = #{priceStandard,jdbcType=VARCHAR},
-      volume = #{volume,jdbcType=DOUBLE},
-      weight = #{weight,jdbcType=DOUBLE}
-    where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
-  </update>
+        weight = #{weight,jdbcType=DOUBLE}
+        where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
+    </update>
     <select id="selectAll" resultMap="BaseResultMap">
-      <!--@mbg.generated-->
-      select
-      <include refid="Base_Column_List" />
-      from cargoreceiptdetail
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from cargoreceiptdetail
+    </select>
+    <select id="selectPreCode" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from cargoreceiptdetail
+        where goodsRevertBillId not in (
+        select goodsRevertBillCode
+        from cargoreceipt
+        )
     </select>
 </mapper>

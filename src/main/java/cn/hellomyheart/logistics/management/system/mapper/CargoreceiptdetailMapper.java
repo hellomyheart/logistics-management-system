@@ -48,4 +48,6 @@ public interface CargoreceiptdetailMapper {
     int updateByPrimaryKey(Cargoreceiptdetail record);
 
     List<Cargoreceiptdetail> selectAll();
+
+    List<Cargoreceiptdetail> selectPreCode();
 }

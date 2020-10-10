@@ -21,4 +21,5 @@ public interface CargoreceiptdetailService{
 
     int updateByPrimaryKey(Cargoreceiptdetail record);
 
+    List<Cargoreceiptdetail> selectPreCode();
 }

@@ -49,4 +49,8 @@ public class CargoreceiptdetailServiceImpl implements CargoreceiptdetailService{
         return cargoreceiptdetailMapper.updateByPrimaryKey(record);
     }
 
+    @Override
+    public List<Cargoreceiptdetail> selectPreCode() {
+        return cargoreceiptdetailMapper.selectPreCode();
+    }
 }

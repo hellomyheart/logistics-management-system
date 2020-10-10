@@ -60,10 +60,6 @@ public class CargoReceiptController {
             result.add(cargoreceiptdetail.get(i).getGoodsRevertBillId());
         }
         return new ResponseResult<List>(CodeStatus.OK, CodeMessage.SUCCESS,result);
-
-
-
     }
-
 
 }
