@@ -17,7 +17,16 @@ mybatis:
   configuration:
     # 配置日志在控制台显示sql语句
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# pagehelper
 
 server:
   #  端口号
   port: 8099
+
+
+# pagehelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql

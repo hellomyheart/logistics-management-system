@@ -1,6 +1,8 @@
 package cn.hellomyheart.logistics.management.system.service;
 
 import cn.hellomyheart.logistics.management.system.entity.Billinfo;
+import com.github.pagehelper.PageInfo;
+
 public interface BillinfoService{
 
 
@@ -16,4 +18,7 @@ public interface BillinfoService{
 
     int updateByPrimaryKey(Billinfo record);
 
+    PageInfo<Billinfo> findNotRelease(int pageNum, int limit);
+
+    PageInfo<Billinfo> findAll(int pageNum, int limit);
 }

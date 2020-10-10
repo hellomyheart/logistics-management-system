@@ -1,9 +1,15 @@
 package cn.hellomyheart.logistics.management.system.controller;
 
+import cn.hellomyheart.logistics.management.system.commons.result.CodeMessage;
+import cn.hellomyheart.logistics.management.system.commons.result.CodeStatus;
+import cn.hellomyheart.logistics.management.system.commons.result.ResponseResult;
 import cn.hellomyheart.logistics.management.system.entity.User;
+import cn.hellomyheart.logistics.management.system.params.LoginParam;
 import cn.hellomyheart.logistics.management.system.service.UserService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,11 +30,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/login")
-    public String login(String loginId,String password){
-        User user = userService.selectByPrimaryKey(loginId);
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
-        return "hello";
+
+    @ApiOperation(value = "登录", notes = "登录，使用Spring-security进行授权验证")
+    @PostMapping("/login-success")
+    public ResponseResult login(LoginParam loginParam) {
+        return new ResponseResult(CodeStatus.OK, CodeMessage.LOGIN_SUCCESS, 1);
     }
 
 }

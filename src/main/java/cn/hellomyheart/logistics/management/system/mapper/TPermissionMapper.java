@@ -1,54 +1,51 @@
 package cn.hellomyheart.logistics.management.system.mapper;
 
-import cn.hellomyheart.logistics.management.system.entity.Billinfo;
+import cn.hellomyheart.logistics.management.system.entity.TPermission;
 
 import java.util.List;
 
-public interface BillinfoMapper {
+public interface TPermissionMapper {
     /**
      * delete by primary key
      * @param id primaryKey
      * @return deleteCount
      */
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(String id);
 
     /**
      * insert record to table
      * @param record the record
      * @return insert count
      */
-    int insert(Billinfo record);
+    int insert(TPermission record);
 
     /**
      * insert record to table selective
      * @param record the record
      * @return insert count
      */
-    int insertSelective(Billinfo record);
+    int insertSelective(TPermission record);
 
     /**
      * select by primary key
      * @param id primary key
      * @return object by primary key
      */
-    Billinfo selectByPrimaryKey(Integer id);
+    TPermission selectByPrimaryKey(String id);
 
     /**
      * update record selective
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKeySelective(Billinfo record);
+    int updateByPrimaryKeySelective(TPermission record);
 
     /**
      * update record
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKey(Billinfo record);
+    int updateByPrimaryKey(TPermission record);
+    List<TPermission> selectPermissionsByUserId(String userId);
 
-
-    List<Billinfo> findNotRelease();
-
-    List<Billinfo> findAll();
 }

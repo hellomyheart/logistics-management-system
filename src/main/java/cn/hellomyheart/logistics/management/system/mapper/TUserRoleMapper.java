@@ -1,54 +1,48 @@
 package cn.hellomyheart.logistics.management.system.mapper;
 
-import cn.hellomyheart.logistics.management.system.entity.Billinfo;
+import cn.hellomyheart.logistics.management.system.entity.TUserRole;
+import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
-public interface BillinfoMapper {
+public interface TUserRoleMapper {
     /**
      * delete by primary key
-     * @param id primaryKey
+     * @param userId primaryKey
      * @return deleteCount
      */
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(@Param("userId") String userId, @Param("roleId") String roleId);
 
     /**
      * insert record to table
      * @param record the record
      * @return insert count
      */
-    int insert(Billinfo record);
+    int insert(TUserRole record);
 
     /**
      * insert record to table selective
      * @param record the record
      * @return insert count
      */
-    int insertSelective(Billinfo record);
+    int insertSelective(TUserRole record);
 
     /**
      * select by primary key
-     * @param id primary key
+     * @param userId primary key
      * @return object by primary key
      */
-    Billinfo selectByPrimaryKey(Integer id);
+    TUserRole selectByPrimaryKey(@Param("userId") String userId, @Param("roleId") String roleId);
 
     /**
      * update record selective
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKeySelective(Billinfo record);
+    int updateByPrimaryKeySelective(TUserRole record);
 
     /**
      * update record
      * @param record the updated record
      * @return update count
      */
-    int updateByPrimaryKey(Billinfo record);
-
-
-    List<Billinfo> findNotRelease();
-
-    List<Billinfo> findAll();
+    int updateByPrimaryKey(TUserRole record);
 }
