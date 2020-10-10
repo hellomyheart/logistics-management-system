@@ -5,6 +5,9 @@ import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapper.CargoreceiptMapper;
 import cn.hellomyheart.logistics.management.system.entity.Cargoreceipt;
 import cn.hellomyheart.logistics.management.system.service.CargoreceiptService;
+
+import java.util.List;
+
 @Service
 public class CargoreceiptServiceImpl implements CargoreceiptService{
 
@@ -30,6 +33,7 @@ public class CargoreceiptServiceImpl implements CargoreceiptService{
     public Cargoreceipt selectByPrimaryKey(String goodsRevertBillCode) {
         return cargoreceiptMapper.selectByPrimaryKey(goodsRevertBillCode);
     }
+
 
     @Override
     public int updateByPrimaryKeySelective(Cargoreceipt record) {

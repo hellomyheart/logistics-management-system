@@ -1,6 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
 import cn.hellomyheart.logistics.management.system.entity.Cargoreceipt;
+
+import java.util.List;
+
 public interface CargoreceiptService{
 
 

@@ -5,6 +5,9 @@ import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail;
 import cn.hellomyheart.logistics.management.system.mapper.CargoreceiptdetailMapper;
 import cn.hellomyheart.logistics.management.system.service.CargoreceiptdetailService;
+
+import java.util.List;
+
 @Service
 public class CargoreceiptdetailServiceImpl implements CargoreceiptdetailService{
 
@@ -29,6 +32,11 @@ public class CargoreceiptdetailServiceImpl implements CargoreceiptdetailService{
     @Override
     public Cargoreceiptdetail selectByPrimaryKey(String goodsRevertBillId) {
         return cargoreceiptdetailMapper.selectByPrimaryKey(goodsRevertBillId);
+    }
+
+    @Override
+    public List<Cargoreceiptdetail> selectAll() {
+        return cargoreceiptdetailMapper.selectAll();
     }
 
     @Override

@@ -2,6 +2,8 @@ package cn.hellomyheart.logistics.management.system.mapper;
 
 import cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail;
 
+import java.util.List;
+
 public interface CargoreceiptdetailMapper {
     /**
      * delete by primary key
@@ -44,4 +46,6 @@ public interface CargoreceiptdetailMapper {
      * @return update count
      */
     int updateByPrimaryKey(Cargoreceiptdetail record);
+
+    List<Cargoreceiptdetail> selectAll();
 }

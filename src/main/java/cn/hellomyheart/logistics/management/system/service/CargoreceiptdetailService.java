@@ -1,6 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
 import cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail;
+
+import java.util.List;
+
 public interface CargoreceiptdetailService{
 
 
@@ -11,6 +14,8 @@ public interface CargoreceiptdetailService{
     int insertSelective(Cargoreceiptdetail record);
 
     Cargoreceiptdetail selectByPrimaryKey(String goodsRevertBillId);
+
+    List<Cargoreceiptdetail> selectAll();
 
     int updateByPrimaryKeySelective(Cargoreceiptdetail record);
 

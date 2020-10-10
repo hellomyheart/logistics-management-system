@@ -29,15 +29,15 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    goods_revert_bill_code, accept_station, all_carriage, arrive_time, back_bill_state, 
-    carriage_banlance_mode, carriage_mode, carry_goods_bill_deposit, carry_goods_insurance, 
-    deal_goods_station, dispatch_service_fee, driver_id, if_balance, insurance, linkman_phone, 
-    load_station, receive_goods_detail_addr, receive_goods_linkman, remark, sign_time, 
+    goods_revert_bill_code, accept_station, all_carriage, arrive_time, back_bill_state,
+    carriage_banlance_mode, carriage_mode, carry_goods_bill_deposit, carry_goods_insurance,
+    deal_goods_station, dispatch_service_fee, driver_id, if_balance, insurance, linkman_phone,
+    load_station, receive_goods_detail_addr, receive_goods_linkman, remark, sign_time,
     start_advance, start_carry_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from cargoreceipt
     where goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR}
@@ -49,21 +49,21 @@
   </delete>
   <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
     <!--@mbg.generated-->
-    insert into cargoreceipt (goods_revert_bill_code, accept_station, 
-      all_carriage, arrive_time, back_bill_state, 
-      carriage_banlance_mode, carriage_mode, carry_goods_bill_deposit, 
-      carry_goods_insurance, deal_goods_station, dispatch_service_fee, 
-      driver_id, if_balance, insurance, 
-      linkman_phone, load_station, receive_goods_detail_addr, 
-      receive_goods_linkman, remark, sign_time, 
+    insert into cargoreceipt (goods_revert_bill_code, accept_station,
+      all_carriage, arrive_time, back_bill_state,
+      carriage_banlance_mode, carriage_mode, carry_goods_bill_deposit,
+      carry_goods_insurance, deal_goods_station, dispatch_service_fee,
+      driver_id, if_balance, insurance,
+      linkman_phone, load_station, receive_goods_detail_addr,
+      receive_goods_linkman, remark, sign_time,
       start_advance, start_carry_time)
-    values (#{goodsRevertBillCode,jdbcType=VARCHAR}, #{acceptStation,jdbcType=VARCHAR}, 
-      #{allCarriage,jdbcType=DOUBLE}, #{arriveTime,jdbcType=DATE}, #{backBillState,jdbcType=VARCHAR}, 
-      #{carriageBanlanceMode,jdbcType=VARCHAR}, #{carriageMode,jdbcType=VARCHAR}, #{carryGoodsBillDeposit,jdbcType=DOUBLE}, 
-      #{carryGoodsInsurance,jdbcType=DOUBLE}, #{dealGoodsStation,jdbcType=VARCHAR}, #{dispatchServiceFee,jdbcType=DOUBLE}, 
-      #{driverId,jdbcType=VARCHAR}, #{ifBalance,jdbcType=VARCHAR}, #{insurance,jdbcType=DOUBLE}, 
-      #{linkmanPhone,jdbcType=VARCHAR}, #{loadStation,jdbcType=VARCHAR}, #{receiveGoodsDetailAddr,jdbcType=VARCHAR}, 
-      #{receiveGoodsLinkman,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{signTime,jdbcType=DATE}, 
+    values (#{goodsRevertBillCode,jdbcType=VARCHAR}, #{acceptStation,jdbcType=VARCHAR},
+      #{allCarriage,jdbcType=DOUBLE}, #{arriveTime,jdbcType=DATE}, #{backBillState,jdbcType=VARCHAR},
+      #{carriageBanlanceMode,jdbcType=VARCHAR}, #{carriageMode,jdbcType=VARCHAR}, #{carryGoodsBillDeposit,jdbcType=DOUBLE},
+      #{carryGoodsInsurance,jdbcType=DOUBLE}, #{dealGoodsStation,jdbcType=VARCHAR}, #{dispatchServiceFee,jdbcType=DOUBLE},
+      #{driverId,jdbcType=VARCHAR}, #{ifBalance,jdbcType=VARCHAR}, #{insurance,jdbcType=DOUBLE},
+      #{linkmanPhone,jdbcType=VARCHAR}, #{loadStation,jdbcType=VARCHAR}, #{receiveGoodsDetailAddr,jdbcType=VARCHAR},
+      #{receiveGoodsLinkman,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{signTime,jdbcType=DATE},
       #{startAdvance,jdbcType=DOUBLE}, #{startCarryTime,jdbcType=DATE})
   </insert>
   <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
@@ -302,4 +302,9 @@
       start_carry_time = #{startCarryTime,jdbcType=DATE}
     where goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR}
   </update>
+    <select id="selectAll" resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List" />
+      from cargoreceipt
+    </select>
 </mapper>

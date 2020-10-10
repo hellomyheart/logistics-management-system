@@ -15,12 +15,12 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    goods_revert_bill_id, goods_bill_detail_id, goods_value, piece_amount, price_mode, 
+    goods_revert_bill_id, goods_bill_detail_id, goods_value, piece_amount, price_mode,
     price_standard, volume, weight
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from cargoreceiptdetail
     where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
@@ -32,12 +32,12 @@
   </delete>
   <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail">
     <!--@mbg.generated-->
-    insert into cargoreceiptdetail (goods_revert_bill_id, goods_bill_detail_id, 
-      goods_value, piece_amount, price_mode, 
+    insert into cargoreceiptdetail (goods_revert_bill_id, goods_bill_detail_id,
+      goods_value, piece_amount, price_mode,
       price_standard, volume, weight
       )
-    values (#{goodsRevertBillId,jdbcType=VARCHAR}, #{goodsBillDetailId,jdbcType=VARCHAR}, 
-      #{goodsValue,jdbcType=DOUBLE}, #{pieceAmount,jdbcType=INTEGER}, #{priceMode,jdbcType=VARCHAR}, 
+    values (#{goodsRevertBillId,jdbcType=VARCHAR}, #{goodsBillDetailId,jdbcType=VARCHAR},
+      #{goodsValue,jdbcType=DOUBLE}, #{pieceAmount,jdbcType=INTEGER}, #{priceMode,jdbcType=VARCHAR},
       #{priceStandard,jdbcType=VARCHAR}, #{volume,jdbcType=DOUBLE}, #{weight,jdbcType=DOUBLE}
       )
   </insert>
@@ -137,4 +137,10 @@
       weight = #{weight,jdbcType=DOUBLE}
     where goods_revert_bill_id = #{goodsRevertBillId,jdbcType=VARCHAR}
   </update>
+    <select id="selectAll" resultMap="BaseResultMap">
+      <!--@mbg.generated-->
+      select
+      <include refid="Base_Column_List" />
+      from cargoreceiptdetail
+    </select>
 </mapper>
