@@ -19,12 +19,12 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    id, bill_id, bill_type, content, dial_no, finally_dial_time, goods_bill_id, locked, 
+    id, bill_id, bill_type, content, dial_no, finally_dial_time, goods_bill_id, locked,
     success, `type`, write_time, writer
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from callbackinfo
     where id = #{id,jdbcType=INTEGER}
@@ -36,13 +36,13 @@
   </delete>
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Callbackinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
-    insert into callbackinfo (bill_id, bill_type, content, 
-      dial_no, finally_dial_time, goods_bill_id, 
-      locked, success, `type`, write_time, 
+    insert into callbackinfo (bill_id, bill_type, content,
+      dial_no, finally_dial_time, goods_bill_id,
+      locked, success, `type`, write_time,
       writer)
-    values (#{billId,jdbcType=VARCHAR}, #{billType,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
-      #{dialNo,jdbcType=VARCHAR}, #{finallyDialTime,jdbcType=DATE}, #{goodsBillId,jdbcType=VARCHAR}, 
-      #{locked,jdbcType=BIT}, #{success,jdbcType=BIT}, #{type,jdbcType=VARCHAR}, #{writeTime,jdbcType=DATE}, 
+    values (#{billId,jdbcType=VARCHAR}, #{billType,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR},
+      #{dialNo,jdbcType=VARCHAR}, #{finallyDialTime,jdbcType=DATE}, #{goodsBillId,jdbcType=VARCHAR},
+      #{locked,jdbcType=BIT}, #{success,jdbcType=BIT}, #{type,jdbcType=VARCHAR}, #{writeTime,jdbcType=DATE},
       #{writer,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Callbackinfo" useGeneratedKeys="true">
@@ -175,4 +175,11 @@
       writer = #{writer,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+    <select id="selectByDetails" parameterType="hashmap" resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List" />
+      from callbackinfo
+      where goods_bill_id = #{goodsBillId}
+      and type = #{type}
+    </select>
 </mapper>

@@ -34,8 +34,17 @@ public class CallbackController {
             return new ResponseResult(CodeStatus.OK, CodeMessage.SUCCESS);
         }
         return new ResponseResult(CodeStatus.FAIL, CodeMessage.FAIL);
+    }
+
+    @ApiOperation(value = "查询一条回告信息")
+    @RequestMapping(value = "/findDetail/{goodsBillId}/{type}", method = RequestMethod.GET)
+    public ResponseResult findDetail(@PathVariable("goodsBillId") String goodsBillId, @PathVariable("type") String type) {
+        Callbackinfo callbackinfo = callbackinfoService.selectByPrimaryKey(Integer.valueOf(goodsBillId));
+        return new ResponseResult<Callbackinfo>(CodeStatus.OK, CodeMessage.SUCCESS,callbackinfo);
 
     }
 
 
-}
+
+
+    }

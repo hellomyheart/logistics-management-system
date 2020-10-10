@@ -5,8 +5,13 @@ import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Callbackinfo;
 import cn.hellomyheart.logistics.management.system.mapper.CallbackinfoMapper;
 import cn.hellomyheart.logistics.management.system.service.CallbackinfoService;
+
+import java.util.HashMap;
+import java.util.Map;
+
 @Service
 public class CallbackinfoServiceImpl implements CallbackinfoService{
+
 
     @Resource
     private CallbackinfoMapper callbackinfoMapper;
@@ -41,4 +46,12 @@ public class CallbackinfoServiceImpl implements CallbackinfoService{
         return callbackinfoMapper.updateByPrimaryKey(record);
     }
 
+    @Override
+    public Callbackinfo selectByDetails(String goodsBillId, String type) {
+        Map map= new HashMap<String,String>();
+        map.put("goodsBillId",goodsBillId);
+        map.put("type",type);
+
+        return callbackinfoMapper.selectByDetails(map);
+    }
 }

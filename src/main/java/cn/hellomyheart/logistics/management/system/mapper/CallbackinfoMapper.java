@@ -2,6 +2,8 @@ package cn.hellomyheart.logistics.management.system.mapper;
 
 import cn.hellomyheart.logistics.management.system.entity.Callbackinfo;
 
+import java.util.Map;
+
 public interface CallbackinfoMapper {
     /**
      * delete by primary key
@@ -44,4 +46,6 @@ public interface CallbackinfoMapper {
      * @return update count
      */
     int updateByPrimaryKey(Callbackinfo record);
+
+    Callbackinfo selectByDetails(Map map);
 }
