@@ -62,4 +62,17 @@ public class CargoReceiptController {
         return new ResponseResult<List>(CodeStatus.OK, CodeMessage.SUCCESS,result);
     }
 
+    @ApiOperation(value = "查询未被安排的货运单")
+    @RequestMapping(value = "/selectLeftCodes", method = RequestMethod.GET)
+    public ResponseResult selectLeftCodes() {
+        List<Cargoreceiptdetail> cargoreceiptdetails = cargoreceiptdetailService.selectPreCode();
+        List result =new ArrayList();
+        for (int i = 0; i < cargoreceiptdetails.size(); i++) {
+            result.add(cargoreceiptdetails.get(i).getGoodsRevertBillId());
+        }
+        return new ResponseResult<List>(CodeStatus.OK, CodeMessage.SUCCESS,result);
+
+    }
+
+
 }

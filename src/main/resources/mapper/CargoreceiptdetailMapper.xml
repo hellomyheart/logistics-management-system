@@ -146,12 +146,13 @@
         from cargoreceiptdetail
     </select>
     <select id="selectPreCode" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
+
+        select <include refid="Base_Column_List"/>
         from cargoreceiptdetail
-        where goodsRevertBillId not in (
-        select goodsRevertBillCode
-        from cargoreceipt
-        )
+        where goods_revert_bill_id
+            not in (
+                select goods_revert_bill_code
+                from cargoreceipt
+            )
     </select>
 </mapper>
