@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Employeewage;
-public interface EmployeewageService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Employeewage;
 
+public interface EmployeewageService extends BaseService<Employeewage> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Employeewage record);
-
-    int insertSelective(Employeewage record);
-
-    Employeewage selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Employeewage record);
-
-    int updateByPrimaryKey(Employeewage record);
 
 }

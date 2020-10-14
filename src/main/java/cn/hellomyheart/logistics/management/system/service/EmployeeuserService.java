@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Employeeuser;
-public interface EmployeeuserService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Employeeuser;
 
+public interface EmployeeuserService extends BaseService<Employeeuser> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Employeeuser record);
-
-    int insertSelective(Employeeuser record);
-
-    Employeeuser selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Employeeuser record);
-
-    int updateByPrimaryKey(Employeeuser record);
 
 }

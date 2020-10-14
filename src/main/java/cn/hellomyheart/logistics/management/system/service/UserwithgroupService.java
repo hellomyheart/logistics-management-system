@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Userwithgroup;
-public interface UserwithgroupService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Userwithgroup;
 
+public interface UserwithgroupService extends BaseService<Userwithgroup> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Userwithgroup record);
-
-    int insertSelective(Userwithgroup record);
-
-    Userwithgroup selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Userwithgroup record);
-
-    int updateByPrimaryKey(Userwithgroup record);
 
 }

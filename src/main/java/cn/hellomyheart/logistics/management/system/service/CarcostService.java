@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Carcost;
-public interface CarcostService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Carcost;
 
+public interface CarcostService extends BaseService<Carcost> {
 
-    int deleteByPrimaryKey(String driverCode);
-
-    int insert(Carcost record);
-
-    int insertSelective(Carcost record);
-
-    Carcost selectByPrimaryKey(String driverCode);
-
-    int updateByPrimaryKeySelective(Carcost record);
-
-    int updateByPrimaryKey(Carcost record);
 
 }

@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Financefee;
-public interface FinancefeeService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Financefee;
 
+public interface FinancefeeService extends BaseService<Financefee> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Financefee record);
-
-    int insertSelective(Financefee record);
-
-    Financefee selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Financefee record);
-
-    int updateByPrimaryKey(Financefee record);
 
 }

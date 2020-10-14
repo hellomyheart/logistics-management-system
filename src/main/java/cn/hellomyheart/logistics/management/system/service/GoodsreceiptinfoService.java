@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Goodsreceiptinfo;
-public interface GoodsreceiptinfoService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Goodsreceiptinfo;
 
+public interface GoodsreceiptinfoService extends BaseService<Goodsreceiptinfo> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Goodsreceiptinfo record);
-
-    int insertSelective(Goodsreceiptinfo record);
-
-    Goodsreceiptinfo selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Goodsreceiptinfo record);
-
-    int updateByPrimaryKey(Goodsreceiptinfo record);
 
 }

@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Incomemonthlytemp;
-public interface IncomemonthlytempService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Incomemonthlytemp;
 
+public interface IncomemonthlytempService extends BaseService<Incomemonthlytemp> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Incomemonthlytemp record);
-
-    int insertSelective(Incomemonthlytemp record);
-
-    Incomemonthlytemp selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Incomemonthlytemp record);
-
-    int updateByPrimaryKey(Incomemonthlytemp record);
 
 }

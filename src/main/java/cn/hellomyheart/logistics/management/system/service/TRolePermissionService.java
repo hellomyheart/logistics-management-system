@@ -1,13 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.TRolePermission;
-public interface TRolePermissionService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.TRolePermission;
 
+public interface TRolePermissionService extends BaseService<TRolePermission> {
 
-    int deleteByPrimaryKey(String roleId,String permissionId);
-
-    int insert(TRolePermission record);
-
-    int insertSelective(TRolePermission record);
 
 }

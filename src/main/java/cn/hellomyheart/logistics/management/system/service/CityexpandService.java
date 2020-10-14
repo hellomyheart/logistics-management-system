@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Cityexpand;
-public interface CityexpandService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Cityexpand;
 
+public interface CityexpandService extends BaseService<Cityexpand> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Cityexpand record);
-
-    int insertSelective(Cityexpand record);
-
-    Cityexpand selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Cityexpand record);
-
-    int updateByPrimaryKey(Cityexpand record);
 
 }

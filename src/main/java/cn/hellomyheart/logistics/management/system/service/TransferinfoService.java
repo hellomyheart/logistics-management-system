@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Transferinfo;
-public interface TransferinfoService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Transferinfo;
 
+public interface TransferinfoService extends BaseService<Transferinfo> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Transferinfo record);
-
-    int insertSelective(Transferinfo record);
-
-    Transferinfo selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Transferinfo record);
-
-    int updateByPrimaryKey(Transferinfo record);
 
 }

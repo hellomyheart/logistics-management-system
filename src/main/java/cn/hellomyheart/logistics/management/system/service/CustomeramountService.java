@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Customeramount;
-public interface CustomeramountService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Customeramount;
 
+public interface CustomeramountService extends BaseService<Customeramount> {
 
-    int deleteByPrimaryKey(String sendGoodsCustomer);
-
-    int insert(Customeramount record);
-
-    int insertSelective(Customeramount record);
-
-    Customeramount selectByPrimaryKey(String sendGoodsCustomer);
-
-    int updateByPrimaryKeySelective(Customeramount record);
-
-    int updateByPrimaryKey(Customeramount record);
 
 }

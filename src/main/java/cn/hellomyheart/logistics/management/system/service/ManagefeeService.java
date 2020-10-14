@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Managefee;
-public interface ManagefeeService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Managefee;
 
+public interface ManagefeeService extends BaseService<Managefee> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Managefee record);
-
-    int insertSelective(Managefee record);
-
-    Managefee selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Managefee record);
-
-    int updateByPrimaryKey(Managefee record);
 
 }

@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Extraclear;
-public interface ExtraclearService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Extraclear;
 
+public interface ExtraclearService extends BaseService<Extraclear> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Extraclear record);
-
-    int insertSelective(Extraclear record);
-
-    Extraclear selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Extraclear record);
-
-    int updateByPrimaryKey(Extraclear record);
 
 }

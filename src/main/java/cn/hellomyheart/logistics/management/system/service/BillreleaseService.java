@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Billrelease;
-public interface BillreleaseService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Billrelease;
 
+public interface BillreleaseService extends BaseService<Billrelease> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Billrelease record);
-
-    int insertSelective(Billrelease record);
-
-    Billrelease selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Billrelease record);
-
-    int updateByPrimaryKey(Billrelease record);
 
 }

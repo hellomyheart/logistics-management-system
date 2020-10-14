@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear;
-public interface ProxyfeeclearService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Proxyfeeclear;
 
+public interface ProxyfeeclearService extends BaseService<Proxyfeeclear> {
 
-    int deleteByPrimaryKey(String goodsBillCode);
-
-    int insert(Proxyfeeclear record);
-
-    int insertSelective(Proxyfeeclear record);
-
-    Proxyfeeclear selectByPrimaryKey(String goodsBillCode);
-
-    int updateByPrimaryKeySelective(Proxyfeeclear record);
-
-    int updateByPrimaryKey(Proxyfeeclear record);
 
 }

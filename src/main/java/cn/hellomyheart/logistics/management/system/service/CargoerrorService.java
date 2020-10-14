@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Cargoerror;
-public interface CargoerrorService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Cargoerror;
 
+public interface CargoerrorService extends BaseService<Cargoerror> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Cargoerror record);
-
-    int insertSelective(Cargoerror record);
-
-    Cargoerror selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Cargoerror record);
-
-    int updateByPrimaryKey(Cargoerror record);
 
 }

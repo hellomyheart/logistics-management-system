@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Sentlist;
-public interface SentlistService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Sentlist;
 
+public interface SentlistService extends BaseService<Sentlist> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Sentlist record);
-
-    int insertSelective(Sentlist record);
-
-    Sentlist selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Sentlist record);
-
-    int updateByPrimaryKey(Sentlist record);
 
 }

@@ -1,21 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Callbackinfo;
-public interface CallbackinfoService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Callbackinfo;
 
+public interface CallbackinfoService extends BaseService<Callbackinfo> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Callbackinfo record);
-
-    int insertSelective(Callbackinfo record);
-
-    Callbackinfo selectByPrimaryKey(Integer id);
-
-    Callbackinfo selectByDetails(String goodsBillId, String type);
-
-    int updateByPrimaryKeySelective(Callbackinfo record);
-
-    int updateByPrimaryKey(Callbackinfo record);
 
 }

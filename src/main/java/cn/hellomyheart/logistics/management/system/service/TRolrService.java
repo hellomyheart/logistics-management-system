@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.TRolr;
-public interface TRolrService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.TRolr;
 
+public interface TRolrService extends BaseService<TRolr> {
 
-    int deleteByPrimaryKey(String id);
-
-    int insert(TRolr record);
-
-    int insertSelective(TRolr record);
-
-    TRolr selectByPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(TRolr record);
-
-    int updateByPrimaryKey(TRolr record);
 
 }

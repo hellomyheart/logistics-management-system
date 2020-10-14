@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.TPermission;
-public interface TPermissionService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.TPermission;
 
+public interface TPermissionService extends BaseService<TPermission> {
 
-    int deleteByPrimaryKey(String id);
-
-    int insert(TPermission record);
-
-    int insertSelective(TPermission record);
-
-    TPermission selectByPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(TPermission record);
-
-    int updateByPrimaryKey(TPermission record);
 
 }

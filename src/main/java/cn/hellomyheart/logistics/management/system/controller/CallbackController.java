@@ -4,7 +4,7 @@ import cn.hellomyheart.logistics.management.system.commons.result.CodeMessage;
 import cn.hellomyheart.logistics.management.system.commons.result.CodeStatus;
 import cn.hellomyheart.logistics.management.system.commons.result.ResponseResult;
 import cn.hellomyheart.logistics.management.system.entity.Callbackinfo;
-import cn.hellomyheart.logistics.management.system.service.CallbackinfoService;
+import cn.hellomyheart.logistics.management.system.serviceold.CallbackinfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

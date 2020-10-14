@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Region;
-public interface RegionService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Region;
 
+public interface RegionService extends BaseService<Region> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Region record);
-
-    int insertSelective(Region record);
-
-    Region selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Region record);
-
-    int updateByPrimaryKey(Region record);
 
 }

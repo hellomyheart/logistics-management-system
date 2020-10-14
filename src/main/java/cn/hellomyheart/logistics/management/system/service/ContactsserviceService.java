@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Contactsservice;
-public interface ContactsserviceService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Contactsservice;
 
+public interface ContactsserviceService extends BaseService<Contactsservice> {
 
-    int deleteByPrimaryKey(String sendGoodsCustomer);
-
-    int insert(Contactsservice record);
-
-    int insertSelective(Contactsservice record);
-
-    Contactsservice selectByPrimaryKey(String sendGoodsCustomer);
-
-    int updateByPrimaryKeySelective(Contactsservice record);
-
-    int updateByPrimaryKey(Contactsservice record);
 
 }

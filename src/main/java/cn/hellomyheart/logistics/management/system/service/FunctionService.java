@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Function;
-public interface FunctionService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Function;
 
+public interface FunctionService extends BaseService<Function> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Function record);
-
-    int insertSelective(Function record);
-
-    Function selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Function record);
-
-    int updateByPrimaryKey(Function record);
 
 }

@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Customerbillclear;
-public interface CustomerbillclearService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Customerbillclear;
 
+public interface CustomerbillclearService extends BaseService<Customerbillclear> {
 
-    int deleteByPrimaryKey(String goodsBillCode);
-
-    int insert(Customerbillclear record);
-
-    int insertSelective(Customerbillclear record);
-
-    Customerbillclear selectByPrimaryKey(String goodsBillCode);
-
-    int updateByPrimaryKeySelective(Customerbillclear record);
-
-    int updateByPrimaryKey(Customerbillclear record);
 
 }

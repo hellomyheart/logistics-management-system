@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Goodsbill;
-public interface GoodsbillService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Goodsbill;
 
+public interface GoodsbillService extends BaseService<Goodsbill> {
 
-    int deleteByPrimaryKey(String goodsBillCode);
-
-    int insert(Goodsbill record);
-
-    int insertSelective(Goodsbill record);
-
-    Goodsbill selectByPrimaryKey(String goodsBillCode);
-
-    int updateByPrimaryKeySelective(Goodsbill record);
-
-    int updateByPrimaryKey(Goodsbill record);
 
 }

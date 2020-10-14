@@ -3,10 +3,9 @@ package cn.hellomyheart.logistics.management.system.controller;
 import cn.hellomyheart.logistics.management.system.commons.result.CodeMessage;
 import cn.hellomyheart.logistics.management.system.commons.result.CodeStatus;
 import cn.hellomyheart.logistics.management.system.commons.result.ResponseResult;
-import cn.hellomyheart.logistics.management.system.entity.User;
 import cn.hellomyheart.logistics.management.system.params.LoginParam;
 import cn.hellomyheart.logistics.management.system.params.UserParam;
-import cn.hellomyheart.logistics.management.system.service.UserService;
+import cn.hellomyheart.logistics.management.system.serviceold.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**

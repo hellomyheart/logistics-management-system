@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.TUserRole;
-public interface TUserRoleService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.TUserRole;
 
+public interface TUserRoleService extends BaseService<TUserRole> {
 
-    int deleteByPrimaryKey(String userId,String roleId);
-
-    int insert(TUserRole record);
-
-    int insertSelective(TUserRole record);
-
-    TUserRole selectByPrimaryKey(String userId,String roleId);
-
-    int updateByPrimaryKeySelective(TUserRole record);
-
-    int updateByPrimaryKey(TUserRole record);
 
 }

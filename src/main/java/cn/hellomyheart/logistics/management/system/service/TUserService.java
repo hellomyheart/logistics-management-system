@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.TUser;
-public interface TUserService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.TUser;
 
+public interface TUserService extends BaseService<TUser> {
 
-    int deleteByPrimaryKey(Long id);
-
-    int insert(TUser record);
-
-    int insertSelective(TUser record);
-
-    TUser selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TUser record);
-
-    int updateByPrimaryKey(TUser record);
 
 }

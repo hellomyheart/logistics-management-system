@@ -1,19 +1,9 @@
 package cn.hellomyheart.logistics.management.system.service;
 
-import cn.hellomyheart.logistics.management.system.entity.Functionwithgroup;
-public interface FunctionwithgroupService{
+import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
+import cn.hellomyheart.logistics.management.system.entity1.Functionwithgroup;
 
+public interface FunctionwithgroupService extends BaseService<Functionwithgroup> {
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Functionwithgroup record);
-
-    int insertSelective(Functionwithgroup record);
-
-    Functionwithgroup selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Functionwithgroup record);
-
-    int updateByPrimaryKey(Functionwithgroup record);
 
 }
