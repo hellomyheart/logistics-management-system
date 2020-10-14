@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.TRolePermission;
+import cn.hellomyheart.logistics.management.system.entityold.TRolePermission;
 public interface TRolePermissionService{
 
 

@@ -1,54 +1,96 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
 import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.Serializable;
+
 import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@ApiModel(value="cn-hellomyheart-logistics-management-system-entity-Callbackinfo")
+@ApiModel(value = "cn-hellomyheart-logistics-management-system-entity1-Callbackinfo")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName(value = "callbackinfo")
 public class Callbackinfo implements BaseEntity {
-    @ApiModelProperty(value="")
+    @TableId(value = "id", type = IdType.AUTO)
+    @ApiModelProperty(value = "")
     private Integer id;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "bill_id")
+    @ApiModelProperty(value = "")
     private String billId;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "bill_type")
+    @ApiModelProperty(value = "")
     private String billType;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "content")
+    @ApiModelProperty(value = "")
     private String content;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "dial_no")
+    @ApiModelProperty(value = "")
     private String dialNo;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "finally_dial_time")
+    @ApiModelProperty(value = "")
     private Date finallyDialTime;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "goods_bill_id")
+    @ApiModelProperty(value = "")
     private String goodsBillId;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "locked")
+    @ApiModelProperty(value = "")
     private Boolean locked;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "success")
+    @ApiModelProperty(value = "")
     private Boolean success;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "type")
+    @ApiModelProperty(value = "")
     private String type;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "write_time")
+    @ApiModelProperty(value = "")
     private Date writeTime;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "writer")
+    @ApiModelProperty(value = "")
     private String writer;
 
-    private static final long serialVersionUID = 3319235320864413636L;
+    private static final long serialVersionUID = 7710879639636067550L;
+
+    public static final String COL_ID = "id";
+
+    public static final String COL_BILL_ID = "bill_id";
+
+    public static final String COL_BILL_TYPE = "bill_type";
+
+    public static final String COL_CONTENT = "content";
+
+    public static final String COL_DIAL_NO = "dial_no";
+
+    public static final String COL_FINALLY_DIAL_TIME = "finally_dial_time";
+
+    public static final String COL_GOODS_BILL_ID = "goods_bill_id";
+
+    public static final String COL_LOCKED = "locked";
+
+    public static final String COL_SUCCESS = "success";
+
+    public static final String COL_TYPE = "type";
+
+    public static final String COL_WRITE_TIME = "write_time";
+
+    public static final String COL_WRITER = "writer";
 }

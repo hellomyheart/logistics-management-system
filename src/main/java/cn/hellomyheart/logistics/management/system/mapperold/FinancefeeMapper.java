@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Financefee;
+import cn.hellomyheart.logistics.management.system.entityold.Financefee;
 
 public interface FinancefeeMapper {
     /**

@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Employeeuser;
+import cn.hellomyheart.logistics.management.system.entityold.Employeeuser;
 import cn.hellomyheart.logistics.management.system.mapperold.EmployeeuserMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.EmployeeuserService;
-@Service
+//@Service
 public class EmployeeuserServiceImpl implements EmployeeuserService{
 
     @Resource

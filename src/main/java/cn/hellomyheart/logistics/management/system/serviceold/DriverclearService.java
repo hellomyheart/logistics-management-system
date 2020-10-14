@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Driverclear;
+import cn.hellomyheart.logistics.management.system.entityold.Driverclear;
 public interface DriverclearService{
 
 

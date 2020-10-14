@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Extraclear;
+import cn.hellomyheart.logistics.management.system.entityold.Extraclear;
 public interface ExtraclearService{
 
 

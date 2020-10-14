@@ -1,36 +1,60 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
 import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.Serializable;
+
 import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@ApiModel(value="cn-hellomyheart-logistics-management-system-entity-Employee")
+@ApiModel(value = "cn-hellomyheart-logistics-management-system-entity1-Employee")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName(value = "employee")
 public class Employee implements BaseEntity {
-    @ApiModelProperty(value="")
+    @TableId(value = "employee_code", type = IdType.INPUT)
+    @ApiModelProperty(value = "")
     private String employeeCode;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "birthday")
+    @ApiModelProperty(value = "")
     private Date birthday;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "department")
+    @ApiModelProperty(value = "")
     private String department;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "employee_name")
+    @ApiModelProperty(value = "")
     private String employeeName;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "gender")
+    @ApiModelProperty(value = "")
     private String gender;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "position")
+    @ApiModelProperty(value = "")
     private String position;
 
-    private static final long serialVersionUID = -8519049758229835522L;
+    private static final long serialVersionUID = -4777006249083394459L;
+
+    public static final String COL_EMPLOYEE_CODE = "employee_code";
+
+    public static final String COL_BIRTHDAY = "birthday";
+
+    public static final String COL_DEPARTMENT = "department";
+
+    public static final String COL_EMPLOYEE_NAME = "employee_name";
+
+    public static final String COL_GENDER = "gender";
+
+    public static final String COL_POSITION = "position";
 }

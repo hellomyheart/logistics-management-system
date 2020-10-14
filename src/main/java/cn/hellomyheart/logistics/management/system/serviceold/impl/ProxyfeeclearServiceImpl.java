@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear;
+import cn.hellomyheart.logistics.management.system.entityold.Proxyfeeclear;
 import cn.hellomyheart.logistics.management.system.mapperold.ProxyfeeclearMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.ProxyfeeclearService;
-@Service
+//@Service
 public class ProxyfeeclearServiceImpl implements ProxyfeeclearService{
 
     @Resource

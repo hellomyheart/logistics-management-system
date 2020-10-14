@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.GoodsbillMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Goodsbill">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Goodsbill">
     <!--@mbg.generated-->
     <!--@Table goodsbill-->
     <id column="goods_bill_code" jdbcType="VARCHAR" property="goodsBillCode" />
@@ -61,7 +61,7 @@
     delete from goodsbill
     where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Goodsbill">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Goodsbill">
     <!--@mbg.generated-->
     insert into goodsbill (goods_bill_code, accept_procedure_rate,
       accept_station, carriage, carry_goods_fee,
@@ -92,7 +92,7 @@
       #{validity,jdbcType=BIT}, #{writeBillPerson,jdbcType=VARCHAR}, #{writeDate,jdbcType=DATE}
       )
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Goodsbill">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Goodsbill">
     <!--@mbg.generated-->
     insert into goodsbill
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -304,7 +304,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Goodsbill">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Goodsbill">
     <!--@mbg.generated-->
     update goodsbill
     <set>
@@ -410,7 +410,7 @@
     </set>
     where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Goodsbill">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Goodsbill">
     <!--@mbg.generated-->
     update goodsbill
     set accept_procedure_rate = #{acceptProcedureRate,jdbcType=VARCHAR},

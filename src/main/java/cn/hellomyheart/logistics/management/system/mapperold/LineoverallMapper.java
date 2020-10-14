@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Lineoverall;
+import cn.hellomyheart.logistics.management.system.entityold.Lineoverall;
 
 public interface LineoverallMapper {
     /**

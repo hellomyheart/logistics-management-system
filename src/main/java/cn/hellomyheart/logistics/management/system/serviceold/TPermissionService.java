@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.TPermission;
+import cn.hellomyheart.logistics.management.system.entityold.TPermission;
 public interface TPermissionService{
 
 

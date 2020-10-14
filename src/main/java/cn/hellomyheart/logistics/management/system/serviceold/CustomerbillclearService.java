@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Customerbillclear;
+import cn.hellomyheart.logistics.management.system.entityold.Customerbillclear;
 public interface CustomerbillclearService{
 
 

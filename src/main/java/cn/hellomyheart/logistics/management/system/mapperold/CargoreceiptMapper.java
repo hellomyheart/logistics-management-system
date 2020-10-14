@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Cargoreceipt;
+import cn.hellomyheart.logistics.management.system.entityold.Cargoreceipt;
 
 import java.util.List;
 

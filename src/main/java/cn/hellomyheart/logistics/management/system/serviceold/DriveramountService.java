@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Driveramount;
+import cn.hellomyheart.logistics.management.system.entityold.Driveramount;
 public interface DriveramountService{
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.ContactsserviceMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Contactsservice">
     <!--@mbg.generated-->
     <!--@Table contactsservice-->
     <id column="send_goods_customer" jdbcType="VARCHAR" property="sendGoodsCustomer" />
@@ -33,7 +33,7 @@
     delete from contactsservice
     where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Contactsservice">
     <!--@mbg.generated-->
     insert into contactsservice (send_goods_customer, balance, bill_money,
       carriage, goods_bill_code, insurance,
@@ -44,7 +44,7 @@
       #{moneyReceivable,jdbcType=DOUBLE}, #{receiveGoodsAddr,jdbcType=VARCHAR}, #{receivedMoney,jdbcType=DOUBLE},
       #{sendGoodsAddr,jdbcType=VARCHAR}, #{sendGoodsDate,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Contactsservice">
     <!--@mbg.generated-->
     insert into contactsservice
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -118,7 +118,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Contactsservice">
     <!--@mbg.generated-->
     update contactsservice
     <set>
@@ -155,7 +155,7 @@
     </set>
     where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Contactsservice">
     <!--@mbg.generated-->
     update contactsservice
     set balance = #{balance,jdbcType=DOUBLE},

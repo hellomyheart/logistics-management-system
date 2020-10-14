@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.TUser;
+import cn.hellomyheart.logistics.management.system.entityold.TUser;
 public interface TUserService{
 
 

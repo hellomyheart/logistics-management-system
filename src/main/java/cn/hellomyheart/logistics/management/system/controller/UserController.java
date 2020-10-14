@@ -5,7 +5,6 @@ import cn.hellomyheart.logistics.management.system.commons.result.CodeStatus;
 import cn.hellomyheart.logistics.management.system.commons.result.ResponseResult;
 import cn.hellomyheart.logistics.management.system.params.LoginParam;
 import cn.hellomyheart.logistics.management.system.params.UserParam;
-import cn.hellomyheart.logistics.management.system.serviceold.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,27 +27,21 @@ import java.util.Set;
  * @className: UserController
  * @package: cn.hellomyheart.logistics.management.system.controller
  * @author: Stephen Shen
- * @date: 2020/10/5 上午11:10
+ * @date: 2020/10/14 下午4:43
  */
-
 @RestController
 @Api(value = "用户管理")
 @RequestMapping("/user")
 public class UserController {
 
     @Autowired
-    private UserService userService;
-
-    @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-
 
     @ApiOperation(value = "登录", notes = "登录，使用Spring-security进行授权验证")
     @PostMapping("/login-success")
     public ResponseResult login(LoginParam loginParam) {
         return new ResponseResult(CodeStatus.OK, CodeMessage.LOGIN_SUCCESS, loginParam);
     }
-
 
     @ApiOperation(value = "获取登录信息", notes = "获取Spring-security的")
     @GetMapping("/info")
@@ -89,5 +82,6 @@ public class UserController {
         }
         return userParam;
     }
+
 
 }

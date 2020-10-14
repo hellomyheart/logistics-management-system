@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.LineoverallMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Lineoverall">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Lineoverall">
     <!--@mbg.generated-->
     <!--@Table lineoverall-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -27,7 +27,7 @@
     delete from lineoverall
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Lineoverall" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Lineoverall" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into lineoverall (all_carriage_total, deal_goods_station,
       insurance_total, load_station, times
@@ -36,7 +36,7 @@
       #{insuranceTotal,jdbcType=DOUBLE}, #{loadStation,jdbcType=VARCHAR}, #{times,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Lineoverall" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Lineoverall" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into lineoverall
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -74,7 +74,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Lineoverall">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Lineoverall">
     <!--@mbg.generated-->
     update lineoverall
     <set>
@@ -96,7 +96,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Lineoverall">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Lineoverall">
     <!--@mbg.generated-->
     update lineoverall
     set all_carriage_total = #{allCarriageTotal,jdbcType=DOUBLE},

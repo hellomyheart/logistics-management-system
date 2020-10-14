@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.User;
+import cn.hellomyheart.logistics.management.system.entityold.User;
 
 public interface UserMapper {
     /**

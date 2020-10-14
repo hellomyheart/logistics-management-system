@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Driverinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Driverinfo;
 import cn.hellomyheart.logistics.management.system.mapperold.DriverinfoMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.DriverinfoService;
-@Service
+//@Service
 public class DriverinfoServiceImpl implements DriverinfoService{
 
     @Resource

@@ -7,6 +7,7 @@ import cn.hellomyheart.logistics.management.system.commons.result.ResponseResult
 import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.List;
  * @author: Stephen Shen
  * @date: 2020/10/14 下午3:04
  */
+@Component
 public class ControllerUtils<S extends BaseService<E>, E extends BaseEntity> {
 
     @Autowired

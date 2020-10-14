@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.TransfercominfoMapper;
-import cn.hellomyheart.logistics.management.system.entity.Transfercominfo;
+import cn.hellomyheart.logistics.management.system.entityold.Transfercominfo;
 import cn.hellomyheart.logistics.management.system.serviceold.TransfercominfoService;
-@Service
+//@Service
 public class TransfercominfoServiceImpl implements TransfercominfoService{
 
     @Resource

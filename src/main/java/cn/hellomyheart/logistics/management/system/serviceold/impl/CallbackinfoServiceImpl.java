@@ -2,14 +2,14 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Callbackinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Callbackinfo;
 import cn.hellomyheart.logistics.management.system.mapperold.CallbackinfoMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.CallbackinfoService;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Service
+//@Service
 public class CallbackinfoServiceImpl implements CallbackinfoService{
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.TransfercominfoMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Transfercominfo">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Transfercominfo">
     <!--@mbg.generated-->
     <!--@Table transfercominfo-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -26,14 +26,14 @@
     delete from transfercominfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Transfercominfo" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Transfercominfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into transfercominfo (city, company_name, detail_address,
       link_phone)
     values (#{city,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{detailAddress,jdbcType=VARCHAR},
       #{linkPhone,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Transfercominfo" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Transfercominfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into transfercominfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -65,7 +65,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Transfercominfo">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Transfercominfo">
     <!--@mbg.generated-->
     update transfercominfo
     <set>
@@ -84,7 +84,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Transfercominfo">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Transfercominfo">
     <!--@mbg.generated-->
     update transfercominfo
     set city = #{city,jdbcType=VARCHAR},

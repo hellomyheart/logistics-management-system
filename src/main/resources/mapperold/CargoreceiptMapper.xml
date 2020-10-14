@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CargoreceiptMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Cargoreceipt">
     <!--@mbg.generated-->
     <!--@Table cargoreceipt-->
     <id column="goods_revert_bill_code" jdbcType="VARCHAR" property="goodsRevertBillCode" />
@@ -47,7 +47,7 @@
     delete from cargoreceipt
     where goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Cargoreceipt">
     <!--@mbg.generated-->
     insert into cargoreceipt (goods_revert_bill_code, accept_station,
       all_carriage, arrive_time, back_bill_state,
@@ -66,7 +66,7 @@
       #{receiveGoodsLinkman,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{signTime,jdbcType=DATE},
       #{startAdvance,jdbcType=DOUBLE}, #{startCarryTime,jdbcType=DATE})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Cargoreceipt">
     <!--@mbg.generated-->
     insert into cargoreceipt
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -206,7 +206,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Cargoreceipt">
     <!--@mbg.generated-->
     update cargoreceipt
     <set>
@@ -276,7 +276,7 @@
     </set>
     where goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoreceipt">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Cargoreceipt">
     <!--@mbg.generated-->
     update cargoreceipt
     set accept_station = #{acceptStation,jdbcType=VARCHAR},

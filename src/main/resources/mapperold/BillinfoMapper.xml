@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.BillinfoMapper">
-    <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Billinfo">
+    <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Billinfo">
         <!--@mbg.generated-->
         <!--@Table billinfo-->
         <id column="id" jdbcType="INTEGER" property="id"/>
@@ -28,7 +28,7 @@
         where id = #{id,jdbcType=INTEGER}
     </delete>
     <insert id="insert" keyColumn="id" keyProperty="id"
-            parameterType="cn.hellomyheart.logistics.management.system.entity.Billinfo" useGeneratedKeys="true">
+            parameterType="cn.hellomyheart.logistics.management.system.entityold.Billinfo" useGeneratedKeys="true">
         <!--@mbg.generated-->
         insert into billinfo (accept_station, bill_code, bill_state,
         bill_type, write_date)
@@ -36,7 +36,7 @@
         #{billType,jdbcType=VARCHAR}, #{writeDate,jdbcType=TIMESTAMP})
     </insert>
     <insert id="insertSelective" keyColumn="id" keyProperty="id"
-            parameterType="cn.hellomyheart.logistics.management.system.entity.Billinfo" useGeneratedKeys="true">
+            parameterType="cn.hellomyheart.logistics.management.system.entityold.Billinfo" useGeneratedKeys="true">
         <!--@mbg.generated-->
         insert into billinfo
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -75,7 +75,7 @@
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective"
-            parameterType="cn.hellomyheart.logistics.management.system.entity.Billinfo">
+            parameterType="cn.hellomyheart.logistics.management.system.entityold.Billinfo">
         <!--@mbg.generated-->
         update billinfo
         <set>
@@ -97,7 +97,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Billinfo">
+    <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Billinfo">
         <!--@mbg.generated-->
         update billinfo
         set accept_station = #{acceptStation,jdbcType=VARCHAR},

@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Compensationinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Compensationinfo;
 
 public interface CompensationinfoMapper {
     /**

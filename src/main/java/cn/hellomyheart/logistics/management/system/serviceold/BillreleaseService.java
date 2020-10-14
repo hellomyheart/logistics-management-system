@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Billrelease;
+import cn.hellomyheart.logistics.management.system.entityold.Billrelease;
 public interface BillreleaseService{
 
 

@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Goodsbill;
+import cn.hellomyheart.logistics.management.system.entityold.Goodsbill;
 
 public interface GoodsbillMapper {
     /**

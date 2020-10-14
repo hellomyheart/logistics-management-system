@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Cargoerror;
+import cn.hellomyheart.logistics.management.system.entityold.Cargoerror;
 public interface CargoerrorService{
 
 

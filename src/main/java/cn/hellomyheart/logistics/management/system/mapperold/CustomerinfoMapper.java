@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Customerinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Customerinfo;
 
 public interface CustomerinfoMapper {
     /**

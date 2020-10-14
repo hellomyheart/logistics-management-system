@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear;
+import cn.hellomyheart.logistics.management.system.entityold.Proxyfeeclear;
 public interface ProxyfeeclearService{
 
 

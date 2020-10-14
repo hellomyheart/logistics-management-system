@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Goodsbillevent;
+import cn.hellomyheart.logistics.management.system.entityold.Goodsbillevent;
 import cn.hellomyheart.logistics.management.system.mapperold.GoodsbilleventMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.GoodsbilleventService;
-@Service
+//@Service
 public class GoodsbilleventServiceImpl implements GoodsbilleventService{
 
     @Resource

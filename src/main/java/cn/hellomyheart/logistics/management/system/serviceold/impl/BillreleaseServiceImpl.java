@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.BillreleaseMapper;
-import cn.hellomyheart.logistics.management.system.entity.Billrelease;
+import cn.hellomyheart.logistics.management.system.entityold.Billrelease;
 import cn.hellomyheart.logistics.management.system.serviceold.BillreleaseService;
-@Service
+//@Service
 public class BillreleaseServiceImpl implements BillreleaseService{
 
     @Resource

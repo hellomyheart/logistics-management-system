@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Cityexpand;
+import cn.hellomyheart.logistics.management.system.entityold.Cityexpand;
 
 public interface CityexpandMapper {
     /**

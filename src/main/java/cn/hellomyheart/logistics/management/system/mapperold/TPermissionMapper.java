@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.TPermission;
+import cn.hellomyheart.logistics.management.system.entityold.TPermission;
 
 import java.util.List;
 

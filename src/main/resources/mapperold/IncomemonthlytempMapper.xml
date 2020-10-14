@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.IncomemonthlytempMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Incomemonthlytemp">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Incomemonthlytemp">
     <!--@mbg.generated-->
     <!--@Table incomemonthlytemp-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -43,7 +43,7 @@
     delete from incomemonthlytemp
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Incomemonthlytemp" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Incomemonthlytemp" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into incomemonthlytemp (biz_fee, biz_income, car_carriage,
       carriage_money, convey_wage, finance_fee,
@@ -60,7 +60,7 @@
       #{profit,jdbcType=DOUBLE}, #{unbizIncome,jdbcType=DOUBLE}, #{wage,jdbcType=DOUBLE},
       #{waterElecFee,jdbcType=DOUBLE})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Incomemonthlytemp" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Incomemonthlytemp" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into incomemonthlytemp
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -182,7 +182,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Incomemonthlytemp">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Incomemonthlytemp">
     <!--@mbg.generated-->
     update incomemonthlytemp
     <set>
@@ -246,7 +246,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Incomemonthlytemp">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Incomemonthlytemp">
     <!--@mbg.generated-->
     update incomemonthlytemp
     set biz_fee = #{bizFee,jdbcType=DOUBLE},

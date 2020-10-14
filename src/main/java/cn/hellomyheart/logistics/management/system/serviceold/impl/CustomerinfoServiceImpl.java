@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.CustomerinfoMapper;
-import cn.hellomyheart.logistics.management.system.entity.Customerinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Customerinfo;
 import cn.hellomyheart.logistics.management.system.serviceold.CustomerinfoService;
-@Service
+//@Service
 public class CustomerinfoServiceImpl implements CustomerinfoService{
 
     @Resource

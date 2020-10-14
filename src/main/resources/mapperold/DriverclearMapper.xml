@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.DriverclearMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Driverclear">
     <!--@mbg.generated-->
     <!--@Table driverclear-->
     <id column="back_bill_code" jdbcType="VARCHAR" property="backBillCode" />
@@ -36,7 +36,7 @@
     delete from driverclear
     where back_bill_code = #{backBillCode,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Driverclear">
     <!--@mbg.generated-->
     insert into driverclear (back_bill_code, add_carriage, balance,
       balance_time, balance_type, bind_insurance,
@@ -49,7 +49,7 @@
       #{insurance,jdbcType=DOUBLE}, #{needPayment,jdbcType=DOUBLE}, #{payedMoney,jdbcType=DOUBLE},
       #{prepayMoney,jdbcType=DOUBLE})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Driverclear">
     <!--@mbg.generated-->
     insert into driverclear
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -135,7 +135,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Driverclear">
     <!--@mbg.generated-->
     update driverclear
     <set>
@@ -178,7 +178,7 @@
     </set>
     where back_bill_code = #{backBillCode,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverclear">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Driverclear">
     <!--@mbg.generated-->
     update driverclear
     set add_carriage = #{addCarriage,jdbcType=DOUBLE},

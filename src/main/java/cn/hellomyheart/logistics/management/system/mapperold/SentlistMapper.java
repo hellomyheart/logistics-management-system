@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Sentlist;
+import cn.hellomyheart.logistics.management.system.entityold.Sentlist;
 
 public interface SentlistMapper {
     /**

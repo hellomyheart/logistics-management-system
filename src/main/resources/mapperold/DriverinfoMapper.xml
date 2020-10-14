@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.DriverinfoMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Driverinfo">
     <!--@mbg.generated-->
     <!--@Table driverinfo-->
     <id column="id" jdbcType="VARCHAR" property="id" />
@@ -49,7 +49,7 @@
     delete from driverinfo
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Driverinfo">
     <!--@mbg.generated-->
     insert into driverinfo (id, address, allow_carry_volume,
       allow_carry_weight, birthday, biz_licence,
@@ -70,7 +70,7 @@
       #{phone,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{runLicence,jdbcType=VARCHAR},
       #{state,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Driverinfo">
     <!--@mbg.generated-->
     insert into driverinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -228,7 +228,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Driverinfo">
     <!--@mbg.generated-->
     update driverinfo
     <set>
@@ -307,7 +307,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Driverinfo">
     <!--@mbg.generated-->
     update driverinfo
     set address = #{address,jdbcType=VARCHAR},

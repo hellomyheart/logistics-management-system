@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Routeinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Routeinfo;
 public interface RouteinfoService{
 
 

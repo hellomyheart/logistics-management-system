@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.TUserMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.TUser">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.TUser">
     <!--@mbg.generated-->
     <!--@Table t_user-->
     <id column="id" jdbcType="BIGINT" property="id" />
@@ -26,14 +26,14 @@
     delete from t_user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.TUser">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.TUser">
     <!--@mbg.generated-->
     insert into t_user (id, username, `password`,
       fullname, mobile)
     values (#{id,jdbcType=BIGINT}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
       #{fullname,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.TUser">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.TUser">
     <!--@mbg.generated-->
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -71,7 +71,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.TUser">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.TUser">
     <!--@mbg.generated-->
     update t_user
     <set>
@@ -90,7 +90,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.TUser">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.TUser">
     <!--@mbg.generated-->
     update t_user
     set username = #{username,jdbcType=VARCHAR},

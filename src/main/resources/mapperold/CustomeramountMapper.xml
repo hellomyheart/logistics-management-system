@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CustomeramountMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Customeramount">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Customeramount">
     <!--@mbg.generated-->
     <!--@Table customeramount-->
     <id column="send_goods_customer" jdbcType="VARCHAR" property="sendGoodsCustomer" />
@@ -25,14 +25,14 @@
     delete from customeramount
     where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Customeramount">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customeramount">
     <!--@mbg.generated-->
     insert into customeramount (send_goods_customer, carriage_total,
       insurance_total, piece_amount_total)
     values (#{sendGoodsCustomer,jdbcType=VARCHAR}, #{carriageTotal,jdbcType=DOUBLE},
       #{insuranceTotal,jdbcType=DOUBLE}, #{pieceAmountTotal,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customeramount">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customeramount">
     <!--@mbg.generated-->
     insert into customeramount
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -64,7 +64,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customeramount">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customeramount">
     <!--@mbg.generated-->
     update customeramount
     <set>
@@ -80,7 +80,7 @@
     </set>
     where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Customeramount">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customeramount">
     <!--@mbg.generated-->
     update customeramount
     set carriage_total = #{carriageTotal,jdbcType=DOUBLE},

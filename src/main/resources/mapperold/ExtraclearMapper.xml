@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.ExtraclearMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Extraclear">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Extraclear">
     <!--@mbg.generated-->
     <!--@Table extraclear-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -27,14 +27,14 @@
     delete from extraclear
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraclear" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Extraclear" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into extraclear (balance_date, balance_money, balance_type,
       remark, subject_name)
     values (#{balanceDate,jdbcType=DATE}, #{balanceMoney,jdbcType=DOUBLE}, #{balanceType,jdbcType=VARCHAR},
       #{remark,jdbcType=VARCHAR}, #{subjectName,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraclear" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Extraclear" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into extraclear
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -72,7 +72,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraclear">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Extraclear">
     <!--@mbg.generated-->
     update extraclear
     <set>
@@ -94,7 +94,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraclear">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Extraclear">
     <!--@mbg.generated-->
     update extraclear
     set balance_date = #{balanceDate,jdbcType=DATE},

@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Userwithgroup;
+import cn.hellomyheart.logistics.management.system.entityold.Userwithgroup;
 public interface UserwithgroupService{
 
 

@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Functionwithgroup;
+import cn.hellomyheart.logistics.management.system.entityold.Functionwithgroup;
 public interface FunctionwithgroupService{
 
 

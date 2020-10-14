@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.LineoverallMapper;
-import cn.hellomyheart.logistics.management.system.entity.Lineoverall;
+import cn.hellomyheart.logistics.management.system.entityold.Lineoverall;
 import cn.hellomyheart.logistics.management.system.serviceold.LineoverallService;
-@Service
+//@Service
 public class LineoverallServiceImpl implements LineoverallService{
 
     @Resource

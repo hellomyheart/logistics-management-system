@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Incomemonthlytemp;
+import cn.hellomyheart.logistics.management.system.entityold.Incomemonthlytemp;
 import cn.hellomyheart.logistics.management.system.mapperold.IncomemonthlytempMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.IncomemonthlytempService;
-@Service
+//@Service
 public class IncomemonthlytempServiceImpl implements IncomemonthlytempService{
 
     @Resource

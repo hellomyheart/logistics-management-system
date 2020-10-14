@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Cargoreceiptdetail;
+import cn.hellomyheart.logistics.management.system.entityold.Cargoreceiptdetail;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.RouteinfoMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Routeinfo">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Routeinfo">
     <!--@mbg.generated-->
     <!--@Table routeinfo-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -27,14 +27,14 @@
     delete from routeinfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Routeinfo" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Routeinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into routeinfo (distance, end_station, fetch_time,
       pass_station, start_station)
     values (#{distance,jdbcType=DOUBLE}, #{endStation,jdbcType=INTEGER}, #{fetchTime,jdbcType=DOUBLE},
       #{passStation,jdbcType=VARCHAR}, #{startStation,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Routeinfo" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Routeinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into routeinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -72,7 +72,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Routeinfo">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Routeinfo">
     <!--@mbg.generated-->
     update routeinfo
     <set>
@@ -94,7 +94,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Routeinfo">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Routeinfo">
     <!--@mbg.generated-->
     update routeinfo
     set distance = #{distance,jdbcType=DOUBLE},

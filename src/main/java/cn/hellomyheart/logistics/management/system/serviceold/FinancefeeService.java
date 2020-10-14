@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Financefee;
+import cn.hellomyheart.logistics.management.system.entityold.Financefee;
 public interface FinancefeeService{
 
 

@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.TPermission;
+import cn.hellomyheart.logistics.management.system.entityold.TPermission;
 import cn.hellomyheart.logistics.management.system.mapperold.TPermissionMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.TPermissionService;
-@Service
+//@Service
 public class TPermissionServiceImpl implements TPermissionService{
 
     @Resource

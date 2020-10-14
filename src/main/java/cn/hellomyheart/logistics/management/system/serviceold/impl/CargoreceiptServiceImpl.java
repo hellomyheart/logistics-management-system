@@ -3,10 +3,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.CargoreceiptMapper;
-import cn.hellomyheart.logistics.management.system.entity.Cargoreceipt;
+import cn.hellomyheart.logistics.management.system.entityold.Cargoreceipt;
 import cn.hellomyheart.logistics.management.system.serviceold.CargoreceiptService;
 
-@Service
+//@Service
 public class CargoreceiptServiceImpl implements CargoreceiptService{
 
     @Resource

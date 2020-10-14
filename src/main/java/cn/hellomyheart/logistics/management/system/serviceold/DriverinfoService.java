@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Driverinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Driverinfo;
 public interface DriverinfoService{
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CustomerinfoMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Customerinfo">
     <!--@mbg.generated-->
     <!--@Table customerinfo-->
     <id column="customer_code" jdbcType="VARCHAR" property="customerCode" />
@@ -34,7 +34,7 @@
     delete from customerinfo
     where customer_code = #{customerCode,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerinfo">
     <!--@mbg.generated-->
     insert into customerinfo (customer_code, address, customer,
       customer_type, email, enterprise_property,
@@ -47,7 +47,7 @@
       #{linkmanMobile,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{postCode,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerinfo">
     <!--@mbg.generated-->
     insert into customerinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -127,7 +127,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerinfo">
     <!--@mbg.generated-->
     update customerinfo
     <set>
@@ -167,7 +167,7 @@
     </set>
     where customer_code = #{customerCode,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerinfo">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerinfo">
     <!--@mbg.generated-->
     update customerinfo
     set address = #{address,jdbcType=VARCHAR},

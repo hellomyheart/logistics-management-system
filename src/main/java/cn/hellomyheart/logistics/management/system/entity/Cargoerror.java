@@ -1,44 +1,76 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
 import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@ApiModel(value="cn-hellomyheart-logistics-management-system-entity-Cargoerror")
+@ApiModel(value = "cn-hellomyheart-logistics-management-system-entity1-Cargoerror")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName(value = "cargoerror")
 public class Cargoerror implements BaseEntity {
-    @ApiModelProperty(value="")
+    @TableId(value = "id", type = IdType.AUTO)
+    @ApiModelProperty(value = "")
     private Integer id;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "customer")
+    @ApiModelProperty(value = "")
     private String customer;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "goods_bill_code")
+    @ApiModelProperty(value = "")
     private String goodsBillCode;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "goods_name")
+    @ApiModelProperty(value = "")
     private String goodsName;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "goods_revert_bill_code")
+    @ApiModelProperty(value = "")
     private String goodsRevertBillCode;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "goods_value")
+    @ApiModelProperty(value = "")
     private Double goodsValue;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "mistake_type")
+    @ApiModelProperty(value = "")
     private String mistakeType;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "piece_amount")
+    @ApiModelProperty(value = "")
     private Integer pieceAmount;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "size")
+    @ApiModelProperty(value = "")
     private String size;
 
-    private static final long serialVersionUID = 5150061137940762115L;
+    private static final long serialVersionUID = 3973371126966786619L;
+
+    public static final String COL_ID = "id";
+
+    public static final String COL_CUSTOMER = "customer";
+
+    public static final String COL_GOODS_BILL_CODE = "goods_bill_code";
+
+    public static final String COL_GOODS_NAME = "goods_name";
+
+    public static final String COL_GOODS_REVERT_BILL_CODE = "goods_revert_bill_code";
+
+    public static final String COL_GOODS_VALUE = "goods_value";
+
+    public static final String COL_MISTAKE_TYPE = "mistake_type";
+
+    public static final String COL_PIECE_AMOUNT = "piece_amount";
+
+    public static final String COL_SIZE = "size";
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CompensationinfoMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Compensationinfo">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Compensationinfo">
     <!--@mbg.generated-->
     <!--@Table compensationinfo-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -31,7 +31,7 @@
     delete from compensationinfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Compensationinfo" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Compensationinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into compensationinfo (amends, amends_time, bad_destroy_goods,
       customer, receive_station_id, receive_station_name,
@@ -40,7 +40,7 @@
       #{customer,jdbcType=VARCHAR}, #{receiveStationId,jdbcType=INTEGER}, #{receiveStationName,jdbcType=VARCHAR},
       #{remark,jdbcType=VARCHAR}, #{writeDate,jdbcType=DATE})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Compensationinfo" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Compensationinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into compensationinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -96,7 +96,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Compensationinfo">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Compensationinfo">
     <!--@mbg.generated-->
     update compensationinfo
     <set>
@@ -127,7 +127,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Compensationinfo">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Compensationinfo">
     <!--@mbg.generated-->
     update compensationinfo
     set amends = #{amends,jdbcType=DOUBLE},

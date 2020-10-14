@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Sentlist;
+import cn.hellomyheart.logistics.management.system.entityold.Sentlist;
 import cn.hellomyheart.logistics.management.system.mapperold.SentlistMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.SentlistService;
-@Service
+//@Service
 public class SentlistServiceImpl implements SentlistService{
 
     @Resource

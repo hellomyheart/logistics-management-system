@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Callbackinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Callbackinfo;
 public interface CallbackinfoService{
 
 

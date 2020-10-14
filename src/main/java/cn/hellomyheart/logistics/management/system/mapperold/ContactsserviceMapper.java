@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Contactsservice;
+import cn.hellomyheart.logistics.management.system.entityold.Contactsservice;
 
 public interface ContactsserviceMapper {
     /**

@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.TRolePermissionMapper;
-import cn.hellomyheart.logistics.management.system.entity.TRolePermission;
+import cn.hellomyheart.logistics.management.system.entityold.TRolePermission;
 import cn.hellomyheart.logistics.management.system.serviceold.TRolePermissionService;
-@Service
+//@Service
 public class TRolePermissionServiceImpl implements TRolePermissionService{
 
     @Resource

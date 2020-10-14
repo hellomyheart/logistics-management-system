@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.ExtraclearMapper;
-import cn.hellomyheart.logistics.management.system.entity.Extraclear;
+import cn.hellomyheart.logistics.management.system.entityold.Extraclear;
 import cn.hellomyheart.logistics.management.system.serviceold.ExtraclearService;
-@Service
+//@Service
 public class ExtraclearServiceImpl implements ExtraclearService{
 
     @Resource

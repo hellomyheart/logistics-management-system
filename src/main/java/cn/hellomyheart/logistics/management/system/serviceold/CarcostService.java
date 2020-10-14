@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Carcost;
+import cn.hellomyheart.logistics.management.system.entityold.Carcost;
 public interface CarcostService{
 
 

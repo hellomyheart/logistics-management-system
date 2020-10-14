@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.FunctionMapper;
-import cn.hellomyheart.logistics.management.system.entity.Function;
+import cn.hellomyheart.logistics.management.system.entityold.Function;
 import cn.hellomyheart.logistics.management.system.serviceold.FunctionService;
-@Service
+//@Service
 public class FunctionServiceImpl implements FunctionService{
 
     @Resource

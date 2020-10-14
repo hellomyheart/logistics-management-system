@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.ExtraincomeMapper;
-import cn.hellomyheart.logistics.management.system.entity.Extraincome;
+import cn.hellomyheart.logistics.management.system.entityold.Extraincome;
 import cn.hellomyheart.logistics.management.system.serviceold.ExtraincomeService;
-@Service
+//@Service
 public class ExtraincomeServiceImpl implements ExtraincomeService{
 
     @Resource

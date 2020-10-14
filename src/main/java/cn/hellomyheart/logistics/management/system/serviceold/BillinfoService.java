@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Billinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Billinfo;
 import com.github.pagehelper.PageInfo;
 
 public interface BillinfoService{

@@ -1,26 +1,40 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
 import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@ApiModel(value="cn-hellomyheart-logistics-management-system-entity-Functionwithgroup")
+@ApiModel(value = "cn-hellomyheart-logistics-management-system-entity1-Functionwithgroup")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName(value = "functionwithgroup")
 public class Functionwithgroup implements BaseEntity {
-    @ApiModelProperty(value="")
+    @TableId(value = "id", type = IdType.AUTO)
+    @ApiModelProperty(value = "")
     private Integer id;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "function_id")
+    @ApiModelProperty(value = "")
     private Integer functionId;
 
-    @ApiModelProperty(value="")
+    @TableField(value = "group_id")
+    @ApiModelProperty(value = "")
     private Integer groupId;
 
-    private static final long serialVersionUID = -9163435359671002086L;
+    private static final long serialVersionUID = 7114768327309206478L;
+
+    public static final String COL_ID = "id";
+
+    public static final String COL_FUNCTION_ID = "function_id";
+
+    public static final String COL_GROUP_ID = "group_id";
 }

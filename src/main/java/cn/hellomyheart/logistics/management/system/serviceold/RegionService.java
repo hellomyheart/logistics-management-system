@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Region;
+import cn.hellomyheart.logistics.management.system.entityold.Region;
 public interface RegionService{
 
 

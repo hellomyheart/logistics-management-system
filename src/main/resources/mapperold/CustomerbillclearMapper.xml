@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CustomerbillclearMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Customerbillclear">
     <!--@mbg.generated-->
     <!--@Table customerbillclear-->
     <id column="goods_bill_code" jdbcType="VARCHAR" property="goodsBillCode" />
@@ -36,7 +36,7 @@
     delete from customerbillclear
     where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerbillclear">
     <!--@mbg.generated-->
     insert into customerbillclear (goods_bill_code, customer_code, balance,
       balance_time, balance_type, bill_money,
@@ -49,7 +49,7 @@
       #{moneyReceivable,jdbcType=DOUBLE}, #{payKickback,jdbcType=DOUBLE}, #{prepayMoney,jdbcType=DOUBLE},
       #{receivedMoney,jdbcType=DOUBLE})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerbillclear">
     <!--@mbg.generated-->
     insert into customerbillclear
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -135,7 +135,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerbillclear">
     <!--@mbg.generated-->
     update customerbillclear
     <set>
@@ -178,7 +178,7 @@
     </set>
     where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerbillclear">
     <!--@mbg.generated-->
     update customerbillclear
     set customer_code = #{customerCode,jdbcType=VARCHAR},

@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.TRolr;
+import cn.hellomyheart.logistics.management.system.entityold.TRolr;
 
 public interface TRolrMapper {
     /**

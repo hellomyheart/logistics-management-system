@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.UserMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.User">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.User">
     <!--@mbg.generated-->
     <!--@Table `user`-->
     <id column="login_id" jdbcType="VARCHAR" property="loginId" />
@@ -24,14 +24,14 @@
     delete from `user`
     where login_id = #{loginId,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.User">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.User">
     <!--@mbg.generated-->
     insert into `user` (login_id, if_online, `password`
       )
     values (#{loginId,jdbcType=VARCHAR}, #{ifOnline,jdbcType=BIT}, #{password,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.User">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.User">
     <!--@mbg.generated-->
     insert into `user`
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.User">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.User">
     <!--@mbg.generated-->
     update `user`
     <set>
@@ -70,7 +70,7 @@
     </set>
     where login_id = #{loginId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.User">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.User">
     <!--@mbg.generated-->
     update `user`
     set if_online = #{ifOnline,jdbcType=BIT},

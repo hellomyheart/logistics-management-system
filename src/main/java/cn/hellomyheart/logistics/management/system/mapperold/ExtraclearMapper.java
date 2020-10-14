@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Extraclear;
+import cn.hellomyheart.logistics.management.system.entityold.Extraclear;
 
 public interface ExtraclearMapper {
     /**

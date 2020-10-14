@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Region;
+import cn.hellomyheart.logistics.management.system.entityold.Region;
 import cn.hellomyheart.logistics.management.system.mapperold.RegionMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.RegionService;
-@Service
+//@Service
 public class RegionServiceImpl implements RegionService{
 
     @Resource

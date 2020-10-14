@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CustomerreceiptinfoMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Customerreceiptinfo">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Customerreceiptinfo">
     <!--@mbg.generated-->
     <!--@Table customerreceiptinfo-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -29,7 +29,7 @@
     delete from customerreceiptinfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerreceiptinfo" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerreceiptinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into customerreceiptinfo (carry_bill_event_id, check_goods_record,
       customer, goods_bill_code, receive_goods_date,
@@ -38,7 +38,7 @@
       #{customer,jdbcType=VARCHAR}, #{goodsBillCode,jdbcType=VARCHAR}, #{receiveGoodsDate,jdbcType=DATE},
       #{receiveGoodsPerson,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerreceiptinfo" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerreceiptinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into customerreceiptinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -82,7 +82,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerreceiptinfo">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerreceiptinfo">
     <!--@mbg.generated-->
     update customerreceiptinfo
     <set>
@@ -107,7 +107,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerreceiptinfo">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Customerreceiptinfo">
     <!--@mbg.generated-->
     update customerreceiptinfo
     set carry_bill_event_id = #{carryBillEventId,jdbcType=INTEGER},

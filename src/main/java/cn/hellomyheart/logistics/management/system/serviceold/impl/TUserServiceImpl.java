@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.TUserMapper;
-import cn.hellomyheart.logistics.management.system.entity.TUser;
+import cn.hellomyheart.logistics.management.system.entityold.TUser;
 import cn.hellomyheart.logistics.management.system.serviceold.TUserService;
-@Service
+//@Service
 public class TUserServiceImpl implements TUserService{
 
     @Resource

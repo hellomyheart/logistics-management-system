@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.TUserRole;
+import cn.hellomyheart.logistics.management.system.entityold.TUserRole;
 import cn.hellomyheart.logistics.management.system.mapperold.TUserRoleMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.TUserRoleService;
-@Service
+//@Service
 public class TUserRoleServiceImpl implements TUserRoleService{
 
     @Resource

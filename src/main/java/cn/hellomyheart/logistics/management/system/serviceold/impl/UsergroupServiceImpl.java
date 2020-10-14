@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.UsergroupMapper;
-import cn.hellomyheart.logistics.management.system.entity.Usergroup;
+import cn.hellomyheart.logistics.management.system.entityold.Usergroup;
 import cn.hellomyheart.logistics.management.system.serviceold.UsergroupService;
-@Service
+//@Service
 public class UsergroupServiceImpl implements UsergroupService{
 
     @Resource

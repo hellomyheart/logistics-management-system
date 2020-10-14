@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.TUserRole;
+import cn.hellomyheart.logistics.management.system.entityold.TUserRole;
 import org.apache.ibatis.annotations.Param;
 
 public interface TUserRoleMapper {

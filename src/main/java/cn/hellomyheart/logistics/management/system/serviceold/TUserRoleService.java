@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.TUserRole;
+import cn.hellomyheart.logistics.management.system.entityold.TUserRole;
 public interface TUserRoleService{
 
 

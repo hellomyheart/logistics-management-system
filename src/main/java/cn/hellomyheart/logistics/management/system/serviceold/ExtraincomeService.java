@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Extraincome;
+import cn.hellomyheart.logistics.management.system.entityold.Extraincome;
 public interface ExtraincomeService{
 
 

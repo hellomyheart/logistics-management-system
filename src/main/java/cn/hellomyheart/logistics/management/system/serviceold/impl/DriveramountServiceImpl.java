@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.DriveramountMapper;
-import cn.hellomyheart.logistics.management.system.entity.Driveramount;
+import cn.hellomyheart.logistics.management.system.entityold.Driveramount;
 import cn.hellomyheart.logistics.management.system.serviceold.DriveramountService;
-@Service
+//@Service
 public class DriveramountServiceImpl implements DriveramountService{
 
     @Resource

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapper.DriverinfoMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity1.Driverinfo">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
     <!--@mbg.generated-->
     <!--@Table driverinfo-->
     <id column="id" jdbcType="VARCHAR" property="id" />

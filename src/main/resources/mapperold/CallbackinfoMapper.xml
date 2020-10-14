@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CallbackinfoMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Callbackinfo">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Callbackinfo">
     <!--@mbg.generated-->
     <!--@Table callbackinfo-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -34,7 +34,7 @@
     delete from callbackinfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Callbackinfo" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Callbackinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into callbackinfo (bill_id, bill_type, content,
       dial_no, finally_dial_time, goods_bill_id,
@@ -45,7 +45,7 @@
       #{locked,jdbcType=BIT}, #{success,jdbcType=BIT}, #{type,jdbcType=VARCHAR}, #{writeTime,jdbcType=DATE},
       #{writer,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Callbackinfo" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Callbackinfo" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into callbackinfo
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -119,7 +119,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Callbackinfo">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Callbackinfo">
     <!--@mbg.generated-->
     update callbackinfo
     <set>
@@ -159,7 +159,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Callbackinfo">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Callbackinfo">
     <!--@mbg.generated-->
     update callbackinfo
     set bill_id = #{billId,jdbcType=VARCHAR},

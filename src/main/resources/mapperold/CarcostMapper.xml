@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CarcostMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Carcost">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Carcost">
     <!--@mbg.generated-->
     <!--@Table carcost-->
     <id column="driver_code" jdbcType="VARCHAR" property="driverCode" />
@@ -36,7 +36,7 @@
     delete from carcost
     where driver_code = #{driverCode,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Carcost">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.Carcost">
     <!--@mbg.generated-->
     insert into carcost (driver_code, add_carriage_total, allow_carry_weight,
       back_bill_code, balance_time, car_no,
@@ -49,7 +49,7 @@
       #{dealGoodsStation,jdbcType=VARCHAR}, #{factCarriageTotal,jdbcType=DOUBLE}, #{goodsHeight,jdbcType=VARCHAR},
       #{loadStation,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Carcost">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Carcost">
     <!--@mbg.generated-->
     insert into carcost
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -135,7 +135,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Carcost">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Carcost">
     <!--@mbg.generated-->
     update carcost
     <set>
@@ -178,7 +178,7 @@
     </set>
     where driver_code = #{driverCode,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Carcost">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Carcost">
     <!--@mbg.generated-->
     update carcost
     set add_carriage_total = #{addCarriageTotal,jdbcType=DOUBLE},

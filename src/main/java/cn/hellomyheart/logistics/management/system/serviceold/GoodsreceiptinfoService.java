@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Goodsreceiptinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Goodsreceiptinfo;
 public interface GoodsreceiptinfoService{
 
 

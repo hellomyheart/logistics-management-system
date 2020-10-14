@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapper.TPermissionMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity1.TPermission">
-    <!--@mbg.generated-->
-    <!--@Table t_permission-->
-    <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="code" jdbcType="VARCHAR" property="code" />
-    <result column="description" jdbcType="VARCHAR" property="description" />
-    <result column="url" jdbcType="VARCHAR" property="url" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    id, code, description, url
-  </sql>
+    <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.TPermission">
+        <!--@mbg.generated-->
+        <!--@Table t_permission-->
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="code" jdbcType="VARCHAR" property="code"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, code, description, url
+    </sql>
+
+    <select id="selectPermissionsByUserId" resultMap="BaseResultMap" parameterType="string">
+        <!--@mbg.generated-->
+        select
+        <include refid="Base_Column_List"/>
+        from t_permission
+        where id in (
+        select permission_id FROM t_role_permission WHERE role_id in(
+        SELECT role_id FROM t_user_role WHERE user_id =#{userId,jdbcType=VARCHAR}
+        )
+        )
+    </select>
 </mapper>

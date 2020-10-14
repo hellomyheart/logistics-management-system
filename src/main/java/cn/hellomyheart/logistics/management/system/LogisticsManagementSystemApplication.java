@@ -8,6 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -17,9 +19,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-@MapperScan("cn.hellomyheart.logistics.management.system.mapperold")
+@MapperScan("cn.hellomyheart.logistics.management.system.mapper")
 //使得@WebServlet、@WebFilter、@WebListener注解自动注册
 @ServletComponentScan
+@ComponentScan(excludeFilters =
+        {
+                @ComponentScan.Filter(type = FilterType.REGEX,pattern = "cn.hellomyheart.logistics.management.system.commons.*")
+        })
+
 // 继承 用于将fastjson替换原有的jackson
 public class LogisticsManagementSystemApplication  extends WebMvcConfigurationSupport {
 

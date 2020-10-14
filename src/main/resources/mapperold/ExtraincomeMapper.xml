@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.ExtraincomeMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Extraincome">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.Extraincome">
     <!--@mbg.generated-->
     <!--@Table extraincome-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -26,14 +26,14 @@
     delete from extraincome
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraincome" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Extraincome" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into extraincome (income_month, money, `name`,
       write_date)
     values (#{incomeMonth,jdbcType=VARCHAR}, #{money,jdbcType=DOUBLE}, #{name,jdbcType=VARCHAR},
       #{writeDate,jdbcType=DATE})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraincome" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entityold.Extraincome" useGeneratedKeys="true">
     <!--@mbg.generated-->
     insert into extraincome
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -65,7 +65,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraincome">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.Extraincome">
     <!--@mbg.generated-->
     update extraincome
     <set>
@@ -84,7 +84,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Extraincome">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.Extraincome">
     <!--@mbg.generated-->
     update extraincome
     set income_month = #{incomeMonth,jdbcType=VARCHAR},

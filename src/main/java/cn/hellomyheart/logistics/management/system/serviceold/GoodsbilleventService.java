@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.serviceold;
 
-import cn.hellomyheart.logistics.management.system.entity.Goodsbillevent;
+import cn.hellomyheart.logistics.management.system.entityold.Goodsbillevent;
 public interface GoodsbilleventService{
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.TUserRoleMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.TUserRole">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entityold.TUserRole">
     <!--@mbg.generated-->
     <!--@Table t_user_role-->
     <id column="user_id" jdbcType="VARCHAR" property="userId" />
@@ -27,14 +27,14 @@
     where user_id = #{userId,jdbcType=VARCHAR}
       and role_id = #{roleId,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.TUserRole">
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entityold.TUserRole">
     <!--@mbg.generated-->
     insert into t_user_role (user_id, role_id, create_time,
       creator)
     values (#{userId,jdbcType=VARCHAR}, #{roleId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},
       #{creator,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.TUserRole">
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.TUserRole">
     <!--@mbg.generated-->
     insert into t_user_role
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -66,7 +66,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.TUserRole">
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entityold.TUserRole">
     <!--@mbg.generated-->
     update t_user_role
     <set>
@@ -80,7 +80,7 @@
     where user_id = #{userId,jdbcType=VARCHAR}
       and role_id = #{roleId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.TUserRole">
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entityold.TUserRole">
     <!--@mbg.generated-->
     update t_user_role
     set create_time = #{createTime,jdbcType=TIMESTAMP},

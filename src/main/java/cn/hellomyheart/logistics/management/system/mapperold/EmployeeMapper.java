@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Employee;
+import cn.hellomyheart.logistics.management.system.entityold.Employee;
 
 public interface EmployeeMapper {
     /**

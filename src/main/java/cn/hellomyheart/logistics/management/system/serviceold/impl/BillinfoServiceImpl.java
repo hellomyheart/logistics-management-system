@@ -4,13 +4,13 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Billinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Billinfo;
 import cn.hellomyheart.logistics.management.system.mapperold.BillinfoMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.BillinfoService;
 
 import java.util.List;
 
-@Service
+//@Service
 public class BillinfoServiceImpl implements BillinfoService{
 
     @Resource

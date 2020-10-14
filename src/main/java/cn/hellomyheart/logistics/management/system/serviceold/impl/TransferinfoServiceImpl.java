@@ -2,10 +2,10 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.entity.Transferinfo;
+import cn.hellomyheart.logistics.management.system.entityold.Transferinfo;
 import cn.hellomyheart.logistics.management.system.mapperold.TransferinfoMapper;
 import cn.hellomyheart.logistics.management.system.serviceold.TransferinfoService;
-@Service
+//@Service
 public class TransferinfoServiceImpl implements TransferinfoService{
 
     @Resource

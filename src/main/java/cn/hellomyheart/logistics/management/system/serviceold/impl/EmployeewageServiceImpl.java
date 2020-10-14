@@ -3,9 +3,9 @@ package cn.hellomyheart.logistics.management.system.serviceold.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.mapperold.EmployeewageMapper;
-import cn.hellomyheart.logistics.management.system.entity.Employeewage;
+import cn.hellomyheart.logistics.management.system.entityold.Employeewage;
 import cn.hellomyheart.logistics.management.system.serviceold.EmployeewageService;
-@Service
+//@Service
 public class EmployeewageServiceImpl implements EmployeewageService{
 
     @Resource

@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.TRolePermission;
+import cn.hellomyheart.logistics.management.system.entityold.TRolePermission;
 import org.apache.ibatis.annotations.Param;
 
 public interface TRolePermissionMapper {

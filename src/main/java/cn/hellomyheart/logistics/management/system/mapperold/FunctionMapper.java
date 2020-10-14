@@ -1,6 +1,6 @@
 package cn.hellomyheart.logistics.management.system.mapperold;
 
-import cn.hellomyheart.logistics.management.system.entity.Function;
+import cn.hellomyheart.logistics.management.system.entityold.Function;
 
 public interface FunctionMapper {
     /**
