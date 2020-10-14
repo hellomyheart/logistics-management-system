@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapper.CustomeramountMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Customeramount">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity1.Customeramount">
     <!--@mbg.generated-->
     <!--@Table customeramount-->
     <id column="send_goods_customer" jdbcType="VARCHAR" property="sendGoodsCustomer" />
@@ -13,79 +13,4 @@
     <!--@mbg.generated-->
     send_goods_customer, carriage_total, insurance_total, piece_amount_total
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select 
-    <include refid="Base_Column_List" />
-    from customeramount
-    where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    <!--@mbg.generated-->
-    delete from customeramount
-    where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
-  </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Customeramount">
-    <!--@mbg.generated-->
-    insert into customeramount (send_goods_customer, carriage_total, 
-      insurance_total, piece_amount_total)
-    values (#{sendGoodsCustomer,jdbcType=VARCHAR}, #{carriageTotal,jdbcType=DOUBLE}, 
-      #{insuranceTotal,jdbcType=DOUBLE}, #{pieceAmountTotal,jdbcType=INTEGER})
-  </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customeramount">
-    <!--@mbg.generated-->
-    insert into customeramount
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="sendGoodsCustomer != null">
-        send_goods_customer,
-      </if>
-      <if test="carriageTotal != null">
-        carriage_total,
-      </if>
-      <if test="insuranceTotal != null">
-        insurance_total,
-      </if>
-      <if test="pieceAmountTotal != null">
-        piece_amount_total,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="sendGoodsCustomer != null">
-        #{sendGoodsCustomer,jdbcType=VARCHAR},
-      </if>
-      <if test="carriageTotal != null">
-        #{carriageTotal,jdbcType=DOUBLE},
-      </if>
-      <if test="insuranceTotal != null">
-        #{insuranceTotal,jdbcType=DOUBLE},
-      </if>
-      <if test="pieceAmountTotal != null">
-        #{pieceAmountTotal,jdbcType=INTEGER},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customeramount">
-    <!--@mbg.generated-->
-    update customeramount
-    <set>
-      <if test="carriageTotal != null">
-        carriage_total = #{carriageTotal,jdbcType=DOUBLE},
-      </if>
-      <if test="insuranceTotal != null">
-        insurance_total = #{insuranceTotal,jdbcType=DOUBLE},
-      </if>
-      <if test="pieceAmountTotal != null">
-        piece_amount_total = #{pieceAmountTotal,jdbcType=INTEGER},
-      </if>
-    </set>
-    where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Customeramount">
-    <!--@mbg.generated-->
-    update customeramount
-    set carriage_total = #{carriageTotal,jdbcType=DOUBLE},
-      insurance_total = #{insuranceTotal,jdbcType=DOUBLE},
-      piece_amount_total = #{pieceAmountTotal,jdbcType=INTEGER}
-    where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
-  </update>
 </mapper>

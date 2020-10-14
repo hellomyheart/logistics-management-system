@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.EmployeeMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Employee">
+    <!--@mbg.generated-->
+    <!--@Table employee-->
+    <id column="employee_code" jdbcType="VARCHAR" property="employeeCode" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="employee_name" jdbcType="VARCHAR" property="employeeName" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="position" jdbcType="VARCHAR" property="position" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    employee_code, birthday, department, employee_name, gender, `position`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <include refid="Base_Column_List" />
+    from employee
+    where employee_code = #{employeeCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from employee
+    where employee_code = #{employeeCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Employee">
+    <!--@mbg.generated-->
+    insert into employee (employee_code, birthday, department,
+      employee_name, gender, `position`
+      )
+    values (#{employeeCode,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{department,jdbcType=VARCHAR},
+      #{employeeName,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Employee">
+    <!--@mbg.generated-->
+    insert into employee
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="employeeCode != null">
+        employee_code,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="employeeName != null">
+        employee_name,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="position != null">
+        `position`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="employeeCode != null">
+        #{employeeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="department != null">
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeName != null">
+        #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Employee">
+    <!--@mbg.generated-->
+    update employee
+    <set>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="department != null">
+        department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeName != null">
+        employee_name = #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        `position` = #{position,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where employee_code = #{employeeCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Employee">
+    <!--@mbg.generated-->
+    update employee
+    set birthday = #{birthday,jdbcType=DATE},
+      department = #{department,jdbcType=VARCHAR},
+      employee_name = #{employeeName,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      `position` = #{position,jdbcType=VARCHAR}
+    where employee_code = #{employeeCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

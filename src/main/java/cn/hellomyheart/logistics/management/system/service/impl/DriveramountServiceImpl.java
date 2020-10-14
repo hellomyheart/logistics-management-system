@@ -2,7 +2,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.mapper.DriveramountMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.DriveramountMapper;
 import cn.hellomyheart.logistics.management.system.entity.Driveramount;
 import cn.hellomyheart.logistics.management.system.service.DriveramountService;
 @Service

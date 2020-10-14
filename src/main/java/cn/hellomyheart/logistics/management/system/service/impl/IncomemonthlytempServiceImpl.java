@@ -3,7 +3,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Incomemonthlytemp;
-import cn.hellomyheart.logistics.management.system.mapper.IncomemonthlytempMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.IncomemonthlytempMapper;
 import cn.hellomyheart.logistics.management.system.service.IncomemonthlytempService;
 @Service
 public class IncomemonthlytempServiceImpl implements IncomemonthlytempService{

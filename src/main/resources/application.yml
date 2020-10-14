@@ -9,7 +9,7 @@ spring:
 
 
 # mybatis配置
-mybatis:
+mybatis-plus:
   # 配置别名需要扫描的包
   type-aliases-package: cn.hellomyheart.logistics.management.system.entity
   # 引入映射文件

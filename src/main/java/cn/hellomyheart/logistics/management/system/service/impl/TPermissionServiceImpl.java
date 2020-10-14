@@ -3,7 +3,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.TPermission;
-import cn.hellomyheart.logistics.management.system.mapper.TPermissionMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.TPermissionMapper;
 import cn.hellomyheart.logistics.management.system.service.TPermissionService;
 @Service
 public class TPermissionServiceImpl implements TPermissionService{

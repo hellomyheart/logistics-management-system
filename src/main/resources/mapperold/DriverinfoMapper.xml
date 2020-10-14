@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.DriverinfoMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+    <!--@mbg.generated-->
+    <!--@Table driverinfo-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="allow_carry_volume" jdbcType="DOUBLE" property="allowCarryVolume" />
+    <result column="allow_carry_weight" jdbcType="DOUBLE" property="allowCarryWeight" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="biz_licence" jdbcType="VARCHAR" property="bizLicence" />
+    <result column="car_dept" jdbcType="VARCHAR" property="carDept" />
+    <result column="car_dept_tel" jdbcType="VARCHAR" property="carDeptTel" />
+    <result column="car_frame_no" jdbcType="VARCHAR" property="carFrameNo" />
+    <result column="car_length" jdbcType="VARCHAR" property="carLength" />
+    <result column="car_no" jdbcType="VARCHAR" property="carNo" />
+    <result column="car_type" jdbcType="VARCHAR" property="carType" />
+    <result column="car_width" jdbcType="VARCHAR" property="carWidth" />
+    <result column="company_car" jdbcType="BIT" property="companyCar" />
+    <result column="drive_licence" jdbcType="VARCHAR" property="driveLicence" />
+    <result column="driver_name" jdbcType="VARCHAR" property="driverName" />
+    <result column="engine_no" jdbcType="VARCHAR" property="engineNo" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="goods_height" jdbcType="VARCHAR" property="goodsHeight" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="insurance_card" jdbcType="VARCHAR" property="insuranceCard" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="run_licence" jdbcType="VARCHAR" property="runLicence" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, address, allow_carry_volume, allow_carry_weight, birthday, biz_licence, car_dept,
+    car_dept_tel, car_frame_no, car_length, car_no, car_type, car_width, company_car,
+    drive_licence, driver_name, engine_no, gender, goods_height, id_card, insurance_card,
+    phone, remark, run_licence, `state`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <include refid="Base_Column_List" />
+    from driverinfo
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from driverinfo
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+    <!--@mbg.generated-->
+    insert into driverinfo (id, address, allow_carry_volume,
+      allow_carry_weight, birthday, biz_licence,
+      car_dept, car_dept_tel, car_frame_no,
+      car_length, car_no, car_type,
+      car_width, company_car, drive_licence,
+      driver_name, engine_no, gender,
+      goods_height, id_card, insurance_card,
+      phone, remark, run_licence,
+      `state`)
+    values (#{id,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{allowCarryVolume,jdbcType=DOUBLE},
+      #{allowCarryWeight,jdbcType=DOUBLE}, #{birthday,jdbcType=DATE}, #{bizLicence,jdbcType=VARCHAR},
+      #{carDept,jdbcType=VARCHAR}, #{carDeptTel,jdbcType=VARCHAR}, #{carFrameNo,jdbcType=VARCHAR},
+      #{carLength,jdbcType=VARCHAR}, #{carNo,jdbcType=VARCHAR}, #{carType,jdbcType=VARCHAR},
+      #{carWidth,jdbcType=VARCHAR}, #{companyCar,jdbcType=BIT}, #{driveLicence,jdbcType=VARCHAR},
+      #{driverName,jdbcType=VARCHAR}, #{engineNo,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR},
+      #{goodsHeight,jdbcType=VARCHAR}, #{idCard,jdbcType=VARCHAR}, #{insuranceCard,jdbcType=VARCHAR},
+      #{phone,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{runLicence,jdbcType=VARCHAR},
+      #{state,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+    <!--@mbg.generated-->
+    insert into driverinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="allowCarryVolume != null">
+        allow_carry_volume,
+      </if>
+      <if test="allowCarryWeight != null">
+        allow_carry_weight,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="bizLicence != null">
+        biz_licence,
+      </if>
+      <if test="carDept != null">
+        car_dept,
+      </if>
+      <if test="carDeptTel != null">
+        car_dept_tel,
+      </if>
+      <if test="carFrameNo != null">
+        car_frame_no,
+      </if>
+      <if test="carLength != null">
+        car_length,
+      </if>
+      <if test="carNo != null">
+        car_no,
+      </if>
+      <if test="carType != null">
+        car_type,
+      </if>
+      <if test="carWidth != null">
+        car_width,
+      </if>
+      <if test="companyCar != null">
+        company_car,
+      </if>
+      <if test="driveLicence != null">
+        drive_licence,
+      </if>
+      <if test="driverName != null">
+        driver_name,
+      </if>
+      <if test="engineNo != null">
+        engine_no,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="goodsHeight != null">
+        goods_height,
+      </if>
+      <if test="idCard != null">
+        id_card,
+      </if>
+      <if test="insuranceCard != null">
+        insurance_card,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="runLicence != null">
+        run_licence,
+      </if>
+      <if test="state != null">
+        `state`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="allowCarryVolume != null">
+        #{allowCarryVolume,jdbcType=DOUBLE},
+      </if>
+      <if test="allowCarryWeight != null">
+        #{allowCarryWeight,jdbcType=DOUBLE},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="bizLicence != null">
+        #{bizLicence,jdbcType=VARCHAR},
+      </if>
+      <if test="carDept != null">
+        #{carDept,jdbcType=VARCHAR},
+      </if>
+      <if test="carDeptTel != null">
+        #{carDeptTel,jdbcType=VARCHAR},
+      </if>
+      <if test="carFrameNo != null">
+        #{carFrameNo,jdbcType=VARCHAR},
+      </if>
+      <if test="carLength != null">
+        #{carLength,jdbcType=VARCHAR},
+      </if>
+      <if test="carNo != null">
+        #{carNo,jdbcType=VARCHAR},
+      </if>
+      <if test="carType != null">
+        #{carType,jdbcType=VARCHAR},
+      </if>
+      <if test="carWidth != null">
+        #{carWidth,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCar != null">
+        #{companyCar,jdbcType=BIT},
+      </if>
+      <if test="driveLicence != null">
+        #{driveLicence,jdbcType=VARCHAR},
+      </if>
+      <if test="driverName != null">
+        #{driverName,jdbcType=VARCHAR},
+      </if>
+      <if test="engineNo != null">
+        #{engineNo,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsHeight != null">
+        #{goodsHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null">
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceCard != null">
+        #{insuranceCard,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="runLicence != null">
+        #{runLicence,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+    <!--@mbg.generated-->
+    update driverinfo
+    <set>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="allowCarryVolume != null">
+        allow_carry_volume = #{allowCarryVolume,jdbcType=DOUBLE},
+      </if>
+      <if test="allowCarryWeight != null">
+        allow_carry_weight = #{allowCarryWeight,jdbcType=DOUBLE},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="bizLicence != null">
+        biz_licence = #{bizLicence,jdbcType=VARCHAR},
+      </if>
+      <if test="carDept != null">
+        car_dept = #{carDept,jdbcType=VARCHAR},
+      </if>
+      <if test="carDeptTel != null">
+        car_dept_tel = #{carDeptTel,jdbcType=VARCHAR},
+      </if>
+      <if test="carFrameNo != null">
+        car_frame_no = #{carFrameNo,jdbcType=VARCHAR},
+      </if>
+      <if test="carLength != null">
+        car_length = #{carLength,jdbcType=VARCHAR},
+      </if>
+      <if test="carNo != null">
+        car_no = #{carNo,jdbcType=VARCHAR},
+      </if>
+      <if test="carType != null">
+        car_type = #{carType,jdbcType=VARCHAR},
+      </if>
+      <if test="carWidth != null">
+        car_width = #{carWidth,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCar != null">
+        company_car = #{companyCar,jdbcType=BIT},
+      </if>
+      <if test="driveLicence != null">
+        drive_licence = #{driveLicence,jdbcType=VARCHAR},
+      </if>
+      <if test="driverName != null">
+        driver_name = #{driverName,jdbcType=VARCHAR},
+      </if>
+      <if test="engineNo != null">
+        engine_no = #{engineNo,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsHeight != null">
+        goods_height = #{goodsHeight,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null">
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceCard != null">
+        insurance_card = #{insuranceCard,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="runLicence != null">
+        run_licence = #{runLicence,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        `state` = #{state,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Driverinfo">
+    <!--@mbg.generated-->
+    update driverinfo
+    set address = #{address,jdbcType=VARCHAR},
+      allow_carry_volume = #{allowCarryVolume,jdbcType=DOUBLE},
+      allow_carry_weight = #{allowCarryWeight,jdbcType=DOUBLE},
+      birthday = #{birthday,jdbcType=DATE},
+      biz_licence = #{bizLicence,jdbcType=VARCHAR},
+      car_dept = #{carDept,jdbcType=VARCHAR},
+      car_dept_tel = #{carDeptTel,jdbcType=VARCHAR},
+      car_frame_no = #{carFrameNo,jdbcType=VARCHAR},
+      car_length = #{carLength,jdbcType=VARCHAR},
+      car_no = #{carNo,jdbcType=VARCHAR},
+      car_type = #{carType,jdbcType=VARCHAR},
+      car_width = #{carWidth,jdbcType=VARCHAR},
+      company_car = #{companyCar,jdbcType=BIT},
+      drive_licence = #{driveLicence,jdbcType=VARCHAR},
+      driver_name = #{driverName,jdbcType=VARCHAR},
+      engine_no = #{engineNo,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      goods_height = #{goodsHeight,jdbcType=VARCHAR},
+      id_card = #{idCard,jdbcType=VARCHAR},
+      insurance_card = #{insuranceCard,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      run_licence = #{runLicence,jdbcType=VARCHAR},
+      `state` = #{state,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

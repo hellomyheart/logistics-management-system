@@ -3,7 +3,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Cityexpand;
-import cn.hellomyheart.logistics.management.system.mapper.CityexpandMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.CityexpandMapper;
 import cn.hellomyheart.logistics.management.system.service.CityexpandService;
 @Service
 public class CityexpandServiceImpl implements CityexpandService{

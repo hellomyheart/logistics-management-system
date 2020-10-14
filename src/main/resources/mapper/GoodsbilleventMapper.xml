@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapper.GoodsbilleventMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Goodsbillevent">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity1.Goodsbillevent">
     <!--@mbg.generated-->
     <!--@Table goodsbillevent-->
     <id column="goods_bill_id" jdbcType="VARCHAR" property="goodsBillId" />
@@ -13,79 +13,4 @@
     <!--@mbg.generated-->
     goods_bill_id, event_name, occur_time, remark
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select 
-    <include refid="Base_Column_List" />
-    from goodsbillevent
-    where goods_bill_id = #{goodsBillId,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    <!--@mbg.generated-->
-    delete from goodsbillevent
-    where goods_bill_id = #{goodsBillId,jdbcType=VARCHAR}
-  </delete>
-  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Goodsbillevent">
-    <!--@mbg.generated-->
-    insert into goodsbillevent (goods_bill_id, event_name, occur_time, 
-      remark)
-    values (#{goodsBillId,jdbcType=VARCHAR}, #{eventName,jdbcType=VARCHAR}, #{occurTime,jdbcType=TIMESTAMP}, 
-      #{remark,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Goodsbillevent">
-    <!--@mbg.generated-->
-    insert into goodsbillevent
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="goodsBillId != null">
-        goods_bill_id,
-      </if>
-      <if test="eventName != null">
-        event_name,
-      </if>
-      <if test="occurTime != null">
-        occur_time,
-      </if>
-      <if test="remark != null">
-        remark,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="goodsBillId != null">
-        #{goodsBillId,jdbcType=VARCHAR},
-      </if>
-      <if test="eventName != null">
-        #{eventName,jdbcType=VARCHAR},
-      </if>
-      <if test="occurTime != null">
-        #{occurTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="remark != null">
-        #{remark,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Goodsbillevent">
-    <!--@mbg.generated-->
-    update goodsbillevent
-    <set>
-      <if test="eventName != null">
-        event_name = #{eventName,jdbcType=VARCHAR},
-      </if>
-      <if test="occurTime != null">
-        occur_time = #{occurTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="remark != null">
-        remark = #{remark,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where goods_bill_id = #{goodsBillId,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Goodsbillevent">
-    <!--@mbg.generated-->
-    update goodsbillevent
-    set event_name = #{eventName,jdbcType=VARCHAR},
-      occur_time = #{occurTime,jdbcType=TIMESTAMP},
-      remark = #{remark,jdbcType=VARCHAR}
-    where goods_bill_id = #{goodsBillId,jdbcType=VARCHAR}
-  </update>
 </mapper>

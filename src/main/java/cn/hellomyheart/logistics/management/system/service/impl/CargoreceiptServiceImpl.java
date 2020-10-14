@@ -2,11 +2,9 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.mapper.CargoreceiptMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.CargoreceiptMapper;
 import cn.hellomyheart.logistics.management.system.entity.Cargoreceipt;
 import cn.hellomyheart.logistics.management.system.service.CargoreceiptService;
-
-import java.util.List;
 
 @Service
 public class CargoreceiptServiceImpl implements CargoreceiptService{

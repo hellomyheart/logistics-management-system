@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.CustomerbillclearMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+    <!--@mbg.generated-->
+    <!--@Table customerbillclear-->
+    <id column="goods_bill_code" jdbcType="VARCHAR" property="goodsBillCode" />
+    <result column="customer_code" jdbcType="VARCHAR" property="customerCode" />
+    <result column="balance" jdbcType="DOUBLE" property="balance" />
+    <result column="balance_time" jdbcType="DATE" property="balanceTime" />
+    <result column="balance_type" jdbcType="VARCHAR" property="balanceType" />
+    <result column="bill_money" jdbcType="DOUBLE" property="billMoney" />
+    <result column="carriage_reduce_fund" jdbcType="DOUBLE" property="carriageReduceFund" />
+    <result column="carry_goods_fee" jdbcType="DOUBLE" property="carryGoodsFee" />
+    <result column="insurance" jdbcType="DOUBLE" property="insurance" />
+    <result column="money_receivable" jdbcType="DOUBLE" property="moneyReceivable" />
+    <result column="pay_kickback" jdbcType="DOUBLE" property="payKickback" />
+    <result column="prepay_money" jdbcType="DOUBLE" property="prepayMoney" />
+    <result column="received_money" jdbcType="DOUBLE" property="receivedMoney" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    goods_bill_code, customer_code, balance, balance_time, balance_type, bill_money,
+    carriage_reduce_fund, carry_goods_fee, insurance, money_receivable, pay_kickback,
+    prepay_money, received_money
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <include refid="Base_Column_List" />
+    from customerbillclear
+    where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from customerbillclear
+    where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+    <!--@mbg.generated-->
+    insert into customerbillclear (goods_bill_code, customer_code, balance,
+      balance_time, balance_type, bill_money,
+      carriage_reduce_fund, carry_goods_fee, insurance,
+      money_receivable, pay_kickback, prepay_money,
+      received_money)
+    values (#{goodsBillCode,jdbcType=VARCHAR}, #{customerCode,jdbcType=VARCHAR}, #{balance,jdbcType=DOUBLE},
+      #{balanceTime,jdbcType=DATE}, #{balanceType,jdbcType=VARCHAR}, #{billMoney,jdbcType=DOUBLE},
+      #{carriageReduceFund,jdbcType=DOUBLE}, #{carryGoodsFee,jdbcType=DOUBLE}, #{insurance,jdbcType=DOUBLE},
+      #{moneyReceivable,jdbcType=DOUBLE}, #{payKickback,jdbcType=DOUBLE}, #{prepayMoney,jdbcType=DOUBLE},
+      #{receivedMoney,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+    <!--@mbg.generated-->
+    insert into customerbillclear
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="goodsBillCode != null">
+        goods_bill_code,
+      </if>
+      <if test="customerCode != null">
+        customer_code,
+      </if>
+      <if test="balance != null">
+        balance,
+      </if>
+      <if test="balanceTime != null">
+        balance_time,
+      </if>
+      <if test="balanceType != null">
+        balance_type,
+      </if>
+      <if test="billMoney != null">
+        bill_money,
+      </if>
+      <if test="carriageReduceFund != null">
+        carriage_reduce_fund,
+      </if>
+      <if test="carryGoodsFee != null">
+        carry_goods_fee,
+      </if>
+      <if test="insurance != null">
+        insurance,
+      </if>
+      <if test="moneyReceivable != null">
+        money_receivable,
+      </if>
+      <if test="payKickback != null">
+        pay_kickback,
+      </if>
+      <if test="prepayMoney != null">
+        prepay_money,
+      </if>
+      <if test="receivedMoney != null">
+        received_money,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="goodsBillCode != null">
+        #{goodsBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="customerCode != null">
+        #{customerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null">
+        #{balance,jdbcType=DOUBLE},
+      </if>
+      <if test="balanceTime != null">
+        #{balanceTime,jdbcType=DATE},
+      </if>
+      <if test="balanceType != null">
+        #{balanceType,jdbcType=VARCHAR},
+      </if>
+      <if test="billMoney != null">
+        #{billMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="carriageReduceFund != null">
+        #{carriageReduceFund,jdbcType=DOUBLE},
+      </if>
+      <if test="carryGoodsFee != null">
+        #{carryGoodsFee,jdbcType=DOUBLE},
+      </if>
+      <if test="insurance != null">
+        #{insurance,jdbcType=DOUBLE},
+      </if>
+      <if test="moneyReceivable != null">
+        #{moneyReceivable,jdbcType=DOUBLE},
+      </if>
+      <if test="payKickback != null">
+        #{payKickback,jdbcType=DOUBLE},
+      </if>
+      <if test="prepayMoney != null">
+        #{prepayMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="receivedMoney != null">
+        #{receivedMoney,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+    <!--@mbg.generated-->
+    update customerbillclear
+    <set>
+      <if test="customerCode != null">
+        customer_code = #{customerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null">
+        balance = #{balance,jdbcType=DOUBLE},
+      </if>
+      <if test="balanceTime != null">
+        balance_time = #{balanceTime,jdbcType=DATE},
+      </if>
+      <if test="balanceType != null">
+        balance_type = #{balanceType,jdbcType=VARCHAR},
+      </if>
+      <if test="billMoney != null">
+        bill_money = #{billMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="carriageReduceFund != null">
+        carriage_reduce_fund = #{carriageReduceFund,jdbcType=DOUBLE},
+      </if>
+      <if test="carryGoodsFee != null">
+        carry_goods_fee = #{carryGoodsFee,jdbcType=DOUBLE},
+      </if>
+      <if test="insurance != null">
+        insurance = #{insurance,jdbcType=DOUBLE},
+      </if>
+      <if test="moneyReceivable != null">
+        money_receivable = #{moneyReceivable,jdbcType=DOUBLE},
+      </if>
+      <if test="payKickback != null">
+        pay_kickback = #{payKickback,jdbcType=DOUBLE},
+      </if>
+      <if test="prepayMoney != null">
+        prepay_money = #{prepayMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="receivedMoney != null">
+        received_money = #{receivedMoney,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Customerbillclear">
+    <!--@mbg.generated-->
+    update customerbillclear
+    set customer_code = #{customerCode,jdbcType=VARCHAR},
+      balance = #{balance,jdbcType=DOUBLE},
+      balance_time = #{balanceTime,jdbcType=DATE},
+      balance_type = #{balanceType,jdbcType=VARCHAR},
+      bill_money = #{billMoney,jdbcType=DOUBLE},
+      carriage_reduce_fund = #{carriageReduceFund,jdbcType=DOUBLE},
+      carry_goods_fee = #{carryGoodsFee,jdbcType=DOUBLE},
+      insurance = #{insurance,jdbcType=DOUBLE},
+      money_receivable = #{moneyReceivable,jdbcType=DOUBLE},
+      pay_kickback = #{payKickback,jdbcType=DOUBLE},
+      prepay_money = #{prepayMoney,jdbcType=DOUBLE},
+      received_money = #{receivedMoney,jdbcType=DOUBLE}
+    where goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

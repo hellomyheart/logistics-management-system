@@ -11,14 +11,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-@MapperScan("cn.hellomyheart.logistics.management.system.mapper")
+@MapperScan("cn.hellomyheart.logistics.management.system.mapperold")
 //使得@WebServlet、@WebFilter、@WebListener注解自动注册
 @ServletComponentScan
 // 继承 用于将fastjson替换原有的jackson

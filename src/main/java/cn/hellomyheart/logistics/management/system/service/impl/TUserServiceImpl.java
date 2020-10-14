@@ -2,7 +2,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.mapper.TUserMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.TUserMapper;
 import cn.hellomyheart.logistics.management.system.entity.TUser;
 import cn.hellomyheart.logistics.management.system.service.TUserService;
 @Service

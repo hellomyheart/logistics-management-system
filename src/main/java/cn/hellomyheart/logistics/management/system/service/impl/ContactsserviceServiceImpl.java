@@ -2,7 +2,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.mapper.ContactsserviceMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.ContactsserviceMapper;
 import cn.hellomyheart.logistics.management.system.entity.Contactsservice;
 import cn.hellomyheart.logistics.management.system.service.ContactsserviceService;
 @Service

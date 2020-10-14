@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapper.RegionMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Region">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity1.Region">
     <!--@mbg.generated-->
     <!--@Table region-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -11,51 +11,4 @@
     <!--@mbg.generated-->
     id, city
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select 
-    <include refid="Base_Column_List" />
-    from region
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    <!--@mbg.generated-->
-    delete from region
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Region" useGeneratedKeys="true">
-    <!--@mbg.generated-->
-    insert into region (city)
-    values (#{city,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Region" useGeneratedKeys="true">
-    <!--@mbg.generated-->
-    insert into region
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="city != null">
-        city,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="city != null">
-        #{city,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Region">
-    <!--@mbg.generated-->
-    update region
-    <set>
-      <if test="city != null">
-        city = #{city,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Region">
-    <!--@mbg.generated-->
-    update region
-    set city = #{city,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
 </mapper>

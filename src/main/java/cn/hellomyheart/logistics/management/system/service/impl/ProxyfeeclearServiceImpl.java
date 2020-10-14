@@ -3,7 +3,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Proxyfeeclear;
-import cn.hellomyheart.logistics.management.system.mapper.ProxyfeeclearMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.ProxyfeeclearMapper;
 import cn.hellomyheart.logistics.management.system.service.ProxyfeeclearService;
 @Service
 public class ProxyfeeclearServiceImpl implements ProxyfeeclearService{

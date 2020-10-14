@@ -2,7 +2,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.mapper.UsergroupMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.UsergroupMapper;
 import cn.hellomyheart.logistics.management.system.entity.Usergroup;
 import cn.hellomyheart.logistics.management.system.service.UsergroupService;
 @Service

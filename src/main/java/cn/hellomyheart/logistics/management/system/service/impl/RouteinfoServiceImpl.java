@@ -3,7 +3,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Routeinfo;
-import cn.hellomyheart.logistics.management.system.mapper.RouteinfoMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.RouteinfoMapper;
 import cn.hellomyheart.logistics.management.system.service.RouteinfoService;
 @Service
 public class RouteinfoServiceImpl implements RouteinfoService{

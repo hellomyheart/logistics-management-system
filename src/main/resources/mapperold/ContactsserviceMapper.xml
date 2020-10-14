@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.ContactsserviceMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+    <!--@mbg.generated-->
+    <!--@Table contactsservice-->
+    <id column="send_goods_customer" jdbcType="VARCHAR" property="sendGoodsCustomer" />
+    <result column="balance" jdbcType="DOUBLE" property="balance" />
+    <result column="bill_money" jdbcType="DOUBLE" property="billMoney" />
+    <result column="carriage" jdbcType="DOUBLE" property="carriage" />
+    <result column="goods_bill_code" jdbcType="VARCHAR" property="goodsBillCode" />
+    <result column="insurance" jdbcType="DOUBLE" property="insurance" />
+    <result column="money_receivable" jdbcType="DOUBLE" property="moneyReceivable" />
+    <result column="receive_goods_addr" jdbcType="VARCHAR" property="receiveGoodsAddr" />
+    <result column="received_money" jdbcType="DOUBLE" property="receivedMoney" />
+    <result column="send_goods_addr" jdbcType="VARCHAR" property="sendGoodsAddr" />
+    <result column="send_goods_date" jdbcType="TIMESTAMP" property="sendGoodsDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    send_goods_customer, balance, bill_money, carriage, goods_bill_code, insurance, money_receivable,
+    receive_goods_addr, received_money, send_goods_addr, send_goods_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <include refid="Base_Column_List" />
+    from contactsservice
+    where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from contactsservice
+    where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+    <!--@mbg.generated-->
+    insert into contactsservice (send_goods_customer, balance, bill_money,
+      carriage, goods_bill_code, insurance,
+      money_receivable, receive_goods_addr, received_money,
+      send_goods_addr, send_goods_date)
+    values (#{sendGoodsCustomer,jdbcType=VARCHAR}, #{balance,jdbcType=DOUBLE}, #{billMoney,jdbcType=DOUBLE},
+      #{carriage,jdbcType=DOUBLE}, #{goodsBillCode,jdbcType=VARCHAR}, #{insurance,jdbcType=DOUBLE},
+      #{moneyReceivable,jdbcType=DOUBLE}, #{receiveGoodsAddr,jdbcType=VARCHAR}, #{receivedMoney,jdbcType=DOUBLE},
+      #{sendGoodsAddr,jdbcType=VARCHAR}, #{sendGoodsDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+    <!--@mbg.generated-->
+    insert into contactsservice
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sendGoodsCustomer != null">
+        send_goods_customer,
+      </if>
+      <if test="balance != null">
+        balance,
+      </if>
+      <if test="billMoney != null">
+        bill_money,
+      </if>
+      <if test="carriage != null">
+        carriage,
+      </if>
+      <if test="goodsBillCode != null">
+        goods_bill_code,
+      </if>
+      <if test="insurance != null">
+        insurance,
+      </if>
+      <if test="moneyReceivable != null">
+        money_receivable,
+      </if>
+      <if test="receiveGoodsAddr != null">
+        receive_goods_addr,
+      </if>
+      <if test="receivedMoney != null">
+        received_money,
+      </if>
+      <if test="sendGoodsAddr != null">
+        send_goods_addr,
+      </if>
+      <if test="sendGoodsDate != null">
+        send_goods_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sendGoodsCustomer != null">
+        #{sendGoodsCustomer,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null">
+        #{balance,jdbcType=DOUBLE},
+      </if>
+      <if test="billMoney != null">
+        #{billMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="carriage != null">
+        #{carriage,jdbcType=DOUBLE},
+      </if>
+      <if test="goodsBillCode != null">
+        #{goodsBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="insurance != null">
+        #{insurance,jdbcType=DOUBLE},
+      </if>
+      <if test="moneyReceivable != null">
+        #{moneyReceivable,jdbcType=DOUBLE},
+      </if>
+      <if test="receiveGoodsAddr != null">
+        #{receiveGoodsAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="receivedMoney != null">
+        #{receivedMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="sendGoodsAddr != null">
+        #{sendGoodsAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="sendGoodsDate != null">
+        #{sendGoodsDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+    <!--@mbg.generated-->
+    update contactsservice
+    <set>
+      <if test="balance != null">
+        balance = #{balance,jdbcType=DOUBLE},
+      </if>
+      <if test="billMoney != null">
+        bill_money = #{billMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="carriage != null">
+        carriage = #{carriage,jdbcType=DOUBLE},
+      </if>
+      <if test="goodsBillCode != null">
+        goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR},
+      </if>
+      <if test="insurance != null">
+        insurance = #{insurance,jdbcType=DOUBLE},
+      </if>
+      <if test="moneyReceivable != null">
+        money_receivable = #{moneyReceivable,jdbcType=DOUBLE},
+      </if>
+      <if test="receiveGoodsAddr != null">
+        receive_goods_addr = #{receiveGoodsAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="receivedMoney != null">
+        received_money = #{receivedMoney,jdbcType=DOUBLE},
+      </if>
+      <if test="sendGoodsAddr != null">
+        send_goods_addr = #{sendGoodsAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="sendGoodsDate != null">
+        send_goods_date = #{sendGoodsDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Contactsservice">
+    <!--@mbg.generated-->
+    update contactsservice
+    set balance = #{balance,jdbcType=DOUBLE},
+      bill_money = #{billMoney,jdbcType=DOUBLE},
+      carriage = #{carriage,jdbcType=DOUBLE},
+      goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR},
+      insurance = #{insurance,jdbcType=DOUBLE},
+      money_receivable = #{moneyReceivable,jdbcType=DOUBLE},
+      receive_goods_addr = #{receiveGoodsAddr,jdbcType=VARCHAR},
+      received_money = #{receivedMoney,jdbcType=DOUBLE},
+      send_goods_addr = #{sendGoodsAddr,jdbcType=VARCHAR},
+      send_goods_date = #{sendGoodsDate,jdbcType=TIMESTAMP}
+    where send_goods_customer = #{sendGoodsCustomer,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -2,8 +2,8 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import cn.hellomyheart.logistics.management.system.entity.TPermission;
 import cn.hellomyheart.logistics.management.system.entity.TUser;
-import cn.hellomyheart.logistics.management.system.mapper.TPermissionMapper;
-import cn.hellomyheart.logistics.management.system.mapper.TUserMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.TPermissionMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.TUserMapper;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

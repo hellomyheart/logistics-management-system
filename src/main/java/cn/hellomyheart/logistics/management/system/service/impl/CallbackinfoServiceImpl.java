@@ -3,7 +3,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Callbackinfo;
-import cn.hellomyheart.logistics.management.system.mapper.CallbackinfoMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.CallbackinfoMapper;
 import cn.hellomyheart.logistics.management.system.service.CallbackinfoService;
 
 import java.util.HashMap;

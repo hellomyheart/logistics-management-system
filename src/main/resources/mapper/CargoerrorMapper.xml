@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapper.CargoerrorMapper">
-  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Cargoerror">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity1.Cargoerror">
     <!--@mbg.generated-->
     <!--@Table cargoerror-->
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -16,128 +16,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    id, customer, goods_bill_code, goods_name, goods_revert_bill_code, goods_value, mistake_type, 
+    id, customer, goods_bill_code, goods_name, goods_revert_bill_code, goods_value, mistake_type,
     piece_amount, `size`
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    <!--@mbg.generated-->
-    select 
-    <include refid="Base_Column_List" />
-    from cargoerror
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    <!--@mbg.generated-->
-    delete from cargoerror
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoerror" useGeneratedKeys="true">
-    <!--@mbg.generated-->
-    insert into cargoerror (customer, goods_bill_code, goods_name, 
-      goods_revert_bill_code, goods_value, mistake_type, 
-      piece_amount, `size`)
-    values (#{customer,jdbcType=VARCHAR}, #{goodsBillCode,jdbcType=VARCHAR}, #{goodsName,jdbcType=VARCHAR}, 
-      #{goodsRevertBillCode,jdbcType=VARCHAR}, #{goodsValue,jdbcType=DOUBLE}, #{mistakeType,jdbcType=VARCHAR}, 
-      #{pieceAmount,jdbcType=INTEGER}, #{size,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoerror" useGeneratedKeys="true">
-    <!--@mbg.generated-->
-    insert into cargoerror
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="customer != null">
-        customer,
-      </if>
-      <if test="goodsBillCode != null">
-        goods_bill_code,
-      </if>
-      <if test="goodsName != null">
-        goods_name,
-      </if>
-      <if test="goodsRevertBillCode != null">
-        goods_revert_bill_code,
-      </if>
-      <if test="goodsValue != null">
-        goods_value,
-      </if>
-      <if test="mistakeType != null">
-        mistake_type,
-      </if>
-      <if test="pieceAmount != null">
-        piece_amount,
-      </if>
-      <if test="size != null">
-        `size`,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="customer != null">
-        #{customer,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsBillCode != null">
-        #{goodsBillCode,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsName != null">
-        #{goodsName,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsRevertBillCode != null">
-        #{goodsRevertBillCode,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsValue != null">
-        #{goodsValue,jdbcType=DOUBLE},
-      </if>
-      <if test="mistakeType != null">
-        #{mistakeType,jdbcType=VARCHAR},
-      </if>
-      <if test="pieceAmount != null">
-        #{pieceAmount,jdbcType=INTEGER},
-      </if>
-      <if test="size != null">
-        #{size,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoerror">
-    <!--@mbg.generated-->
-    update cargoerror
-    <set>
-      <if test="customer != null">
-        customer = #{customer,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsBillCode != null">
-        goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsName != null">
-        goods_name = #{goodsName,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsRevertBillCode != null">
-        goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsValue != null">
-        goods_value = #{goodsValue,jdbcType=DOUBLE},
-      </if>
-      <if test="mistakeType != null">
-        mistake_type = #{mistakeType,jdbcType=VARCHAR},
-      </if>
-      <if test="pieceAmount != null">
-        piece_amount = #{pieceAmount,jdbcType=INTEGER},
-      </if>
-      <if test="size != null">
-        `size` = #{size,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Cargoerror">
-    <!--@mbg.generated-->
-    update cargoerror
-    set customer = #{customer,jdbcType=VARCHAR},
-      goods_bill_code = #{goodsBillCode,jdbcType=VARCHAR},
-      goods_name = #{goodsName,jdbcType=VARCHAR},
-      goods_revert_bill_code = #{goodsRevertBillCode,jdbcType=VARCHAR},
-      goods_value = #{goodsValue,jdbcType=DOUBLE},
-      mistake_type = #{mistakeType,jdbcType=VARCHAR},
-      piece_amount = #{pieceAmount,jdbcType=INTEGER},
-      `size` = #{size,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
 </mapper>

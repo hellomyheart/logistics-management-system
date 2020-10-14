@@ -3,7 +3,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Userwithgroup;
-import cn.hellomyheart.logistics.management.system.mapper.UserwithgroupMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.UserwithgroupMapper;
 import cn.hellomyheart.logistics.management.system.service.UserwithgroupService;
 @Service
 public class UserwithgroupServiceImpl implements UserwithgroupService{

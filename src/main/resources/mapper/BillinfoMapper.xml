@@ -1,127 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.hellomyheart.logistics.management.system.mapper.BillinfoMapper">
-    <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Billinfo">
-        <!--@mbg.generated-->
-        <!--@Table billinfo-->
-        <id column="id" jdbcType="INTEGER" property="id"/>
-        <result column="accept_station" jdbcType="VARCHAR" property="acceptStation"/>
-        <result column="bill_code" jdbcType="VARCHAR" property="billCode"/>
-        <result column="bill_state" jdbcType="VARCHAR" property="billState"/>
-        <result column="bill_type" jdbcType="VARCHAR" property="billType"/>
-        <result column="write_date" jdbcType="TIMESTAMP" property="writeDate"/>
-    </resultMap>
-    <sql id="Base_Column_List">
-        <!--@mbg.generated-->
-        id, accept_station, bill_code, bill_state, bill_type, write_date
-    </sql>
-    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-        <!--@mbg.generated-->
-        select
-        <include refid="Base_Column_List"/>
-        from billinfo
-        where id = #{id,jdbcType=INTEGER}
-    </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-        <!--@mbg.generated-->
-        delete from billinfo
-        where id = #{id,jdbcType=INTEGER}
-    </delete>
-    <insert id="insert" keyColumn="id" keyProperty="id"
-            parameterType="cn.hellomyheart.logistics.management.system.entity.Billinfo" useGeneratedKeys="true">
-        <!--@mbg.generated-->
-        insert into billinfo (accept_station, bill_code, bill_state,
-        bill_type, write_date)
-        values (#{acceptStation,jdbcType=VARCHAR}, #{billCode,jdbcType=VARCHAR}, #{billState,jdbcType=VARCHAR},
-        #{billType,jdbcType=VARCHAR}, #{writeDate,jdbcType=TIMESTAMP})
-    </insert>
-    <insert id="insertSelective" keyColumn="id" keyProperty="id"
-            parameterType="cn.hellomyheart.logistics.management.system.entity.Billinfo" useGeneratedKeys="true">
-        <!--@mbg.generated-->
-        insert into billinfo
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="acceptStation != null">
-                accept_station,
-            </if>
-            <if test="billCode != null">
-                bill_code,
-            </if>
-            <if test="billState != null">
-                bill_state,
-            </if>
-            <if test="billType != null">
-                bill_type,
-            </if>
-            <if test="writeDate != null">
-                write_date,
-            </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="acceptStation != null">
-                #{acceptStation,jdbcType=VARCHAR},
-            </if>
-            <if test="billCode != null">
-                #{billCode,jdbcType=VARCHAR},
-            </if>
-            <if test="billState != null">
-                #{billState,jdbcType=VARCHAR},
-            </if>
-            <if test="billType != null">
-                #{billType,jdbcType=VARCHAR},
-            </if>
-            <if test="writeDate != null">
-                #{writeDate,jdbcType=TIMESTAMP},
-            </if>
-        </trim>
-    </insert>
-    <update id="updateByPrimaryKeySelective"
-            parameterType="cn.hellomyheart.logistics.management.system.entity.Billinfo">
-        <!--@mbg.generated-->
-        update billinfo
-        <set>
-            <if test="acceptStation != null">
-                accept_station = #{acceptStation,jdbcType=VARCHAR},
-            </if>
-            <if test="billCode != null">
-                bill_code = #{billCode,jdbcType=VARCHAR},
-            </if>
-            <if test="billState != null">
-                bill_state = #{billState,jdbcType=VARCHAR},
-            </if>
-            <if test="billType != null">
-                bill_type = #{billType,jdbcType=VARCHAR},
-            </if>
-            <if test="writeDate != null">
-                write_date = #{writeDate,jdbcType=TIMESTAMP},
-            </if>
-        </set>
-        where id = #{id,jdbcType=INTEGER}
-    </update>
-    <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Billinfo">
-        <!--@mbg.generated-->
-        update billinfo
-        set accept_station = #{acceptStation,jdbcType=VARCHAR},
-        bill_code = #{billCode,jdbcType=VARCHAR},
-        bill_state = #{billState,jdbcType=VARCHAR},
-        bill_type = #{billType,jdbcType=VARCHAR},
-        write_date = #{writeDate,jdbcType=TIMESTAMP}
-        where id = #{id,jdbcType=INTEGER}
-    </update>
-    <select id="findNotRelease" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
-        from billinfo
-        where bill_state = '已填'
-        and bill_type = '货运单'
-        and bill_code not in (
-        select b.bill_code from billrelease b
-        )
-    </select>
-    <select id="findAll" resultMap="BaseResultMap">
-        <!--@mbg.generated-->
-        select
-        <include refid="Base_Column_List"/>
-        from billinfo
-    </select>
-
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity1.Billinfo">
+    <!--@mbg.generated-->
+    <!--@Table billinfo-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="accept_station" jdbcType="VARCHAR" property="acceptStation" />
+    <result column="bill_code" jdbcType="VARCHAR" property="billCode" />
+    <result column="bill_state" jdbcType="VARCHAR" property="billState" />
+    <result column="bill_type" jdbcType="VARCHAR" property="billType" />
+    <result column="write_date" jdbcType="TIMESTAMP" property="writeDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, accept_station, bill_code, bill_state, bill_type, write_date
+  </sql>
 </mapper>

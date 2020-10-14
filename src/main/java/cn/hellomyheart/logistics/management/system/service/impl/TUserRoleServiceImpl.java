@@ -3,7 +3,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.TUserRole;
-import cn.hellomyheart.logistics.management.system.mapper.TUserRoleMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.TUserRoleMapper;
 import cn.hellomyheart.logistics.management.system.service.TUserRoleService;
 @Service
 public class TUserRoleServiceImpl implements TUserRoleService{

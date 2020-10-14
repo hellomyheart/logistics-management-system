@@ -2,7 +2,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.mapper.TRolePermissionMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.TRolePermissionMapper;
 import cn.hellomyheart.logistics.management.system.entity.TRolePermission;
 import cn.hellomyheart.logistics.management.system.service.TRolePermissionService;
 @Service

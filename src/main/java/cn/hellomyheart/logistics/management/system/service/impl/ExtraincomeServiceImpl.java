@@ -2,7 +2,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.mapper.ExtraincomeMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.ExtraincomeMapper;
 import cn.hellomyheart.logistics.management.system.entity.Extraincome;
 import cn.hellomyheart.logistics.management.system.service.ExtraincomeService;
 @Service

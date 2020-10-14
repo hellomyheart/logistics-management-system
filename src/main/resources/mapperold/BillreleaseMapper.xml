@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.BillreleaseMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Billrelease">
+    <!--@mbg.generated-->
+    <!--@Table billrelease-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="accept_station" jdbcType="VARCHAR" property="acceptStation" />
+    <result column="bill_code" jdbcType="VARCHAR" property="billCode" />
+    <result column="bill_type" jdbcType="VARCHAR" property="billType" />
+    <result column="receive_bill_person" jdbcType="VARCHAR" property="receiveBillPerson" />
+    <result column="receive_bill_time" jdbcType="DATE" property="receiveBillTime" />
+    <result column="release_person" jdbcType="VARCHAR" property="releasePerson" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, accept_station, bill_code, bill_type, receive_bill_person, receive_bill_time,
+    release_person
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <include refid="Base_Column_List" />
+    from billrelease
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from billrelease
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Billrelease" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into billrelease (accept_station, bill_code, bill_type,
+      receive_bill_person, receive_bill_time, release_person
+      )
+    values (#{acceptStation,jdbcType=VARCHAR}, #{billCode,jdbcType=VARCHAR}, #{billType,jdbcType=VARCHAR},
+      #{receiveBillPerson,jdbcType=VARCHAR}, #{receiveBillTime,jdbcType=DATE}, #{releasePerson,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Billrelease" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into billrelease
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="acceptStation != null">
+        accept_station,
+      </if>
+      <if test="billCode != null">
+        bill_code,
+      </if>
+      <if test="billType != null">
+        bill_type,
+      </if>
+      <if test="receiveBillPerson != null">
+        receive_bill_person,
+      </if>
+      <if test="receiveBillTime != null">
+        receive_bill_time,
+      </if>
+      <if test="releasePerson != null">
+        release_person,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="acceptStation != null">
+        #{acceptStation,jdbcType=VARCHAR},
+      </if>
+      <if test="billCode != null">
+        #{billCode,jdbcType=VARCHAR},
+      </if>
+      <if test="billType != null">
+        #{billType,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBillPerson != null">
+        #{receiveBillPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBillTime != null">
+        #{receiveBillTime,jdbcType=DATE},
+      </if>
+      <if test="releasePerson != null">
+        #{releasePerson,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Billrelease">
+    <!--@mbg.generated-->
+    update billrelease
+    <set>
+      <if test="acceptStation != null">
+        accept_station = #{acceptStation,jdbcType=VARCHAR},
+      </if>
+      <if test="billCode != null">
+        bill_code = #{billCode,jdbcType=VARCHAR},
+      </if>
+      <if test="billType != null">
+        bill_type = #{billType,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBillPerson != null">
+        receive_bill_person = #{receiveBillPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBillTime != null">
+        receive_bill_time = #{receiveBillTime,jdbcType=DATE},
+      </if>
+      <if test="releasePerson != null">
+        release_person = #{releasePerson,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Billrelease">
+    <!--@mbg.generated-->
+    update billrelease
+    set accept_station = #{acceptStation,jdbcType=VARCHAR},
+      bill_code = #{billCode,jdbcType=VARCHAR},
+      bill_type = #{billType,jdbcType=VARCHAR},
+      receive_bill_person = #{receiveBillPerson,jdbcType=VARCHAR},
+      receive_bill_time = #{receiveBillTime,jdbcType=DATE},
+      release_person = #{releasePerson,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

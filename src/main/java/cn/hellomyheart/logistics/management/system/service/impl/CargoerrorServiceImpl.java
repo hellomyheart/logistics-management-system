@@ -2,7 +2,7 @@ package cn.hellomyheart.logistics.management.system.service.impl;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import cn.hellomyheart.logistics.management.system.mapper.CargoerrorMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.CargoerrorMapper;
 import cn.hellomyheart.logistics.management.system.entity.Cargoerror;
 import cn.hellomyheart.logistics.management.system.service.CargoerrorService;
 @Service

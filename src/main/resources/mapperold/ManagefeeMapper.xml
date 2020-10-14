@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hellomyheart.logistics.management.system.mapperold.ManagefeeMapper">
+  <resultMap id="BaseResultMap" type="cn.hellomyheart.logistics.management.system.entity.Managefee">
+    <!--@mbg.generated-->
+    <!--@Table managefee-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="house_rent" jdbcType="DOUBLE" property="houseRent" />
+    <result column="office_fee" jdbcType="DOUBLE" property="officeFee" />
+    <result column="other_payout" jdbcType="DOUBLE" property="otherPayout" />
+    <result column="payout_month" jdbcType="VARCHAR" property="payoutMonth" />
+    <result column="phone_fee" jdbcType="DOUBLE" property="phoneFee" />
+    <result column="water_elec_fee" jdbcType="DOUBLE" property="waterElecFee" />
+    <result column="write_date" jdbcType="DATE" property="writeDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, house_rent, office_fee, other_payout, payout_month, phone_fee, water_elec_fee,
+    write_date
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <include refid="Base_Column_List" />
+    from managefee
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from managefee
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Managefee" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into managefee (house_rent, office_fee, other_payout,
+      payout_month, phone_fee, water_elec_fee,
+      write_date)
+    values (#{houseRent,jdbcType=DOUBLE}, #{officeFee,jdbcType=DOUBLE}, #{otherPayout,jdbcType=DOUBLE},
+      #{payoutMonth,jdbcType=VARCHAR}, #{phoneFee,jdbcType=DOUBLE}, #{waterElecFee,jdbcType=DOUBLE},
+      #{writeDate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="cn.hellomyheart.logistics.management.system.entity.Managefee" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into managefee
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="houseRent != null">
+        house_rent,
+      </if>
+      <if test="officeFee != null">
+        office_fee,
+      </if>
+      <if test="otherPayout != null">
+        other_payout,
+      </if>
+      <if test="payoutMonth != null">
+        payout_month,
+      </if>
+      <if test="phoneFee != null">
+        phone_fee,
+      </if>
+      <if test="waterElecFee != null">
+        water_elec_fee,
+      </if>
+      <if test="writeDate != null">
+        write_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="houseRent != null">
+        #{houseRent,jdbcType=DOUBLE},
+      </if>
+      <if test="officeFee != null">
+        #{officeFee,jdbcType=DOUBLE},
+      </if>
+      <if test="otherPayout != null">
+        #{otherPayout,jdbcType=DOUBLE},
+      </if>
+      <if test="payoutMonth != null">
+        #{payoutMonth,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneFee != null">
+        #{phoneFee,jdbcType=DOUBLE},
+      </if>
+      <if test="waterElecFee != null">
+        #{waterElecFee,jdbcType=DOUBLE},
+      </if>
+      <if test="writeDate != null">
+        #{writeDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hellomyheart.logistics.management.system.entity.Managefee">
+    <!--@mbg.generated-->
+    update managefee
+    <set>
+      <if test="houseRent != null">
+        house_rent = #{houseRent,jdbcType=DOUBLE},
+      </if>
+      <if test="officeFee != null">
+        office_fee = #{officeFee,jdbcType=DOUBLE},
+      </if>
+      <if test="otherPayout != null">
+        other_payout = #{otherPayout,jdbcType=DOUBLE},
+      </if>
+      <if test="payoutMonth != null">
+        payout_month = #{payoutMonth,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneFee != null">
+        phone_fee = #{phoneFee,jdbcType=DOUBLE},
+      </if>
+      <if test="waterElecFee != null">
+        water_elec_fee = #{waterElecFee,jdbcType=DOUBLE},
+      </if>
+      <if test="writeDate != null">
+        write_date = #{writeDate,jdbcType=DATE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hellomyheart.logistics.management.system.entity.Managefee">
+    <!--@mbg.generated-->
+    update managefee
+    set house_rent = #{houseRent,jdbcType=DOUBLE},
+      office_fee = #{officeFee,jdbcType=DOUBLE},
+      other_payout = #{otherPayout,jdbcType=DOUBLE},
+      payout_month = #{payoutMonth,jdbcType=VARCHAR},
+      phone_fee = #{phoneFee,jdbcType=DOUBLE},
+      water_elec_fee = #{waterElecFee,jdbcType=DOUBLE},
+      write_date = #{writeDate,jdbcType=DATE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

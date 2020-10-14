@@ -5,7 +5,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import cn.hellomyheart.logistics.management.system.entity.Billinfo;
-import cn.hellomyheart.logistics.management.system.mapper.BillinfoMapper;
+import cn.hellomyheart.logistics.management.system.mapperold.BillinfoMapper;
 import cn.hellomyheart.logistics.management.system.service.BillinfoService;
 
 import java.util.List;
