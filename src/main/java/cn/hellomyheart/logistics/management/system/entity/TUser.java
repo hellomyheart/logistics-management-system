@@ -1,5 +1,6 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
+import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TUser implements Serializable {
+public class TUser implements BaseEntity {
     /**
     * 用户id
     */
@@ -36,5 +37,5 @@ public class TUser implements Serializable {
     @ApiModelProperty(value="手机号")
     private String mobile;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 7573054896552046170L;
 }

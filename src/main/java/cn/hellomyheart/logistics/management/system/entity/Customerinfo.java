@@ -1,5 +1,6 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
+import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customerinfo implements Serializable {
+public class Customerinfo implements BaseEntity {
     @ApiModelProperty(value="")
     private String customerCode;
 
@@ -48,5 +49,5 @@ public class Customerinfo implements Serializable {
     @ApiModelProperty(value="")
     private String postCode;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 8576541681705018265L;
 }

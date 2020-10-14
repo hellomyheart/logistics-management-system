@@ -1,5 +1,6 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
+import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Extraincome implements Serializable {
+public class Extraincome implements BaseEntity {
     @ApiModelProperty(value="")
     private Integer id;
 
@@ -28,5 +29,5 @@ public class Extraincome implements Serializable {
     @ApiModelProperty(value="")
     private Date writeDate;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -6014834092720729726L;
 }

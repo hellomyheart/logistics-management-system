@@ -1,5 +1,6 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
+import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Incomemonthlytemp implements Serializable {
+public class Incomemonthlytemp implements BaseEntity {
     @ApiModelProperty(value="")
     private Integer id;
 
@@ -72,5 +73,5 @@ public class Incomemonthlytemp implements Serializable {
     @ApiModelProperty(value="")
     private Double waterElecFee;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 8654358230024142947L;
 }

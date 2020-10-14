@@ -1,5 +1,6 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
+import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Routeinfo implements Serializable {
+public class Routeinfo implements BaseEntity {
     @ApiModelProperty(value="")
     private Integer id;
 
@@ -30,5 +31,5 @@ public class Routeinfo implements Serializable {
     @ApiModelProperty(value="")
     private Integer startStation;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -2569792081765688117L;
 }

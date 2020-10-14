@@ -1,5 +1,6 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
+import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Usergroup implements Serializable {
+public class Usergroup implements BaseEntity {
     @ApiModelProperty(value="")
     private Integer id;
 
@@ -21,5 +22,5 @@ public class Usergroup implements Serializable {
     @ApiModelProperty(value="")
     private String groupName;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 4064655717485721556L;
 }

@@ -1,5 +1,6 @@
 package cn.hellomyheart.logistics.management.system.entity;
 
+import cn.hellomyheart.logistics.management.system.commons.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Proxyfeeclear implements Serializable {
+public class Proxyfeeclear implements BaseEntity {
     @ApiModelProperty(value="")
     private String goodsBillCode;
 
@@ -40,5 +41,5 @@ public class Proxyfeeclear implements Serializable {
     @ApiModelProperty(value="")
     private Double receivedCommision;
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 6101018058830461681L;
 }
