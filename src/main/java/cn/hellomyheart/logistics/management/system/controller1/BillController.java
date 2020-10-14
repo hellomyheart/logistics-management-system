@@ -32,20 +32,15 @@ public class BillController {
     @Autowired
     private BillreleaseService billreleaseService;
 
-    @Autowired
-    private GoodsbilleventService goodsbilleventService;
 
-    @Autowired
-    private GoodsbillService goodsbillService;
+
+
 
     @Autowired
     private GoodsreceiptinfoService goodsreceiptinfoService;
 
-    @Autowired
-    private CargoreceiptService cargoreceiptService;
 
-    @Autowired
-    private CargoreceiptdetailService cargoreceiptdetailService;
+
 
     @ApiOperation(value = "查询未分发的运单信息", notes = "查询未分发的运单信息")
     @RequestMapping(value = "/findNotRelease", method = RequestMethod.GET)

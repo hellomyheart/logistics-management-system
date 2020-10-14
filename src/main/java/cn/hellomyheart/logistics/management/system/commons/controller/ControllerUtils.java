@@ -6,8 +6,6 @@ import cn.hellomyheart.logistics.management.system.commons.result.CodeStatus;
 import cn.hellomyheart.logistics.management.system.commons.result.ResponseResult;
 import cn.hellomyheart.logistics.management.system.commons.service.BaseService;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.util.List;
@@ -20,11 +18,8 @@ import java.util.List;
  * @author: Stephen Shen
  * @date: 2020/10/14 下午3:04
  */
-@Component
-public class ControllerUtils<S extends BaseService<E>, E extends BaseEntity> {
+public class ControllerUtils {
 
-    @Autowired
-    public S s;
 
     /**
      * 插入一条记录
@@ -32,7 +27,7 @@ public class ControllerUtils<S extends BaseService<E>, E extends BaseEntity> {
      * @param e
      * @return
      */
-    public ResponseResult save(E e) {
+    public <S extends BaseService<E>, E extends BaseEntity> ResponseResult save(S s, E e) {
         boolean save = s.save(e);
         return result(save);
     }
@@ -43,7 +38,7 @@ public class ControllerUtils<S extends BaseService<E>, E extends BaseEntity> {
      * @param e
      * @return
      */
-    public ResponseResult updateById(E e) {
+    public <S extends BaseService<E>, E extends BaseEntity> ResponseResult updateById(S s, E e) {
         boolean update = s.updateById(e);
         return result(update);
     }
@@ -54,7 +49,7 @@ public class ControllerUtils<S extends BaseService<E>, E extends BaseEntity> {
      * @param id
      * @return
      */
-    public ResponseResult removeById(Serializable id) {
+    public <S extends BaseService<E>, E extends BaseEntity> ResponseResult removeById(S s, Serializable id) {
         boolean removeById = s.removeById(id);
         return result(removeById);
     }
@@ -65,7 +60,7 @@ public class ControllerUtils<S extends BaseService<E>, E extends BaseEntity> {
      * @param queryWrapper
      * @return
      */
-    public ResponseResult list(Wrapper<E> queryWrapper) {
+    public <S extends BaseService<E>, E extends BaseEntity> ResponseResult list(S s, Wrapper<E> queryWrapper) {
         List<E> list = s.list(queryWrapper);
         return result(list);
     }
@@ -76,17 +71,18 @@ public class ControllerUtils<S extends BaseService<E>, E extends BaseEntity> {
      * @param id
      * @return
      */
-    public ResponseResult getById(Serializable id) {
+    public <S extends BaseService<E>, E extends BaseEntity> ResponseResult getById(S s, Serializable id) {
         E byId = s.getById(id);
         return result(byId);
     }
 
     /**
      * 根据 Wrapper，查询一条记录
+     *
      * @param queryWrapper
      * @return
      */
-    public ResponseResult getOne(Wrapper<E> queryWrapper) {
+    public <S extends BaseService<E>, E extends BaseEntity> ResponseResult getOne(S s, Wrapper<E> queryWrapper) {
         E one = s.getOne(queryWrapper);
         return result(one);
     }
@@ -104,7 +100,7 @@ public class ControllerUtils<S extends BaseService<E>, E extends BaseEntity> {
     }
 
 
-    public ResponseResult result(E e) {
+    public <E extends BaseEntity> ResponseResult result(E e) {
         if (e != null) {
             return new ResponseResult(CodeStatus.OK, CodeMessage.SUCCESS, e);
         }

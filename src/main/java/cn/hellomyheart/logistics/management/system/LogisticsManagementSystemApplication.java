@@ -1,5 +1,6 @@
 package cn.hellomyheart.logistics.management.system;
 
+import cn.hellomyheart.logistics.management.system.commons.controller.ControllerUtils;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
@@ -63,6 +64,9 @@ public class LogisticsManagementSystemApplication  extends WebMvcConfigurationSu
         return new BCryptPasswordEncoder();
     }
 
-
+    @Bean
+    public ControllerUtils controllerUtils(){
+        return new ControllerUtils();
+    }
 
 }
